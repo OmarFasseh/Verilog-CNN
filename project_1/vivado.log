@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Mon Apr 13 14:30:44 2020
+# Process ID: 8004
+# Log file: E:/trashCan/Projects/Assign/project_1/vivado.log
+# Journal file: E:/trashCan/Projects/Assign/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/trashCan/Projects/Assign/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 706.230 ; gain = 140.180
+ges to the IP catalog. Reverting the catalog back to its previous state.
+INFO: [IP_Flow 19-2340] The IP catalog has been returned to its previous state.
+INFO: [Common 17-344] 'open_project' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 13 14:34:17 2020...
