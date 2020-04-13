@@ -3,7 +3,6 @@
 # 
 
 debug::add_scope template.lib 1
-set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7z020clg400-1
@@ -18,8 +17,8 @@ set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
 read_verilog -library xil_defaultlib {
   E:/trashCan/Projects/Assign/tuturu.v
   E:/trashCan/Projects/Assign/tb.v
-  E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add_tb.v
-  E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v
+  E:/trashCan/Projects/Assign/fp_add.v
+  E:/trashCan/Projects/Assign/fp_add_tb.v
 }
 synth_design -top fp_add -part xc7z020clg400-1
 write_checkpoint -noxdef fp_add.dcp

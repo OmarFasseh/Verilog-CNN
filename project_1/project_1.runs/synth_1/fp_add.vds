@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Mon Apr 13 02:52:39 2020
-# Process ID: 16284
+# Start of session at: Mon Apr 13 14:41:40 2020
+# Process ID: 5636
 # Log file: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1/fp_add.vds
 # Journal file: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -12,30 +12,30 @@ Command: synth_design -top fp_add -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-WARNING: [Synth 8-2611] redeclaration of ansi port clock is not allowed [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:18]
+WARNING: [Synth 8-2611] redeclaration of ansi port clock is not allowed [E:/trashCan/Projects/Assign/fp_add.v:18]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 275.387 ; gain = 61.031
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 275.215 ; gain = 60.832
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'fp_add' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:1]
-INFO: [Synth 8-256] done synthesizing module 'fp_add' (1#1) [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:1]
+INFO: [Synth 8-638] synthesizing module 'fp_add' [E:/trashCan/Projects/Assign/fp_add.v:1]
+INFO: [Synth 8-256] done synthesizing module 'fp_add' (1#1) [E:/trashCan/Projects/Assign/fp_add.v:1]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 292.094 ; gain = 77.738
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 291.996 ; gain = 77.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 292.094 ; gain = 77.738
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 291.996 ; gain = 77.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 292.094 ; gain = 77.738
----------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:36]
-WARNING: [Synth 8-327] inferring latch for variable 'mantissa_reg' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 296.770 ; gain = 82.414
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 291.996 ; gain = 77.613
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [E:/trashCan/Projects/Assign/fp_add.v:36]
+WARNING: [Synth 8-327] inferring latch for variable 'mantissa_reg' [E:/trashCan/Projects/Assign/fp_add.v:51]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 296.383 ; gain = 82.000
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -95,14 +95,14 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 447.320 ; gain = 232.965
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 450.188 ; gain = 235.805
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 448.563 ; gain = 234.207
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 451.430 ; gain = 237.047
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 448.563 ; gain = 234.207
+Finished Parallel Reinference  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 451.430 ; gain = 237.047
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -114,22 +114,22 @@ No constraint files found.
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 484.855 ; gain = 270.500
+Finished Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 484.855 ; gain = 270.500
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 484.855 ; gain = 270.500
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 484.855 ; gain = 270.500
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -142,7 +142,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3332] Sequential element (\fract_c_reg[23] ) is unused and will be removed from module fp_add.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 484.855 ; gain = 270.500
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -160,108 +160,108 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 484.855 ; gain = 270.500
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[22] with 1st driver pin 'mantissa_reg[22]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[22] with 2nd driver pin 'mantissa_reg[22]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[22] with 1st driver pin 'i_157/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[22] with 2nd driver pin 'fract_c_reg[22]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[21] with 1st driver pin 'mantissa_reg[21]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[21] with 2nd driver pin 'mantissa_reg[21]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[21] with 1st driver pin 'i_155/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[21] with 2nd driver pin 'fract_c_reg[21]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[20] with 1st driver pin 'mantissa_reg[20]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[20] with 2nd driver pin 'mantissa_reg[20]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[20] with 1st driver pin 'i_153/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[20] with 2nd driver pin 'fract_c_reg[20]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[19] with 1st driver pin 'mantissa_reg[19]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[19] with 2nd driver pin 'mantissa_reg[19]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[19] with 1st driver pin 'i_151/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[19] with 2nd driver pin 'fract_c_reg[19]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[18] with 1st driver pin 'mantissa_reg[18]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[18] with 2nd driver pin 'mantissa_reg[18]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[18] with 1st driver pin 'i_149/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[18] with 2nd driver pin 'fract_c_reg[18]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[17] with 1st driver pin 'mantissa_reg[17]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[17] with 2nd driver pin 'mantissa_reg[17]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[17] with 1st driver pin 'i_147/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[17] with 2nd driver pin 'fract_c_reg[17]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[16] with 1st driver pin 'mantissa_reg[16]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[16] with 2nd driver pin 'mantissa_reg[16]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[16] with 1st driver pin 'i_145/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[16] with 2nd driver pin 'fract_c_reg[16]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[15] with 1st driver pin 'mantissa_reg[15]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[15] with 2nd driver pin 'mantissa_reg[15]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[15] with 1st driver pin 'i_143/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[15] with 2nd driver pin 'fract_c_reg[15]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[14] with 1st driver pin 'mantissa_reg[14]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[14] with 2nd driver pin 'mantissa_reg[14]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[14] with 1st driver pin 'i_141/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[14] with 2nd driver pin 'fract_c_reg[14]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[13] with 1st driver pin 'mantissa_reg[13]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[13] with 2nd driver pin 'mantissa_reg[13]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[13] with 1st driver pin 'i_139/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[13] with 2nd driver pin 'fract_c_reg[13]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[12] with 1st driver pin 'mantissa_reg[12]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[12] with 2nd driver pin 'mantissa_reg[12]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[12] with 1st driver pin 'i_137/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[12] with 2nd driver pin 'fract_c_reg[12]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[11] with 1st driver pin 'mantissa_reg[11]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[11] with 2nd driver pin 'mantissa_reg[11]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[11] with 1st driver pin 'i_135/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[11] with 2nd driver pin 'fract_c_reg[11]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[10] with 1st driver pin 'mantissa_reg[10]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[10] with 2nd driver pin 'mantissa_reg[10]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[10] with 1st driver pin 'i_133/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[10] with 2nd driver pin 'fract_c_reg[10]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[9] with 1st driver pin 'mantissa_reg[9]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[9] with 2nd driver pin 'mantissa_reg[9]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[9] with 1st driver pin 'i_131/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[9] with 2nd driver pin 'fract_c_reg[9]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[8] with 1st driver pin 'mantissa_reg[8]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[8] with 2nd driver pin 'mantissa_reg[8]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[8] with 1st driver pin 'i_129/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[8] with 2nd driver pin 'fract_c_reg[8]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[7] with 1st driver pin 'mantissa_reg[7]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[7] with 2nd driver pin 'mantissa_reg[7]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[7] with 1st driver pin 'i_127/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[7] with 2nd driver pin 'fract_c_reg[7]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[6] with 1st driver pin 'mantissa_reg[6]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[6] with 2nd driver pin 'mantissa_reg[6]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[6] with 1st driver pin 'i_125/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[6] with 2nd driver pin 'fract_c_reg[6]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[5] with 1st driver pin 'mantissa_reg[5]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[5] with 2nd driver pin 'mantissa_reg[5]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[5] with 1st driver pin 'i_123/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[5] with 2nd driver pin 'fract_c_reg[5]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[4] with 1st driver pin 'mantissa_reg[4]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[4] with 2nd driver pin 'mantissa_reg[4]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[4] with 1st driver pin 'i_121/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[4] with 2nd driver pin 'fract_c_reg[4]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[3] with 1st driver pin 'mantissa_reg[3]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[3] with 2nd driver pin 'mantissa_reg[3]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[3] with 1st driver pin 'i_119/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[3] with 2nd driver pin 'fract_c_reg[3]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[2] with 1st driver pin 'mantissa_reg[2]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[2] with 2nd driver pin 'mantissa_reg[2]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[2] with 1st driver pin 'i_117/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[2] with 2nd driver pin 'fract_c_reg[2]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[1] with 1st driver pin 'mantissa_reg[1]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[1] with 2nd driver pin 'mantissa_reg[1]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[1] with 1st driver pin 'i_115/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[1] with 2nd driver pin 'fract_c_reg[1]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[0] with 1st driver pin 'mantissa_reg[0]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[0] with 2nd driver pin 'mantissa_reg[0]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[0] with 1st driver pin 'i_113/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:43]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[0] with 2nd driver pin 'fract_c_reg[0]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net shifting with 1st driver pin 'i_83/O' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:29]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net shifting with 2nd driver pin 'shifting_reg/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:80]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[7] with 1st driver pin 'e_B_reg[7]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:84]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[7] with 2nd driver pin 'exponent_reg[7]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:84]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[7] with 3rd driver pin 'e_B0_inferredi_65/O[3]' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:40]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[6] with 1st driver pin 'e_B_reg[6]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:84]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[6] with 2nd driver pin 'exponent_reg[6]/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:84]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[6] with 3rd driver pin 'e_B0_inferredi_65/O[2]' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:40]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[22] with 1st driver pin 'mantissa_reg[22]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[22] with 2nd driver pin 'mantissa_reg[22]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[22] with 1st driver pin 'i_157/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[22] with 2nd driver pin 'fract_c_reg[22]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[21] with 1st driver pin 'mantissa_reg[21]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[21] with 2nd driver pin 'mantissa_reg[21]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[21] with 1st driver pin 'i_155/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[21] with 2nd driver pin 'fract_c_reg[21]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[20] with 1st driver pin 'mantissa_reg[20]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[20] with 2nd driver pin 'mantissa_reg[20]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[20] with 1st driver pin 'i_153/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[20] with 2nd driver pin 'fract_c_reg[20]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[19] with 1st driver pin 'mantissa_reg[19]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[19] with 2nd driver pin 'mantissa_reg[19]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[19] with 1st driver pin 'i_151/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[19] with 2nd driver pin 'fract_c_reg[19]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[18] with 1st driver pin 'mantissa_reg[18]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[18] with 2nd driver pin 'mantissa_reg[18]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[18] with 1st driver pin 'i_149/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[18] with 2nd driver pin 'fract_c_reg[18]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[17] with 1st driver pin 'mantissa_reg[17]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[17] with 2nd driver pin 'mantissa_reg[17]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[17] with 1st driver pin 'i_147/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[17] with 2nd driver pin 'fract_c_reg[17]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[16] with 1st driver pin 'mantissa_reg[16]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[16] with 2nd driver pin 'mantissa_reg[16]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[16] with 1st driver pin 'i_145/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[16] with 2nd driver pin 'fract_c_reg[16]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[15] with 1st driver pin 'mantissa_reg[15]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[15] with 2nd driver pin 'mantissa_reg[15]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[15] with 1st driver pin 'i_143/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[15] with 2nd driver pin 'fract_c_reg[15]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[14] with 1st driver pin 'mantissa_reg[14]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[14] with 2nd driver pin 'mantissa_reg[14]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[14] with 1st driver pin 'i_141/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[14] with 2nd driver pin 'fract_c_reg[14]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[13] with 1st driver pin 'mantissa_reg[13]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[13] with 2nd driver pin 'mantissa_reg[13]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[13] with 1st driver pin 'i_139/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[13] with 2nd driver pin 'fract_c_reg[13]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[12] with 1st driver pin 'mantissa_reg[12]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[12] with 2nd driver pin 'mantissa_reg[12]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[12] with 1st driver pin 'i_137/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[12] with 2nd driver pin 'fract_c_reg[12]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[11] with 1st driver pin 'mantissa_reg[11]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[11] with 2nd driver pin 'mantissa_reg[11]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[11] with 1st driver pin 'i_135/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[11] with 2nd driver pin 'fract_c_reg[11]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[10] with 1st driver pin 'mantissa_reg[10]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[10] with 2nd driver pin 'mantissa_reg[10]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[10] with 1st driver pin 'i_133/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[10] with 2nd driver pin 'fract_c_reg[10]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[9] with 1st driver pin 'mantissa_reg[9]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[9] with 2nd driver pin 'mantissa_reg[9]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[9] with 1st driver pin 'i_131/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[9] with 2nd driver pin 'fract_c_reg[9]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[8] with 1st driver pin 'mantissa_reg[8]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[8] with 2nd driver pin 'mantissa_reg[8]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[8] with 1st driver pin 'i_129/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[8] with 2nd driver pin 'fract_c_reg[8]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[7] with 1st driver pin 'mantissa_reg[7]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[7] with 2nd driver pin 'mantissa_reg[7]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[7] with 1st driver pin 'i_127/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[7] with 2nd driver pin 'fract_c_reg[7]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[6] with 1st driver pin 'mantissa_reg[6]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[6] with 2nd driver pin 'mantissa_reg[6]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[6] with 1st driver pin 'i_125/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[6] with 2nd driver pin 'fract_c_reg[6]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[5] with 1st driver pin 'mantissa_reg[5]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[5] with 2nd driver pin 'mantissa_reg[5]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[5] with 1st driver pin 'i_123/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[5] with 2nd driver pin 'fract_c_reg[5]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[4] with 1st driver pin 'mantissa_reg[4]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[4] with 2nd driver pin 'mantissa_reg[4]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[4] with 1st driver pin 'i_121/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[4] with 2nd driver pin 'fract_c_reg[4]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[3] with 1st driver pin 'mantissa_reg[3]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[3] with 2nd driver pin 'mantissa_reg[3]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[3] with 1st driver pin 'i_119/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[3] with 2nd driver pin 'fract_c_reg[3]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[2] with 1st driver pin 'mantissa_reg[2]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[2] with 2nd driver pin 'mantissa_reg[2]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[2] with 1st driver pin 'i_117/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[2] with 2nd driver pin 'fract_c_reg[2]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[1] with 1st driver pin 'mantissa_reg[1]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[1] with 2nd driver pin 'mantissa_reg[1]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[1] with 1st driver pin 'i_115/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[1] with 2nd driver pin 'fract_c_reg[1]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[0] with 1st driver pin 'mantissa_reg[0]__0/Q' [E:/trashCan/Projects/Assign/fp_add.v:51]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net mantissa_OBUF[0] with 2nd driver pin 'mantissa_reg[0]/Q' [E:/trashCan/Projects/Assign/fp_add.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[0] with 1st driver pin 'i_113/O' [E:/trashCan/Projects/Assign/fp_add.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net fract_c[0] with 2nd driver pin 'fract_c_reg[0]/Q' [E:/trashCan/Projects/Assign/fp_add.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net shifting with 1st driver pin 'i_83/O' [E:/trashCan/Projects/Assign/fp_add.v:29]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net shifting with 2nd driver pin 'shifting_reg/Q' [E:/trashCan/Projects/Assign/fp_add.v:80]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[7] with 1st driver pin 'e_B_reg[7]/Q' [E:/trashCan/Projects/Assign/fp_add.v:84]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[7] with 2nd driver pin 'exponent_reg[7]/Q' [E:/trashCan/Projects/Assign/fp_add.v:84]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[7] with 3rd driver pin 'e_B0_inferredi_65/O[3]' [E:/trashCan/Projects/Assign/fp_add.v:40]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[6] with 1st driver pin 'e_B_reg[6]/Q' [E:/trashCan/Projects/Assign/fp_add.v:84]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[6] with 2nd driver pin 'exponent_reg[6]/Q' [E:/trashCan/Projects/Assign/fp_add.v:84]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exponent_OBUF[6] with 3rd driver pin 'e_B0_inferredi_65/O[2]' [E:/trashCan/Projects/Assign/fp_add.v:40]
 INFO: [Common 17-14] Message 'Synth 8-3352' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 
 Report Check Netlist: 
@@ -274,7 +274,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 484.855 ; gain = 270.500
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,13 +286,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 484.855 ; gain = 270.500
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 484.855 ; gain = 270.500
+Start Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 484.855 ; gain = 270.500
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -329,11 +329,11 @@ Report Instance Areas:
 |1     |top      |       |   744|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 484.855 ; gain = 270.500
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 118 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 484.855 ; gain = 249.574
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 484.855 ; gain = 270.500
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 485.723 ; gain = 249.641
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 485.723 ; gain = 271.340
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 138 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -346,6 +346,6 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 13 Infos, 3 Warnings, 100 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 545.223 ; gain = 321.500
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 545.223 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 13 02:52:56 2020...
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 545.102 ; gain = 321.355
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 545.102 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 13 14:42:00 2020...

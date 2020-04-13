@@ -1,0 +1,92 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 8004
+
+Current time: 	4/13/20 2:31:10 PM EET
+Time zone: 	Eastern European Time (Africa/Cairo)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	E:/Xilinx/Vivado/2015.2/tps/win64/jre
+
+User name: 	Omar
+User directory: E:/trashCan/Projects/Assign/project_1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: C:/Users/DELL/AppData/Roaming/Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: C:/Users/DELL/AppData/Roaming/Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	123 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 373 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 63 MB (+63752kb) [00:00:11]
+// [Engine Memory]: 342 MB (+207280kb) [00:00:11]
+// Opening Vivado Project: E:\trashCan\Projects\Assign\project_1\project_1.xpr. Version: Vivado v2015.2 
+// cp:P (cl:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project E:/trashCan/Projects/Assign/project_1/project_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 392 MB. GUI used memory: 25 MB. Current time: 4/13/20 2:31:12 PM EET
+// Tcl Message: open_project E:/trashCan/Projects/Assign/project_1/project_1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// [Engine Memory]: 392 MB (+34571kb) [00:00:16]
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 457 MB (+47202kb) [00:00:24]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: project_1; location: E:/trashCan/Projects/Assign/project_1; part: xc7z020clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 706.230 ; gain = 140.180 
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceQtoS.RunGadget_SHOW_ERROR_AND_CRITICAL_WARNING_MESSAGES, "100 critical warnings"); // i:l (JPanel:JComponent, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3352] multi-driven net mantissa_OBUF[22] with 1st driver pin 'mantissa_reg[22]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]. ]", 1, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\trashCan\Projects\FPA\FPA.srcs\sources_1\new\fp_add.v;-;;-;16;-;line;-;51;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3352] multi-driven net mantissa_OBUF[22] with 1st driver pin 'mantissa_reg[22]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]. ]", 1); // ae:k (JViewport:JComponent, cl:JFrame)
+// Elapsed time: 152 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3352] multi-driven net mantissa_OBUF[22] with 1st driver pin 'mantissa_reg[22]__0/Q' [E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v:51]. ]", 1); // ae:k (JViewport:JComponent, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mul_flp_tb (tb.v)]", 3); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mul_flp_tb (tb.v)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mul_flp_tb (tb.v)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mul_flp_tb (tb.v)]", 3, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mul_flp_tb (tb.v)]", 3); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mul_flp_tb (tb.v), inst1 - fpMul (tuturu.v)]", 4, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mul_flp_tb (tb.v), inst1 - fpMul (tuturu.v)]", 4, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// [GUI Memory]: 67 MB (+455kb) [00:03:35]
+// [GUI Memory]: 73 MB (+2870kb) [00:03:35]
+selectCodeEditor("tuturu.v", 98, 157); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "tuturu.v", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 108 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, add_flp3_tb (fp_add_tb.v), fp_add1 - fp_add (fp_add.v)]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, add_flp3_tb (fp_add_tb.v)]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mul_flp_tb (tb.v)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectCodeEditor("tuturu.v", 130, 217); // bj:J (JPanel:JComponent, cl:JFrame)

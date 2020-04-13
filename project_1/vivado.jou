@@ -9,3 +9,12 @@
 #-----------------------------------------------------------
 start_gui
 open_project E:/trashCan/Projects/Assign/project_1/project_1.xpr
+remove_files {E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add.v E:/trashCan/Projects/FPA/FPA.srcs/sources_1/new/fp_add_tb.v}
+add_files -norecurse {E:/trashCan/Projects/Assign/fp_add.v E:/trashCan/Projects/Assign/fp_add_tb.v}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
