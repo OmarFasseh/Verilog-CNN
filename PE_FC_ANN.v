@@ -1,24 +1,27 @@
 module PE_FC_ANN 
 ( input_fc,iweight_FC,clk,start_FC,output_fc
  );
-parameter DATA_WIDTH = 16;
+parameter DATA_WIDTH = 32;
 input [DATA_WIDTH-1:0]       input_fc ;
 input [DATA_WIDTH-1:0]      iweight_FC; 
-input     clk ,start_FC;
-output reg[DATA_WIDTH*2-1:0] output_fc ;
-wire [DATA_WIDTH*2-1:0] output_tmp_mul;
-wire [DATA_WIDTH*2-1:0] output_tmp_add;
+input clk ,start_FC;
+output reg[DATA_WIDTH-1:0] output_fc ;
+wire [DATA_WIDTH-1:0] output_tmp_mul;
+wire [DATA_WIDTH-1:0] output_tmp_add;
 
 always@(posedge clk)
 begin
 
     if (start_FC==1) begin
-            output_fc=32'h00000000;
-    end else begin
-        output_fc = output_tmp_add;
-    end
+            output_fc=64'h00000000000000000000000000000000;
+    end //else begin
+        //output_fc = output_tmp_add;
+    //end
 end
-
+always@(output_tmp_add)
+begin
+        output_fc = output_tmp_add;
+end
 fpMul fmul(
 .flp_a(input_fc),
 .flp_b(iweight_FC),

@@ -1,4 +1,4 @@
-`timescale 1ns / 1ns
+/*`timescale 1ns / 1ns
 module FC_Layer_ANN(
 input_fc,weightCaches_fc, clk,start_FC,output_fc
 );
@@ -24,4 +24,4 @@ generate
 	end
 endgenerate 
 
-endmodule
+endmodule*/

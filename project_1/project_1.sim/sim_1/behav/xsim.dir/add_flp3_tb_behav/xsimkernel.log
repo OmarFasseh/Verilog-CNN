@@ -1,7 +1,0 @@
-Running: xsim.dir/add_flp3_tb_behav/xsimk.exe -simmode gui -wdb add_flp3_tb_behav.wdb -simrunnum 0 -socket 63959
-Design successfully loaded
-Design Loading Memory Usage: 22760 KB (Peak: 22760 KB)
-Design Loading CPU Usage: 343 ms
-Simulation completed
-Simulation Memory Usage: 23252 KB (Peak: 23252 KB)
-Simulation CPU Usage: 343 ms

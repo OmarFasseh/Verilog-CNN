@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Mon Apr 13 23:47:29 2020
+# Process ID: 17992
+# Log file: E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/webtalk.log
+# Journal file: E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 843904333 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtal..."
+    (file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 13 23:47:30 2020...

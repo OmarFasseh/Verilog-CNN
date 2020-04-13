@@ -2,9 +2,9 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Mon Apr 13 14:41:40 2020
-# Process ID: 5636
-# Log file: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1/fp_add.vds
+# Start of session at: Mon Apr 13 22:01:18 2020
+# Process ID: 9980
+# Log file: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1/PE_FC_ANN_tb.vds
 # Journal file: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source fp_add.tcl -notrace
+source PE_FC_ANN_tb.tcl -notrace

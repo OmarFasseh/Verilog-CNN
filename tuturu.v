@@ -41,7 +41,7 @@ input flp_a, flp_b, clock;
 output prod, exponent, sign, exp_sum;
 
 
-always @ (flp_a, flp_b) 
+always @ (flp_a or flp_b) 
 begin
         product = {1'b1 ,flp_a[22:0]}*{1'b1,flp_b[22:0]};
         prod = 0;

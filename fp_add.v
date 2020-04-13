@@ -16,7 +16,7 @@ reg cout;
 reg shifted;
 reg shifting;
 wire clock;
-always @ (A_FP or B_FP)
+always @ (B_FP)
 begin
     shifting = 0;
 	sign_a  = A_FP [31];
@@ -88,7 +88,7 @@ begin
         fract_c = fract_c << 1;
         e_B=e_B-1'b1;
         
-    end
+    end 
 end
 
 endmodule
