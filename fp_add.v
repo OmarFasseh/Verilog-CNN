@@ -54,6 +54,7 @@ begin
            if(fract_a > fract_b) begin
                 sign = 1'b1;
                 fract_c = -fract_c;
+                shifting=1'b1;
             end else if(fract_a < fract_b)begin
                 sign =1'b0;
                 shifting=1'b1;
@@ -64,6 +65,7 @@ begin
              if(fract_b > fract_a) begin
                      sign = 1'b1;
                      fract_c = -fract_c;
+                     shifting=1'b1;
                  end else if(fract_a > fract_b) begin
                      sign =1'b0;
                      shifting=1'b1;

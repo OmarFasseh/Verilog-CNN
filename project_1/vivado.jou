@@ -18,3 +18,5 @@ set_property source_mgmt_mode DisplayOnly [current_project]
 reset_run synth_1
 launch_runs synth_1
 wait_on_run synth_1
+add_files E:/trashCan/Projects/Assign
+add_files -norecurse E:/trashCan/Projects/Assign/weights_Memory.v

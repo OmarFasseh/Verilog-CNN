@@ -21,3 +21,9 @@ reset_run synth_1
 launch_runs synth_1
 [Mon Apr 13 14:41:38 2020] Launched synth_1...
 Run output will be captured here: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1/runme.log
+add_files E:/trashCan/Projects/Assign
+WARNING: [filemgmt 56-12] File 'E:/trashCan/Projects/Assign/tuturu.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'E:/trashCan/Projects/Assign/tb.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'E:/trashCan/Projects/Assign/fp_add_tb.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'E:/trashCan/Projects/Assign/fp_add.v' cannot be added to the project because it already exists in the project, skipping this file
+add_files -norecurse E:/trashCan/Projects/Assign/weights_Memory.v
