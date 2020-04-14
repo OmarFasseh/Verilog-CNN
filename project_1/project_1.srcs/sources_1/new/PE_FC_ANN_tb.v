@@ -15,16 +15,16 @@ parameter DATA_WIDTH = 32;
         #0 iweight_FC = 32'hbb0fc453;
            input_fc = 32'h3a8ea4f3;
             start_FC=1;
-         #250 iweight_FC = 32'h41a00000;
+         #1 iweight_FC = 32'h41a00000;
               input_fc = 32'h40a00000;
               start_FC=0;  
-         #250 iweight_FC = 32'h42340000;
+         #1 iweight_FC = 32'h42340000;
                 input_fc = 32'h41f00000;
                 start_FC=0;   
                 #250 iweight_FC = 32'h42a00000;
                                 input_fc = 32'h429e0000;
                                 start_FC=0;  
-        #500 $stop;
+        #1 $stop;
     end
     always begin
         #5  clock = ~clock; // Toggle clock every 5 ticks :(

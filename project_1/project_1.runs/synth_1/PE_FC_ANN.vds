@@ -1,0 +1,283 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Apr 14 16:15:53 2020
+# Process ID: 11888
+# Log file: K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/project_1/project_1.runs/synth_1/PE_FC_ANN.vds
+# Journal file: K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source PE_FC_ANN.tcl -notrace
+Command: synth_design -top PE_FC_ANN -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 267.906 ; gain = 54.070
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PE_FC_ANN' [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/PE_FC_ANN.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'fpMul' [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/tuturu.v:23]
+INFO: [Synth 8-256] done synthesizing module 'fpMul' (1#1) [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/tuturu.v:23]
+WARNING: [Synth 8-350] instance 'fmul' of module 'fpMul' requires 7 connections, but only 6 given [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/PE_FC_ANN.v:22]
+INFO: [Synth 8-638] synthesizing module 'fp_add' [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/fp_add.v:1]
+WARNING: [Synth 8-567] referenced signal 'A_FP' should be on the sensitivity list [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/fp_add.v:17]
+INFO: [Synth 8-256] done synthesizing module 'fp_add' (2#1) [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/fp_add.v:1]
+INFO: [Synth 8-256] done synthesizing module 'PE_FC_ANN' (3#1) [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/PE_FC_ANN.v:1]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 302.113 ; gain = 88.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 302.113 ; gain = 88.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 302.113 ; gain = 88.277
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/fp_add.v:33]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 350.969 ; gain = 137.133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     24 Bit       Adders := 2     
+	   4 Input      9 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 22    
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 8     
+	   2 Input     23 Bit        Muxes := 24    
+	   2 Input      8 Bit        Muxes := 24    
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fpMul 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+Module fp_add 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     24 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 22    
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 8     
+	   2 Input     23 Bit        Muxes := 23    
+	   2 Input      8 Bit        Muxes := 24    
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 458.871 ; gain = 245.035
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP fmul/exp_sum1, operation Mode is: A*B.
+DSP Report: operator fmul/exp_sum1 is absorbed into DSP fmul/exp_sum1.
+DSP Report: operator fmul/exp_sum1 is absorbed into DSP fmul/exp_sum1.
+DSP Report: Generating DSP fmul/exp_sum1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator fmul/exp_sum1 is absorbed into DSP fmul/exp_sum1.
+DSP Report: operator fmul/exp_sum1 is absorbed into DSP fmul/exp_sum1.
+WARNING: [Synth 8-3331] design PE_FC_ANN has unconnected port clk
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 460.180 ; gain = 246.344
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 460.180 ; gain = 246.344
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP:
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fpMul       | A*B            | No           | 25     | 18     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|fpMul       | (PCIN>>17)+A*B | No           | 25     | 8      | 31     | 25     | 31     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 538.957 ; gain = 325.121
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 538.957 ; gain = 325.121
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 538.957 ; gain = 325.121
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 538.957 ; gain = 325.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    51|
+|2     |DSP48E1 |     2|
+|3     |LUT1    |    48|
+|4     |LUT2    |   115|
+|5     |LUT3    |   120|
+|6     |LUT4    |    96|
+|7     |LUT5    |    78|
+|8     |LUT6    |   422|
+|9     |IBUF    |    65|
+|10    |OBUF    |    32|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  1029|
+|2     |  fadd   |fp_add |   867|
+|3     |  fmul   |fpMul  |    65|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 542.133 ; gain = 305.102
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 118 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 553.727 ; gain = 330.508
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.153 . Memory (MB): peak = 553.727 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 14 16:16:17 2020...

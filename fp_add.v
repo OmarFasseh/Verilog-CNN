@@ -3,8 +3,7 @@ input [31:0] A_FP,
 input [31:0] B_FP, 
 output reg       sign, 
 output reg [7:0] exponent, 
-output reg [22:0] mantissa,
-input clock);
+output reg [22:0] mantissa);
 
 //variables used in an always block
 //are declared as registers
@@ -13,12 +12,10 @@ reg [7:0] e_A, e_B;
 reg [23:0] fract_a, fract_b,fract_c;//frac = 1 . mantissa 
 reg [7:0] shift_cnt;
 reg cout;
-reg shifted;
-reg shifting;
-wire clock;
+reg [5:0] i;
+
 always @ (B_FP)
 begin
-    shifting = 0;
 	sign_a  = A_FP [31];
 	sign_b  = B_FP [31];
 	e_A      = A_FP [30:23];
@@ -54,41 +51,33 @@ begin
            if(fract_a > fract_b) begin
                 sign = 1'b1;
                 fract_c = -fract_c;
-                shifting=1'b1;
-            end else if(fract_a < fract_b)begin
+           end else 
                 sign =1'b0;
-                shifting=1'b1;
-           end else
-                sign=1'b0;
 	 end else begin
 	         {cout, fract_c}  =fract_a - fract_b;
              if(fract_b > fract_a) begin
                      sign = 1'b1;
                      fract_c = -fract_c;
-                     shifting=1'b1;
-                 end else if(fract_a > fract_b) begin
-                     sign =1'b0;
-                     shifting=1'b1;
                  end else
-                    sign= 1'b0;
+                     sign =1'b0;
+                 
 	 end
 	//normalize result
-	
-	   exponent  = e_B;
-end
-
-always @ (posedge clock)
-begin
-    if(shifting ==1) begin
-        if(fract_c[23] ==1) begin
-            mantissa  = fract_c[22:0];
-            shifting =0;
-            exponent  = e_B;
-            end
+    if(fract_a == fract_b && sign_a != sign_b) begin
+        sign= 1'b0;
+        e_B = 0;
+        fract_c[23] = 1;
+        fract_c[22:0] = 22'b0;
+    end
+    
+    for(i = 0; i < 23 && fract_c[23]==0; i=i+1) begin
         fract_c = fract_c << 1;
-        e_B=e_B-1'b1;
-        
-    end 
+        e_B = e_B-1'b1; 
+    end
+    mantissa = fract_c[22:0];
+    exponent = e_B; 
+
+	   exponent  = e_B;
 end
 
 endmodule
