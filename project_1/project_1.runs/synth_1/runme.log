@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log PE_FC_ANN.vds -m64 -mode batch -messageDb vivado.pb -notrace -source PE_FC_ANN.tcl
+    with args -log ReLU.vds -m64 -mode batch -messageDb vivado.pb -notrace -source ReLU.tcl
 
 
 ****** Vivado v2015.2 (64-bit)
@@ -8,40 +8,35 @@
   **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
-source PE_FC_ANN.tcl -notrace
-Command: synth_design -top PE_FC_ANN -part xc7z020clg400-1
+source ReLU.tcl -notrace
+Command: synth_design -top ReLU -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 267.906 ; gain = 54.070
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 265.617 ; gain = 51.121
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'PE_FC_ANN' [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/PE_FC_ANN.v:1]
+INFO: [Synth 8-638] synthesizing module 'ReLU' [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v:2]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'fpMul' [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/tuturu.v:23]
-INFO: [Synth 8-256] done synthesizing module 'fpMul' (1#1) [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/tuturu.v:23]
-WARNING: [Synth 8-350] instance 'fmul' of module 'fpMul' requires 7 connections, but only 6 given [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/PE_FC_ANN.v:22]
-INFO: [Synth 8-638] synthesizing module 'fp_add' [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/fp_add.v:1]
-WARNING: [Synth 8-567] referenced signal 'A_FP' should be on the sensitivity list [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/fp_add.v:17]
-INFO: [Synth 8-256] done synthesizing module 'fp_add' (2#1) [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/fp_add.v:1]
-INFO: [Synth 8-256] done synthesizing module 'PE_FC_ANN' (3#1) [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/PE_FC_ANN.v:1]
+	Parameter parallel_fc_PE bound to: 32 - type: integer 
+	Parameter DATA_WIDTH_OUT bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ReLU' (1#1) [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v:2]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 302.113 ; gain = 88.277
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 299.789 ; gain = 85.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 302.113 ; gain = 88.277
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 299.789 ; gain = 85.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 302.113 ; gain = 88.277
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 299.789 ; gain = 85.293
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/fp_add.v:33]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 350.969 ; gain = 137.133
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 303.914 ; gain = 89.418
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -54,20 +49,8 @@ No constraint files found.
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     25 Bit       Adders := 1     
-	   3 Input     24 Bit       Adders := 2     
-	   4 Input      9 Bit       Adders := 1     
-	   3 Input      8 Bit       Adders := 4     
-	   2 Input      8 Bit       Adders := 22    
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Muxes : 
-	   2 Input     24 Bit        Muxes := 8     
-	   2 Input     23 Bit        Muxes := 24    
-	   2 Input      8 Bit        Muxes := 24    
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
++---Registers : 
+	             1024 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -75,27 +58,10 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module fpMul 
+Module ReLU 
 Detailed RTL Component Info : 
-+---Adders : 
-	   4 Input      9 Bit       Adders := 1     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Muxes : 
-	   2 Input     23 Bit        Muxes := 1     
-Module fp_add 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     25 Bit       Adders := 1     
-	   3 Input     24 Bit       Adders := 2     
-	   3 Input      8 Bit       Adders := 4     
-	   2 Input      8 Bit       Adders := 22    
-+---Muxes : 
-	   2 Input     24 Bit        Muxes := 8     
-	   2 Input     23 Bit        Muxes := 23    
-	   2 Input      8 Bit        Muxes := 24    
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
++---Registers : 
+	             1024 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -108,64 +74,105 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 458.871 ; gain = 245.035
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 444.574 ; gain = 230.078
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP fmul/exp_sum1, operation Mode is: A*B.
-DSP Report: operator fmul/exp_sum1 is absorbed into DSP fmul/exp_sum1.
-DSP Report: operator fmul/exp_sum1 is absorbed into DSP fmul/exp_sum1.
-DSP Report: Generating DSP fmul/exp_sum1, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator fmul/exp_sum1 is absorbed into DSP fmul/exp_sum1.
-DSP Report: operator fmul/exp_sum1 is absorbed into DSP fmul/exp_sum1.
-WARNING: [Synth 8-3331] design PE_FC_ANN has unconnected port clk
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 460.180 ; gain = 246.344
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 455.637 ; gain = 241.141
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 460.180 ; gain = 246.344
+Finished Parallel Reinference  : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 455.637 ; gain = 241.141
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-DSP:
-+------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping    | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|fpMul       | A*B            | No           | 25     | 18     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
-|fpMul       | (PCIN>>17)+A*B | No           | 25     | 8      | 31     | 25     | 31     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
-+------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-
-Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
 No constraint files found.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[127] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[159] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[191] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[223] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[287] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[319] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[351] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[383] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[415] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[447] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[479] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[511] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[543] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[575] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[607] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[639] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[671] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[703] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[735] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[767] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[799] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[831] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[863] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[895] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[927] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[959] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[991] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\output_fc_reg[1023] )
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[1023] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[991] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[959] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[927] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[895] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[863] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[831] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[799] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[767] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[735] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[703] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[671] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[639] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[607] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[575] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[543] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[511] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[479] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[447] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[415] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[383] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[351] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[319] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[287] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[255] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[223] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[191] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[159] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[127] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[95] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[63] ) is unused and will be removed from module ReLU.
+WARNING: [Synth 8-3332] Sequential element (\output_fc_reg[31] ) is unused and will be removed from module ReLU.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 538.957 ; gain = 325.121
+Finished Area Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 455.637 ; gain = 241.141
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 538.957 ; gain = 325.121
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 455.637 ; gain = 241.141
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 538.957 ; gain = 325.121
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 455.637 ; gain = 241.141
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 538.957 ; gain = 325.121
+Finished Timing Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 455.637 ; gain = 241.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -177,7 +184,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+Finished Technology Mapping : Time (s): cpu = 00:01:12 ; elapsed = 00:01:16 . Memory (MB): peak = 455.637 ; gain = 241.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -195,7 +202,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+Finished IO Insertion : Time (s): cpu = 00:01:13 ; elapsed = 00:01:16 . Memory (MB): peak = 455.637 ; gain = 241.141
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -208,7 +215,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:13 ; elapsed = 00:01:16 . Memory (MB): peak = 455.637 ; gain = 241.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -220,13 +227,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:16 . Memory (MB): peak = 455.637 ; gain = 241.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+Start Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:16 . Memory (MB): peak = 455.637 ; gain = 241.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:16 . Memory (MB): peak = 455.637 ; gain = 241.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -239,46 +246,39 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+--------+------+
-|      |Cell    |Count |
-+------+--------+------+
-|1     |CARRY4  |    51|
-|2     |DSP48E1 |     2|
-|3     |LUT1    |    48|
-|4     |LUT2    |   115|
-|5     |LUT3    |   120|
-|6     |LUT4    |    96|
-|7     |LUT5    |    78|
-|8     |LUT6    |   422|
-|9     |IBUF    |    65|
-|10    |OBUF    |    32|
-+------+--------+------+
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |FDRE |   992|
+|3     |IBUF |  1025|
+|4     |OBUF |  1024|
++------+-----+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |  1029|
-|2     |  fadd   |fp_add |   867|
-|3     |  fmul   |fpMul  |    65|
+|1     |top      |       |  3042|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:16 . Memory (MB): peak = 455.637 ; gain = 241.141
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 542.133 ; gain = 305.102
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 542.133 ; gain = 328.297
+Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 455.637 ; gain = 219.969
+Synthesis Optimization Complete : Time (s): cpu = 00:01:13 ; elapsed = 00:01:16 . Memory (MB): peak = 455.637 ; gain = 241.141
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 118 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1025 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'ReLU' is not ideal for floorplanning, since the cellview 'ReLU' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-16 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 553.727 ; gain = 330.508
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.153 . Memory (MB): peak = 553.727 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 14 16:16:17 2020...
+synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 517.578 ; gain = 293.719
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.235 . Memory (MB): peak = 517.578 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 18 22:27:30 2020...

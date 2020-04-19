@@ -1,20 +1,14 @@
 Vivado Simulator 2015.2
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: J:/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PE_FC_ANN_tb_behav xil_defaultlib.PE_FC_ANN_tb xil_defaultlib.glbl -log elaborate.log 
+Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ReLU_tb_behav xil_defaultlib.ReLU_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.fpMul
-Compiling module xil_defaultlib.fp_add
-Compiling module xil_defaultlib.PE_FC_ANN
-Compiling module xil_defaultlib.PE_FC_ANN_tb
+Compiling module xil_defaultlib.ReLU
+Compiling module xil_defaultlib.ReLU_tb
 Compiling module xil_defaultlib.glbl
 Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot PE_FC_ANN_tb_behav
+Built simulation snapshot ReLU_tb_behav

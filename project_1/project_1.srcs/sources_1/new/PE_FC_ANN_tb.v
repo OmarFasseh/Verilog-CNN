@@ -1,4 +1,5 @@
 //test bench for floating-point addition
+`timescale 1ns / 1ps
 module PE_FC_ANN_tb;
 parameter DATA_WIDTH = 32;
 
@@ -21,7 +22,7 @@ parameter DATA_WIDTH = 32;
          #1 iweight_FC = 32'h42340000;
                 input_fc = 32'h41f00000;
                 start_FC=0;   
-                #250 iweight_FC = 32'h42a00000;
+         #1 iweight_FC = 32'h42a00000;
                                 input_fc = 32'h429e0000;
                                 start_FC=0;  
         #1 $stop;

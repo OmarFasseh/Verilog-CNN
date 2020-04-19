@@ -24,8 +24,7 @@ fpMul fmul(
 .flp_b(iweight_FC),
 .sign(output_tmp_mul[31]),
 .exponent(output_tmp_mul[30:23]),
-.prod(output_tmp_mul[22:0]),
-.clock(clk)
+.prod(output_tmp_mul[22:0])
 );
 
 fp_add fadd(

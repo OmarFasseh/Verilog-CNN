@@ -2,1035 +2,481 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Mon Apr 13 20:15:56 2020
-# Process ID: 17852
+# Start of session at: Sat Apr 18 19:10:34 2020
+# Process ID: 11664
 # Log file: E:/trashCan/Projects/Assign/project_1/vivado.log
 # Journal file: E:/trashCan/Projects/Assign/project_1\vivado.jou
-#-----------------------------------------------------------
-start_gui
+#-----------------------------------------------------------sstart_guioopen_project E:/trashCan/Projects/Assign/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2015.2/data/ip'.open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 722.938 ; gain = 152.129
+close [ open E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU_tb.v w ]
+add_files E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU_tb.v
+set_property top ReLU_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'ReLU_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ReLU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fpMul
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_flp_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_add
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add_flp3_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module weights_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_Layer_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ReLU_tb_behav xil_defaultlib.ReLU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <AF_RELU> not found while processing module instance <test> [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU_tb.v:27]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-99] Step results log file:'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/elaborate.log' file for more information.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 749.563 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'ReLU_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ReLU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fpMul
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_flp_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_add
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add_flp3_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module weights_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_Layer_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ReLU_tb_behav xil_defaultlib.ReLU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ReLU
+Compiling module xil_defaultlib.ReLU_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot ReLU_tb_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 1802515882 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/us..."
+    (file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sat Apr 18 19:23:41 2020...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 749.652 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ReLU_tb_behav -key {Behavioral:sim_1:Functional:ReLU_tb} -tclbatch {ReLU_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source ReLU_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ReLU_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 772.879 ; gain = 23.227
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 777.313 ; gain = 4.434
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'ReLU_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ReLU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fpMul
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_flp_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_add
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add_flp3_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module weights_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_Layer_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ReLU_tb_behav xil_defaultlib.ReLU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ReLU
+Compiling module xil_defaultlib.ReLU_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot ReLU_tb_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 1281692583 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/us..."
+    (file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sat Apr 18 19:26:57 2020...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ReLU_tb_behav -key {Behavioral:sim_1:Functional:ReLU_tb} -tclbatch {ReLU_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source ReLU_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ReLU_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 777.313 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'ReLU_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ReLU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fpMul
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_flp_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_add
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add_flp3_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module weights_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_Layer_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ReLU_tb_behav xil_defaultlib.ReLU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ReLU
+Compiling module xil_defaultlib.ReLU_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot ReLU_tb_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 993587091 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/usa..."
+    (file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sat Apr 18 19:37:32 2020...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ReLU_tb_behav -key {Behavioral:sim_1:Functional:ReLU_tb} -tclbatch {ReLU_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source ReLU_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ReLU_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 794.750 ; gain = 0.000
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'ReLU_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ReLU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fpMul
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_flp_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_add
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add_flp3_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module weights_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_Layer_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU_tb
+ERROR: [VRFC 10-1412] syntax error near end [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU_tb.v:23]
+ERROR: [VRFC 10-1040] module ReLU_tb ignored due to previous errors [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU_tb.v:2]
+ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'ReLU_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ReLU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fpMul
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_flp_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_add
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add_flp3_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module weights_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_Layer_ANN
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ReLU_tb_behav xil_defaultlib.ReLU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ReLU
+Compiling module xil_defaultlib.ReLU_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot ReLU_tb_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 3525166315 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/us..."
+    (file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/ReLU_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sat Apr 18 19:40:44 2020...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ReLU_tb_behav -key {Behavioral:sim_1:Functional:ReLU_tb} -tclbatch {ReLU_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source ReLU_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ReLU_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 803.039 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 803.039 ; gain = 0.000
+close_project
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source E:/trashCan/Projects/Assign/project_1/project_1.hw/webtalk/labtool_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2913672761 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.hw/webtalk/usage_statistics_ext_labtool.xml -html..."
+    (file "E:/trashCan/Projects/Assign/project_1/project_1.hw/webtalk/labtool_webtalk.tcl" line 26)
+INFO: [Common 17-206] Exiting Webtalk at Sat Apr 18 21:50:07 2020...
 open_project E:/trashCan/Projects/Assign/project_1/project_1.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2015.2/data/ip'.
-open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:13 . Memory (MB): peak = 768.566 ; gain = 175.250
-file mkdir E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new
-close [ open E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v w ]
-add_files E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v
-close [ open E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN.v w ]
-add_files E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN.v
-remove_files E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1/fp_add.dcp
-close [ open E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v w ]
-add_files E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v
-remove_files E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN.v
-file delete -force E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN.v
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'add_flp3_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-"xvlog -m64 --relax -prj add_flp3_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fpMul
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mul_flp_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_add
-WARNING: [VRFC 10-1315] redeclaration of ansi port clock is not allowed [E:/trashCan/Projects/Assign/fp_add.v:18]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module add_flp3_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module weights_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ReLU
-ERROR: [VRFC 10-1241] port weightCaches_fc is not defined [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v:8]
-ERROR: [VRFC 10-433] cannot index into non-array output_fc [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v:19]
-ERROR: [VRFC 10-1040] module ReLU ignored due to previous errors [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v:2]
-ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
-set_property top PE_FC_ANN_tb [current_fileset]
+close [ open E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/SingleLayer.v w ]
+add_files E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/SingleLayer.v
+set_property is_global_include true [get_files  E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v]
+set_property top ReLU [current_fileset]
+set_property top_lib xil_defaultlib [current_fileset]
+set_property top_file E:/trashCan/Projects/Assign/FC_Layer_ANN.v [current_fileset]
 reset_run synth_1
-launch_runs impl_1
-[Mon Apr 13 22:01:15 2020] Launched synth_1...
+launch_runs synth_1
+[Sat Apr 18 22:14:04 2020] Launched synth_1...
 Run output will be captured here: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1/runme.log
-[Mon Apr 13 22:01:15 2020] Launched impl_1...
-Run output will be captured here: E:/trashCan/Projects/Assign/project_1/project_1.runs/impl_1/runme.log
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'add_flp3_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-"xvlog -m64 --relax -prj add_flp3_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fpMul
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mul_flp_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_add
-WARNING: [VRFC 10-1315] redeclaration of ansi port clock is not allowed [E:/trashCan/Projects/Assign/fp_add.v:18]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module add_flp3_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module weights_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v:6]
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot add_flp3_tb_behav xil_defaultlib.add_flp3_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.fp_add
-Compiling module xil_defaultlib.add_flp3_tb
-Compiling module xil_defaultlib.glbl
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot add_flp3_tb_behav
-
-****** Webtalk v2015.2 (64-bit)
-  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
-  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/add_flp3_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-
-    while executing
-"webtalk_transmit -clientid 3961820917 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/add_flp3_tb_behav/webtal..."
-    (file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/add_flp3_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
-INFO: [Common 17-206] Exiting Webtalk at Mon Apr 13 22:01:29 2020...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 806.766 ; gain = 0.000
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "add_flp3_tb_behav -key {Behavioral:sim_1:Functional:add_flp3_tb} -tclbatch {add_flp3_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2015.2
-Time resolution is 1 ps
-source add_flp3_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-sign=0, exp_biased=10000001, sum=11101000000000000000000
-sign=0, exp_biased=10000010, sum=10100000000000000000000
-sign=1, exp_biased=10000010, sum=01000000000000000000000
-sign=0, exp_biased=10000001, sum=00000000000000000000000
-sign=1, exp_biased=10000001, sum=00000000000000000000000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'add_flp3_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 807.145 ; gain = 0.379
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-set_property top PE_FC_ANN_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'PE_FC_ANN_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-"xvlog -m64 --relax -prj PE_FC_ANN_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fpMul
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mul_flp_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_add
-WARNING: [VRFC 10-1315] redeclaration of ansi port clock is not allowed [E:/trashCan/Projects/Assign/fp_add.v:18]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module add_flp3_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module weights_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v:6]
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PE_FC_ANN_tb_behav xil_defaultlib.PE_FC_ANN_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port flp_a [E:/trashCan/Projects/Assign/PE_FC_ANN.v:23]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port flp_b [E:/trashCan/Projects/Assign/PE_FC_ANN.v:24]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.fpMul
-Compiling module xil_defaultlib.fp_add
-Compiling module xil_defaultlib.PE_FC_ANN
-Compiling module xil_defaultlib.PE_FC_ANN_tb
-Compiling module xil_defaultlib.glbl
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot PE_FC_ANN_tb_behav
-
-****** Webtalk v2015.2 (64-bit)
-  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
-  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-
-    while executing
-"webtalk_transmit -clientid 3451382645 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webta..."
-    (file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
-INFO: [Common 17-206] Exiting Webtalk at Mon Apr 13 22:07:12 2020...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 829.801 ; gain = 0.000
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "PE_FC_ANN_tb_behav -key {Behavioral:sim_1:Functional:PE_FC_ANN_tb} -tclbatch {PE_FC_ANN_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2015.2
-Time resolution is 1 ps
-source PE_FC_ANN_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'PE_FC_ANN_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 829.801 ; gain = 0.000
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 834.668 ; gain = 0.000
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'PE_FC_ANN_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-"xvlog -m64 --relax -prj PE_FC_ANN_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fpMul
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mul_flp_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_add
-WARNING: [VRFC 10-1315] redeclaration of ansi port clock is not allowed [E:/trashCan/Projects/Assign/fp_add.v:18]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module add_flp3_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module weights_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
-ERROR: [VRFC 10-46] iweight_FC is already declared [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v:8]
-ERROR: [VRFC 10-1040] module PE_FC_ANN_tb ignored due to previous errors [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v:2]
-ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'PE_FC_ANN_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-"xvlog -m64 --relax -prj PE_FC_ANN_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fpMul
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mul_flp_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_add
-WARNING: [VRFC 10-1315] redeclaration of ansi port clock is not allowed [E:/trashCan/Projects/Assign/fp_add.v:18]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module add_flp3_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module weights_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
-ERROR: [VRFC 10-46] iweight_FC is already declared [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v:8]
-ERROR: [VRFC 10-1040] module PE_FC_ANN_tb ignored due to previous errors [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v:2]
-ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'PE_FC_ANN_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-"xvlog -m64 --relax -prj PE_FC_ANN_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fpMul
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mul_flp_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_add
-WARNING: [VRFC 10-1315] redeclaration of ansi port clock is not allowed [E:/trashCan/Projects/Assign/fp_add.v:18]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module add_flp3_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module weights_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v:6]
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PE_FC_ANN_tb_behav xil_defaultlib.PE_FC_ANN_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port output_fc [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v:31]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port flp_a [E:/trashCan/Projects/Assign/PE_FC_ANN.v:23]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port flp_b [E:/trashCan/Projects/Assign/PE_FC_ANN.v:24]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.fpMul
-Compiling module xil_defaultlib.fp_add
-Compiling module xil_defaultlib.PE_FC_ANN
-Compiling module xil_defaultlib.PE_FC_ANN_tb
-Compiling module xil_defaultlib.glbl
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot PE_FC_ANN_tb_behav
-
-****** Webtalk v2015.2 (64-bit)
-  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
-  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-
-    while executing
-"webtalk_transmit -clientid 4121209649 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webta..."
-    (file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
-INFO: [Common 17-206] Exiting Webtalk at Mon Apr 13 22:16:53 2020...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 834.668 ; gain = 0.000
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "PE_FC_ANN_tb_behav -key {Behavioral:sim_1:Functional:PE_FC_ANN_tb} -tclbatch {PE_FC_ANN_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2015.2
-Time resolution is 1 ps
-source PE_FC_ANN_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'PE_FC_ANN_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 834.668 ; gain = 0.000
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 834.668 ; gain = 0.000
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'PE_FC_ANN_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-"xvlog -m64 --relax -prj PE_FC_ANN_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fpMul
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mul_flp_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_add
-WARNING: [VRFC 10-1315] redeclaration of ansi port clock is not allowed [E:/trashCan/Projects/Assign/fp_add.v:18]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module add_flp3_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module weights_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v:6]
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PE_FC_ANN_tb_behav xil_defaultlib.PE_FC_ANN_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port output_fc [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v:32]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port flp_a [E:/trashCan/Projects/Assign/PE_FC_ANN.v:23]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port flp_b [E:/trashCan/Projects/Assign/PE_FC_ANN.v:24]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.fpMul
-Compiling module xil_defaultlib.fp_add
-Compiling module xil_defaultlib.PE_FC_ANN
-Compiling module xil_defaultlib.PE_FC_ANN_tb
-Compiling module xil_defaultlib.glbl
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot PE_FC_ANN_tb_behav
-
-****** Webtalk v2015.2 (64-bit)
-  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
-  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-
-    while executing
-"webtalk_transmit -clientid 251419481 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtal..."
-    (file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
-INFO: [Common 17-206] Exiting Webtalk at Mon Apr 13 22:25:52 2020...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 834.668 ; gain = 0.000
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "PE_FC_ANN_tb_behav -key {Behavioral:sim_1:Functional:PE_FC_ANN_tb} -tclbatch {PE_FC_ANN_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2015.2
-Time resolution is 1 ps
-source PE_FC_ANN_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'PE_FC_ANN_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 834.668 ; gain = 0.000
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 19
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 20
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 21
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 22
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 21
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 22
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 23
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 24
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 25
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 26
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 27
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 29
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 36
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 43
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 52
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 64
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 65
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 69
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 73
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 77
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 19
-step
-Stopped at time : 255 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 255 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 265 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 265 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 275 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 275 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 285 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 285 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 295 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 295 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 305 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 305 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 310 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 310 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 310 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 310 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 310 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 310 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 310 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 315 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 855.160 ; gain = 0.000
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'PE_FC_ANN_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-"xvlog -m64 --relax -prj PE_FC_ANN_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fpMul
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mul_flp_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_add
-WARNING: [VRFC 10-1315] redeclaration of ansi port clock is not allowed [E:/trashCan/Projects/Assign/fp_add.v:18]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module add_flp3_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module weights_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v:6]
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PE_FC_ANN_tb_behav xil_defaultlib.PE_FC_ANN_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port output_fc [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v:32]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port flp_a [E:/trashCan/Projects/Assign/PE_FC_ANN.v:23]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port flp_b [E:/trashCan/Projects/Assign/PE_FC_ANN.v:24]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.fpMul
-Compiling module xil_defaultlib.fp_add
-Compiling module xil_defaultlib.PE_FC_ANN
-Compiling module xil_defaultlib.PE_FC_ANN_tb
-Compiling module xil_defaultlib.glbl
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot PE_FC_ANN_tb_behav
-
-****** Webtalk v2015.2 (64-bit)
-  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
-  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-
-    while executing
-"webtalk_transmit -clientid 3712985186 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webta..."
-    (file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
-INFO: [Common 17-206] Exiting Webtalk at Mon Apr 13 22:30:53 2020...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 855.160 ; gain = 0.000
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "PE_FC_ANN_tb_behav -key {Behavioral:sim_1:Functional:PE_FC_ANN_tb} -tclbatch {PE_FC_ANN_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2015.2
-Time resolution is 1 ps
-source PE_FC_ANN_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'PE_FC_ANN_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 855.160 ; gain = 0.000
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 19
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 20
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 21
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 22
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 21
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 22
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 23
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 24
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 25
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 26
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 27
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 29
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 36
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 43
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 52
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 64
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 65
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 69
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 73
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 77
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 19
-step
-Stopped at time : 255 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 255 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 260 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 265 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 265 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 270 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 275 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 275 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 280 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 285 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 285 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 290 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 295 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 295 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 300 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 305 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 305 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 310 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 310 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 310 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 855.160 ; gain = 0.000
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'PE_FC_ANN_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-"xvlog -m64 --relax -prj PE_FC_ANN_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tuturu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fpMul
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mul_flp_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fp_add
-WARNING: [VRFC 10-1315] redeclaration of ansi port clock is not allowed [E:/trashCan/Projects/Assign/fp_add.v:18]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/fp_add_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module add_flp3_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/PE_FC_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/weights_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module weights_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/FC_Layer_ANN.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/ReLU.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_FC_ANN_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v:6]
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PE_FC_ANN_tb_behav xil_defaultlib.PE_FC_ANN_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port output_fc [E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v:32]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port flp_a [E:/trashCan/Projects/Assign/PE_FC_ANN.v:23]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port flp_b [E:/trashCan/Projects/Assign/PE_FC_ANN.v:24]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/tuturu.v" Line 23. Module fpMul has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.fpMul
-Compiling module xil_defaultlib.fp_add
-Compiling module xil_defaultlib.PE_FC_ANN
-Compiling module xil_defaultlib.PE_FC_ANN_tb
-Compiling module xil_defaultlib.glbl
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot PE_FC_ANN_tb_behav
-
-****** Webtalk v2015.2 (64-bit)
-  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
-  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-
-    while executing
-"webtalk_transmit -clientid 1361879324 -regid "" -xml E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webta..."
-    (file "E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav/xsim.dir/PE_FC_ANN_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
-INFO: [Common 17-206] Exiting Webtalk at Mon Apr 13 22:34:02 2020...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 855.160 ; gain = 0.000
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/trashCan/Projects/Assign/project_1/project_1.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "PE_FC_ANN_tb_behav -key {Behavioral:sim_1:Functional:PE_FC_ANN_tb} -tclbatch {PE_FC_ANN_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2015.2
-Time resolution is 1 ps
-source PE_FC_ANN_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'PE_FC_ANN_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 855.160 ; gain = 0.000
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 19
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 20
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 21
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 22
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/project_1/project_1.srcs/sources_1/new/PE_FC_ANN_tb.v" Line 25
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 15
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 18
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/PE_FC_ANN.v" Line 12
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 82
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/fp_add.v" Line 80
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/tuturu.v" Line 46
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/tuturu.v" Line 47
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/tuturu.v" Line 48
-step
-Stopped at time : 250 ns : File "E:/trashCan/Projects/Assign/tuturu.v" Line 49
-run 10 s
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 855.160 ; gain = 0.000
+reset_run synth_1
+launch_runs synth_1
+[Sat Apr 18 22:15:33 2020] Launched synth_1...
+Run output will be captured here: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1 -noclean_dir 
+launch_runs synth_1
+[Sat Apr 18 22:17:50 2020] Launched synth_1...
+Run output will be captured here: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+[Sat Apr 18 22:26:04 2020] Launched synth_1...
+Run output will be captured here: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1/runme.log
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 13 22:35:56 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 18 23:54:59 2020...

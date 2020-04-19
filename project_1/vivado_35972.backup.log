@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Apr 14 22:00:50 2020
+# Process ID: 35860
+# Log file: E:/trashCan/Projects/Assign/project_1/vivado.log
+# Journal file: E:/trashCan/Projects/Assign/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/trashCan/Projects/Assign/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+ERROR: [Project 1-510] Parsing generated run data failed
+open_project E:/trashCan/Projects/Assign/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+ERROR: [Project 1-510] Parsing generated run data failed
+open_project E:/trashCan/Projects/Assign/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'K:/Year 2 CCE-C/Term 2/Logic 2/Verilog-CNN/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+ERROR: [Project 1-510] Parsing generated run data failed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 14 22:01:31 2020...

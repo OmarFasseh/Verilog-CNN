@@ -5,14 +5,8 @@ wire sign;
 wire [7:0] exponent;
 wire [8:0] exp_sum;
 wire [22:0] prod;
-reg clock;
-//display variables
-//initial
-//$monitor ("sign = %b, exp_biased = %b,prod = %b",sign, exp_sum, prod);
-//apply input vectors
 initial
 begin
-clock=1;
 //+5 x +3 = +15
 // s ----e---- --------------f-------------
 #0 flp_a = 32'b01000000101000000000000000000000;
@@ -50,9 +44,8 @@ flp_b = 32'b01000100010101010100000000000000;
 #10 $stop;
 end
 
-always begin
-    #5  clock = ~clock; // Toggle clock every 5 ticks
-end
+
+
 //instantiate the module into the test bench
 fpMul inst1 (
 .flp_a(flp_a),
