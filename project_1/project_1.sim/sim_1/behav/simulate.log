@@ -1,2 +1,3 @@
 Vivado Simulator 2015.2
 Time resolution is 1 ps
+WARNING: File E:/trashCan/Weights_FC_0_ones referenced on E:/trashCan/Projects/Verilog-CNN/weights_Memory.v at line 30 cannot be opened for reading. Please ensure that this file is available in the current working directory.

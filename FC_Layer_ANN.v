@@ -21,6 +21,7 @@ generate
 	 .clk(clk),.start_FC(start_FC),
 	.output_fc(output_fc[DATA_WIDTH_OUT*i+:DATA_WIDTH_OUT])
 	);
+	
 	end
 endgenerate 
 

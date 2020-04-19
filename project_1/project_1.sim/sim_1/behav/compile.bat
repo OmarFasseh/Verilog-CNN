@@ -1,7 +1,7 @@
 @echo off
 set xv_path=E:\\Xilinx\\Vivado\\2015.2\\bin
-echo "xvlog -m64 --relax -prj ReLU_tb_vlog.prj"
-call %xv_path%/xvlog  -m64 --relax -prj ReLU_tb_vlog.prj -log compile.log
+echo "xvlog -m64 --relax -prj SingleLayer_tb_vlog.prj"
+call %xv_path%/xvlog  -m64 --relax -prj SingleLayer_tb_vlog.prj -log compile.log
 if "%errorlevel%"=="1" goto END
 if "%errorlevel%"=="0" goto SUCCESS
 :END

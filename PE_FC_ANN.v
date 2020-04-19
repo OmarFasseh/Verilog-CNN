@@ -17,7 +17,11 @@ begin
     end else begin 
         output_fc = output_tmp_add;
     end
+    
 end
+
+//always@(input_fc)
+//$stop;
 
 fpMul fmul(
 .flp_a(input_fc),
