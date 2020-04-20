@@ -1,3 +1,9 @@
 Vivado Simulator 2015.2
 Time resolution is 1 ps
-WARNING: Too many words specified in data file E:/trashCan/Inputs_FC_0.txt
+Stopped at time : 2100 ns : File "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 22
+Stopped at time : 2100 ns : File "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 23
+Stopped at time : 2100 ns : File "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 19
+Stopped at time : 2100 ns : File "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 19
+Stopped at time : 2100 ns : File "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 21
+Stopped at time : 2100 ns : File "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 21
+Stopped at time : 2100 ns : File "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 22

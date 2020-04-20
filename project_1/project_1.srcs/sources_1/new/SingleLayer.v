@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
-module SingleLayer(input_fc, clk, start_fc, reset,output_fc_final,test_multi,test_weights,test_output);
+module SingleLayer(input_fc, clk, start_fc, reset,output_fc_final,test_multi,test_weights,test_output,done);
 parameter DATA_WIDTH = 32 ; 
 parameter INPUT_SIZE= 100; //Number of inputs
 parameter OUTPUT_SIZE = 32 ; //Number of outputs
 parameter ADDR_WIDTH = 9 ; 
 parameter file = "E:/trashCan/a.txt";
-input  [(DATA_WIDTH*INPUT_SIZE)-1:0] input_fc;
-input clk, start_fc, reset;
+input  [(DATA_WIDTH*(INPUT_SIZE))-1:0] input_fc;
+input clk, start_fc, reset , done;
 output [(DATA_WIDTH*OUTPUT_SIZE)-1:0] output_fc_final;
 output [(DATA_WIDTH*OUTPUT_SIZE)-1:0] test_multi;
 output reg [(DATA_WIDTH*OUTPUT_SIZE)-1:0] test_weights;
@@ -27,11 +27,14 @@ integer i;
 
 always @ (posedge reset) begin
     i = 0;
+    address_fc = 0;
+    relu_flag = 0;
     //$stop;
 end
-
+always @(posedge done) begin
+    relu_flag = 1;
+end
 always @ (negedge clk) begin
-    address_fc = i;
     read_en_MM = 1;
     enable_MM_out = 1;
     test_weights = weights;
@@ -40,14 +43,21 @@ always @ (negedge clk) begin
 end
 
 always @ (posedge clk) begin
+    if(~reset && ~done)
+        address_fc = address_fc +1;
+     if(done)
+        $stop;
+        
     if(i < INPUT_SIZE) begin
         FC_LAYER_INPUT = input_fc[(i*DATA_WIDTH)+:DATA_WIDTH-1];
         i = i+1;
         relu_flag=0;
-    end else begin
+    end 
+    //if(done) begin
+      //  relu_flag = 1;
         //$stop;
-        relu_flag = 1;
-    end
+           
+    //end
 end
 
 //Weights module to read the weights from the memory

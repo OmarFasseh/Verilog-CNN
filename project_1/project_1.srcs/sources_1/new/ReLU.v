@@ -11,7 +11,7 @@ integer i;
 always@(posedge f_flag)
 begin
         for (i=0; i < parallel_fc_PE; i=i+1) 
-       output_fc[DATA_WIDTH*i +: DATA_WIDTH] = input_fc[DATA_WIDTH*i+ DATA_WIDTH-1] == 1'b1 ? 32'b0 : input_fc[DATA_WIDTH*i +: DATA_WIDTH] ;
+            output_fc[DATA_WIDTH*i +: DATA_WIDTH] = input_fc[DATA_WIDTH*i+ DATA_WIDTH-1] == 1'b1 ? 32'b0 : input_fc[DATA_WIDTH*i +: DATA_WIDTH] ;
 end
 
 
