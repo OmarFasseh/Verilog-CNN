@@ -13,22 +13,21 @@ parameter DATA_WIDTH = 32;
     begin
         start_FC=1;
         clock = 0;
-        $stop;
-        #2 start_FC = 0;
+        #1 start_FC = 0;
         iweight_FC = 32'hbb0fc453;
         input_fc = 32'h3a8ea4f3;
-        #2 iweight_FC = 32'h41a00000; //20 
+        #1 iweight_FC = 32'h41a00000; //20 
         input_fc = 32'h40a00000; //5
-        #4 iweight_FC = 32'h42340000;
+        #1 iweight_FC = 32'h42340000;
         input_fc = 32'h41f00000;  
-        #4 iweight_FC = 32'h42a00000;
+        #1 iweight_FC = 32'h42a00000;
         input_fc = 32'h429e0000;
-        #4 $stop;
+        #2 $stop;
     end
 always begin
         // Toggle clock every 5 ticks :(
-     #3  clock = ~clock;
-     #1  clock = ~clock; 
+     #0.5  clock = ~clock;
+     #0.5  clock = ~clock; 
     end
     PE_FC_ANN PE_FC_ANN1 ( //instantiate the module
     .input_fc(input_fc),
