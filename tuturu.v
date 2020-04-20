@@ -11,6 +11,7 @@ clk
 //regs and wires
 wire [31:0] flp_a, flp_b;
 wire clk;
+
 reg sign;
 reg [7:0] exponent;
 reg [8:0] exp_sum;
@@ -30,9 +31,8 @@ begin
         sign = flp_a[31] ^ flp_b[31];
         if(product[47] ==1) begin
             prod = product[46:24];
-         end else begin
+        end else begin
             prod = product[45:23];
-         end
-        
+        end        
 end
 endmodule
