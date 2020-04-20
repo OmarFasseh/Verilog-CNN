@@ -6,10 +6,10 @@ parameter OUTPUT_SIZE_1 = 32 ; //Number of outputs layer 1|| inputs for layer 2
 parameter OUTPUT_SIZE_2 = 10 ; //Number of outputs layer 2|| inputs for layer 3
 parameter OUTPUT_SIZE_3 = 4 ; //Number of outputs layer 3
 parameter ADDR_WIDTH = 9 ; 
-parameter file1 = "C:/Users/DELL/Desktop/Logic-2/Assign/Verilog-CNN/txts/Weights_FC_0_ones.txt";
-parameter file2 = "C:/Users/DELL/Desktop/Logic-2/Assign/Verilog-CNN/txts/Weights_FC_1_ones.txt";
-parameter file3 = "C:/Users/DELL/Desktop/Logic-2/Assign/Verilog-CNN/txts/Weights_FC_2_ones.txt";
-parameter inputs_file_0 = "C:/Users/DELL/Desktop/Logic-2/Assign/Verilog-CNN/txts/Inputs_FC_0.txt";
+parameter file1 = "E:/VivadoFiles/Weights_FC_0_ones.txt";
+parameter file2 = "E:/VivadoFiles/Weights_FC_1_ones.txt";
+parameter file3 = "E:/VivadoFiles/Weights_FC_2_ones.txt";
+parameter inputs_file_0 = "E:/VivadoFiles/Inputs_FC_0.txt";
 
 reg  [DATA_WIDTH*INPUT_SIZE-1:0] input_fc;
 reg clk, start_fc_1,start_fc_2,start_fc_3 , reset, done_1, done_2, done_3;
@@ -52,18 +52,25 @@ initial //apply input vectors
     #1000 done_1 = 1;
     assign output_fc_buffer_1=output_fc_layer_1;
     
-    #10;
+    #20;
      reset=1; 
      start_fc_2=1;
      #20; //16 works 15 doesn't
      reset =0;
      start_fc_2=0;
      
-     #1000 done_2 = 1;
-     $stop;
+     #320 done_2 = 1;
      assign output_fc_buffer_2=output_fc_layer_2;
-    #1000 $stop;
+    #20;
+    reset=1; 
+    start_fc_3=1;
+    #20; //16 works 15 doesn't
+    reset =0;
+    start_fc_3=0;
+    #100 done_3 = 1;
     
+    #10 $stop;
+              
     end
     
     always begin

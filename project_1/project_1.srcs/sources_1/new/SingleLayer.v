@@ -45,8 +45,8 @@ end
 always @ (posedge clk) begin
     if(~reset && ~done)
         address_fc = address_fc +1;
-     //if(done)
-        //$stop;
+   //  if(done&&INPUT_SIZE==32)
+    //    $stop;
         
     if(i < INPUT_SIZE) begin
         FC_LAYER_INPUT = input_fc[(i*DATA_WIDTH)+:DATA_WIDTH-1];
@@ -61,8 +61,7 @@ always @ (posedge clk) begin
 end
 
 //Weights module to read the weights from the memory
-weights_Memory #(.parallel_fc_PE(OUTPUT_SIZE),
-.file(file))
+weights_Memory #(.parallel_fc_PE(OUTPUT_SIZE),.file(file),.fc_columns(INPUT_SIZE),.tot_weight_size(INPUT_SIZE*OUTPUT_SIZE))
 wm(.clk(clk),
 .address_fc(address_fc),
 .read_en_MM_fc(read_en_MM) ,
@@ -70,7 +69,8 @@ wm(.clk(clk),
 .enable_MM_out_fc(enable_MM_out));
 
 //The FC_LAYER responsible to multiply x by their weights and accumalate
-FC_Layer_ANN FC(.input_fc(FC_LAYER_INPUT),
+FC_Layer_ANN #(.parallel_fc_PE(OUTPUT_SIZE),.DATA_WIDTH(DATA_WIDTH))
+FC(.input_fc(FC_LAYER_INPUT),
 .weightCaches_fc(weights),
 .clk(clk),
 .start_FC(start_fc),
@@ -78,6 +78,7 @@ FC_Layer_ANN FC(.input_fc(FC_LAYER_INPUT),
 .test_multi(test_multi)); //inside loop
 
 //ReLu to call when done calculating
-ReLU relu(.input_fc(output_fc) ,.output_fc(output_fc_final),.f_flag(relu_flag));
+ReLU #(.parallel_fc_PE(OUTPUT_SIZE),.DATA_WIDTH(DATA_WIDTH))
+relu(.input_fc(output_fc) ,.output_fc(output_fc_final),.f_flag(relu_flag));
 
 endmodule
