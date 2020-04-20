@@ -5,7 +5,7 @@ Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 1. Module weights_Memory(parallel_fc_PE=32,file="E:/trashCan/Weights_FC_0_ones") doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 1. Module weights_Memory(parallel_fc_PE=32,file="E:/trashCan/Weights_FC_0_ones.txt") doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
@@ -70,7 +70,7 @@ WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. M
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 1. Module weights_Memory(parallel_fc_PE=32,file="E:/trashCan/Weights_FC_0_ones") doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 1. Module weights_Memory(parallel_fc_PE=32,file="E:/trashCan/Weights_FC_0_ones.txt") doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
@@ -143,7 +143,7 @@ Compiling module xil_defaultlib.fp_add
 Compiling module xil_defaultlib.PE_FC_ANN
 Compiling module xil_defaultlib.FC_Layer_ANN_default
 Compiling module xil_defaultlib.ReLU
-Compiling module xil_defaultlib.SingleLayer(INPUT_SIZE=100,file=...
+Compiling module xil_defaultlib.SingleLayer(INPUT_SIZE=99,file="...
 Compiling module xil_defaultlib.SingleLayer_tb
 Compiling module xil_defaultlib.glbl
 Waiting for 2 sub-compilation(s) to finish...

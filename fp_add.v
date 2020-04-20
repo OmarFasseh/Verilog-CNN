@@ -1,7 +1,9 @@
 module fp_add (
 input [31:0] A_FP, 
-input [31:0] B_FP, 
+input [31:0] B_FP,
+input clk, 
 output reg       sign, 
+output reg       done, 
 output reg [7:0] exponent, 
 output reg [22:0] mantissa);
 
@@ -14,9 +16,10 @@ reg [7:0] shift_cnt;
 reg cout;
 reg [5:0] i;
 
-always @ (B_FP)
+always @ (negedge clk)
 begin
-	sign_a  = A_FP [31];
+    done = 0;
+	sign_a  = A_FP [31]; 
 	sign_b  = B_FP [31];
 	e_A      = A_FP [30:23];
 	e_B      = B_FP [30:23];
@@ -78,6 +81,7 @@ begin
     exponent = e_B; 
 
 	   exponent  = e_B;
+	    done= 1;
 end
 
 endmodule

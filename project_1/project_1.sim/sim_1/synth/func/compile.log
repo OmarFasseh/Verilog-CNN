@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Verilog-CNN/project_1/project_1.sim/sim_1/synth/func/SingleLayer_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ReLU
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/trashCan/Projects/Verilog-CNN/project_1/project_1.sim/sim_1/synth/func/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/trashCan/Projects/Verilog-CNN/project_1/project_1.sim/sim_1/synth/func/glbl.v:6]

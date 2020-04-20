@@ -21,7 +21,7 @@ begin
         if (enable_MM_out_fc)
              dataMainMemo_fc[k*DATA_WIDTH+:DATA_WIDTH] <= read_en_MM_fc ? mem[fc_columns*k+address_fc] : 32'b0;
         else 
-             dataMainMemo_fc[k*DATA_WIDTH+:DATA_WIDTH]<=8192'bZ;
+             dataMainMemo_fc[k*DATA_WIDTH+:DATA_WIDTH] <= 8192'bZ;
     end
     //$stop;
 end

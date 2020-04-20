@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module SingleLayer(input_fc, clk, start_fc, reset, output_fc_final);
+module SingleLayer(input_fc, clk, start_fc, reset,output_fc_final,test_multi,test_weights,test_output);
 parameter DATA_WIDTH = 32 ; 
 parameter INPUT_SIZE= 100; //Number of inputs
 parameter OUTPUT_SIZE = 32 ; //Number of outputs
@@ -8,6 +8,9 @@ parameter file = "E:/trashCan/a.txt";
 input  [(DATA_WIDTH*INPUT_SIZE)-1:0] input_fc;
 input clk, start_fc, reset;
 output [(DATA_WIDTH*OUTPUT_SIZE)-1:0] output_fc_final;
+output [(DATA_WIDTH*OUTPUT_SIZE)-1:0] test_multi;
+output reg [(DATA_WIDTH*OUTPUT_SIZE)-1:0] test_weights;
+output reg [(DATA_WIDTH*OUTPUT_SIZE)-1:0] test_output;
 
 reg [ADDR_WIDTH-1:0] address_fc; 
 reg read_en_MM;
@@ -31,6 +34,9 @@ always @ (negedge clk) begin
     address_fc = i;
     read_en_MM = 1;
     enable_MM_out = 1;
+    test_weights = weights;
+    test_output = output_fc;
+    //$stop;
 end
 
 always @ (posedge clk) begin
@@ -58,7 +64,8 @@ FC_Layer_ANN FC(.input_fc(FC_LAYER_INPUT),
 .weightCaches_fc(weights),
 .clk(clk),
 .start_FC(start_fc),
-.output_fc(output_fc)); //inside loop
+.output_fc(output_fc),
+.test_multi(test_multi)); //inside loop
 
 //ReLu to call when done calculating
 ReLU relu(.input_fc(output_fc) ,.output_fc(output_fc_final),.f_flag(relu_flag));
