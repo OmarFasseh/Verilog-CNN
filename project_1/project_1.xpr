@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="E:/trashCan/Projects/Verilog-CNN/project_1/project_1.xpr">
+<Project Version="7" Minor="5" Path="C:/Users/DELL/Desktop/Logic-2/Assign/New folder/Verilog-CNN/project_1/project_1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="0bd8e4f971914d9c91763b877ea9f543"/>
@@ -136,7 +136,7 @@
         <Option Name="TopModule" Val="Pipeline_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="SrcSet" Val="sources_1"/>
-        <Option Name="xsim.simulate.runtime" Val="3000ns"/>
+        <Option Name="xsim.simulate.runtime" Val="4000ns"/>
         <Option Name="NLNetlistMode" Val="funcsim"/>
       </Config>
     </FileSet>
