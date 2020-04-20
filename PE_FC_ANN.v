@@ -25,12 +25,11 @@ begin
     end
     
 end
-always@ (done)
+always@ (posedge done)
 begin
     if (start_FC==0) begin 
         output_fc = output_tmp_add;
         test_multi = output_tmp_mul;
-        $stop;
     end
 end
 
