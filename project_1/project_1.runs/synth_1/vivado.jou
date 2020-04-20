@@ -2,9 +2,9 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sat Apr 18 22:26:08 2020
-# Process ID: 3900
-# Log file: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1/ReLU.vds
-# Journal file: E:/trashCan/Projects/Assign/project_1/project_1.runs/synth_1\vivado.jou
+# Start of session at: Mon Apr 20 19:36:36 2020
+# Process ID: 9616
+# Log file: E:/trashCan/Projects/Verilog-CNN/project_1/project_1.runs/synth_1/SingleLayer.vds
+# Journal file: E:/trashCan/Projects/Verilog-CNN/project_1/project_1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source ReLU.tcl -notrace
+source SingleLayer.tcl -notrace

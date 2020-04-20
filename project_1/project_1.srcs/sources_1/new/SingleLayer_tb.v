@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 module SingleLayer_tb;
 parameter DATA_WIDTH = 32 ; 
-parameter INPUT_SIZE= 100; //Number of inputs
-parameter OUTPUT_SIZE = 32 ; //Number of outputs
+parameter INPUT_SIZE= 32; //Number of inputs
+parameter OUTPUT_SIZE = 10 ; //Number of outputs
 parameter ADDR_WIDTH = 9 ; 
 parameter file = "E:/VivadoFiles/Weights_FC_0_ones.txt";
 parameter inputs_file_0 = "E:/VivadoFiles/Inputs_FC_0.txt";
@@ -24,14 +24,14 @@ reg [DATA_WIDTH-1:0] inputs_mem [0:INPUT_SIZE-1] ; // inputs_mem[0] --> 32bit
     start_fc=1;
     clk = 0;
     done =0; 
-    #1100;
+    #20; //16 works 15 doesn't
     reset =0;
     start_fc=0;
     #1000 done = 1;
     #10 $stop;
     end
     always begin
-        #5  clk = ~clk; // Toggle clock every 5 ticks :(
+        #5  clk = ~clk; // Toggle clock every 5 ticks 
      end
 SingleLayer #(.INPUT_SIZE(INPUT_SIZE), .file(file))//instantiate the module                                                     
 SL( .input_fc(input_fc),

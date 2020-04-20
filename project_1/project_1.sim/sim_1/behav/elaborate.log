@@ -3,9 +3,13 @@ Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
 Running: E:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SingleLayer_tb_behav xil_defaultlib.SingleLayer_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 320 differs from formal bit length 1024 for port weightCaches_fc [E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/SingleLayer.v:74]
+WARNING: [VRFC 10-278] actual bit length 320 differs from formal bit length 1024 for port output_fc [E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/SingleLayer.v:77]
+WARNING: [VRFC 10-278] actual bit length 320 differs from formal bit length 1024 for port test_multi [E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/SingleLayer.v:78]
+WARNING: [VRFC 10-278] actual bit length 320 differs from formal bit length 1024 for port input_fc [E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/SingleLayer.v:81]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 1. Module weights_Memory(parallel_fc_PE=32,file="E:/VivadoFiles/Weights_FC_0_ones.txt") doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 1. Module weights_Memory(parallel_fc_PE=10,file="E:/VivadoFiles/Weights_FC_0_ones.txt") doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
@@ -50,101 +54,3 @@ WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. M
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/weights_Memory.v" Line 1. Module weights_Memory(parallel_fc_PE=32,file="E:/VivadoFiles/Weights_FC_0_ones.txt") doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/PE_FC_ANN.v" Line 1. Module PE_FC_ANN doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/trashCan/Projects/Verilog-CNN/fp_add.v" Line 1. Module fp_add doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.weights_Memory(parallel_fc_PE=32...
-Compiling module xil_defaultlib.fpMul
-Compiling module xil_defaultlib.fp_add
-Compiling module xil_defaultlib.PE_FC_ANN
-Compiling module xil_defaultlib.FC_Layer_ANN_default
-Compiling module xil_defaultlib.ReLU
-Compiling module xil_defaultlib.SingleLayer(INPUT_SIZE=100,file=...
-Compiling module xil_defaultlib.SingleLayer_tb
-Compiling module xil_defaultlib.glbl
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot SingleLayer_tb_behav
