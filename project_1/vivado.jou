@@ -2,54 +2,10 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Mon Apr 20 21:02:28 2020
-# Process ID: 19096
+# Start of session at: Mon Apr 20 23:06:58 2020
+# Process ID: 17768
 # Log file: E:/trashCan/Projects/Verilog-CNN/project_1/vivado.log
 # Journal file: E:/trashCan/Projects/Verilog-CNN/project_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project E:/trashCan/Projects/Verilog-CNN/project_1/project_1.xpr
-launch_simulation
-source Pipeline_tb.tcl
-run 400 us
-launch_simulation
-source Pipeline_tb.tcl
-run 400 us
-close_sim
-launch_simulation
-source Pipeline_tb.tcl
-run 400 us
-launch_simulation
-source Pipeline_tb.tcl
-run 400 us
-run 400 us
-run 400 us
-run 400 us
-launch_simulation
-source Pipeline_tb.tcl
-run 400 us
-run 400 us
-run 400 us
-run 400 us
-launch_simulation
-source Pipeline_tb.tcl
-run 400 us
-close_sim
-launch_simulation
-source Pipeline_tb.tcl
-run 400 us
-launch_simulation
-source Pipeline_tb.tcl
-run 400 us
-close_sim
-launch_simulation
-source Pipeline_tb.tcl
-launch_simulation
-source Pipeline_tb.tcl
-close_sim
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
