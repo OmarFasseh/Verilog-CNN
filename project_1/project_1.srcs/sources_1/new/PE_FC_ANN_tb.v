@@ -9,21 +9,20 @@ parameter DATA_WIDTH = 32;
     wire [DATA_WIDTH-1:0] output_fc;
     wire [DATA_WIDTH-1:0] test_multi;
 
-   
     initial //apply input vectors
     begin
-     clock = 0;
-       
-        #0 iweight_FC = 32'hbb0fc453;
-           input_fc = 32'h3a8ea4f3;
-            start_FC=1;
-         #2 iweight_FC = 32'h41a00000; //20 
-              input_fc = 32'h40a00000; //5
-              start_FC=0;
-         #4 iweight_FC = 32'h42340000;
-                input_fc = 32'h41f00000;  
-         #4 iweight_FC = 32'h42a00000;
-            input_fc = 32'h429e0000;
+        start_FC=1;
+        clock = 0;
+        $stop;
+        #2 start_FC = 0;
+        iweight_FC = 32'hbb0fc453;
+        input_fc = 32'h3a8ea4f3;
+        #2 iweight_FC = 32'h41a00000; //20 
+        input_fc = 32'h40a00000; //5
+        #4 iweight_FC = 32'h42340000;
+        input_fc = 32'h41f00000;  
+        #4 iweight_FC = 32'h42a00000;
+        input_fc = 32'h429e0000;
         #4 $stop;
     end
 always begin
