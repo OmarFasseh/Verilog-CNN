@@ -79,9 +79,7 @@ begin
     end
     mantissa = fract_c[22:0];
     exponent = e_B; 
-
-	   exponent  = e_B;
-	    done= 1;
+	done = 1;
 end
 
 endmodule
