@@ -18,7 +18,6 @@ reg [5:0] i;
 
 always @ (negedge clk)
 begin
-    done = 0;
 	sign_a  = A_FP [31]; 
 	sign_b  = B_FP [31];
 	e_A      = A_FP [30:23];
@@ -81,5 +80,8 @@ begin
     exponent = e_B; 
 	done = 1;
 end
+
+always@(posedge clk)
+    done = 0;
 
 endmodule
