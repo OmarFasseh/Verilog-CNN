@@ -2,14 +2,14 @@
 # Webtalk v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Tue Apr 21 18:40:56 2020
-# Process ID: 8012
+# Start of session at: Tue Apr 21 18:10:58 2020
+# Process ID: 7424
 # Log file: E:/trashCan/Projects/Verilog-CNN/project_1/project_1.sim/sim_1/behav/webtalk.log
 # Journal file: E:/trashCan/Projects/Verilog-CNN/project_1/project_1.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
 source E:/trashCan/Projects/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/Pipeline_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 
     while executing
-"webtalk_transmit -clientid 91683045 -regid "" -xml E:/trashCan/Projects/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/Pipeline_tb_behav/web..."
-    (file "E:/trashCan/Projects/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/Pipeline_tb_behav/webtalk/xsim_webtalk.tcl" line 32)
-INFO: [Common 17-206] Exiting Webtalk at Tue Apr 21 18:40:58 2020...
+"webtalk_transmit -clientid 855933714 -regid "" -xml E:/trashCan/Projects/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/Pipeline_tb_behav/we..."
+    (file "E:/trashCan/Projects/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/Pipeline_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Tue Apr 21 18:11:03 2020...

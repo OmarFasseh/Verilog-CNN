@@ -37,7 +37,7 @@ initial //apply input vectors
     $readmemh(inputs_file_0, inputs_mem);
     for( i = 0;i <INPUT_SIZE;i=i+1)
         input_fc[i*DATA_WIDTH+:DATA_WIDTH] = inputs_mem[i];
-   reset=0;
+    reset=0;
     #1 reset=1; 
     start_fc_1=1;
     start_fc_2=1;
@@ -46,35 +46,31 @@ initial //apply input vectors
     done_1 =0;
     done_2 =0;
     done_3 =0; 
-    #20; //16 works 15 doesn't
+    #20;
     reset =0;
     start_fc_1=0;
     #1000 done_1 = 1;
     assign output_fc_buffer_1=output_fc_layer_1;
     
-    #20;
-     reset=1; 
-     start_fc_2=1;
-     #20; //16 works 15 doesn't
-     reset =0;
-     start_fc_2=0;
-     
-     #320 done_2 = 1;
-     assign output_fc_buffer_2=output_fc_layer_2;
-    #20;
-    reset=1; 
+    #20 reset=1; 
+    start_fc_2=1;
+
+    #20 reset =0;
+    start_fc_2=0;
+    
+    #320 done_2 = 1;
+    assign output_fc_buffer_2=output_fc_layer_2;
+    #20 reset=1; 
     start_fc_3=1;
-    #20; //16 works 15 doesn't
-    reset =0;
+    #20 reset =0;
     start_fc_3=0;
     #100 done_3 = 1;
-   assign input1_final_ans=output_fc_layer_3;
-   // #10 $stop;
+    assign input1_final_ans=output_fc_layer_3;
               
     end   
     always begin
         #5  clk = ~clk; // Toggle clock every 5 ticks 
-     end
+    end
 SingleLayer #(.INPUT_SIZE(INPUT_SIZE), .file(file1), .OUTPUT_SIZE(OUTPUT_SIZE_1))//instantiate the module                                                     
 SL1( .input_fc(input_fc),
     .clk(clk),

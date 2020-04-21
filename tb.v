@@ -53,8 +53,8 @@ end
 
 
 always begin
-         #1  clock = ~clock; 
-        end
+     #1  clock = ~clock; 
+    end
         
 //instantiate the module into the test bench
 fpMul inst1 (

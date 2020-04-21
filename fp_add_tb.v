@@ -6,8 +6,7 @@ module add_flp3_tb;
     wire [7:0] exp_C;
     wire [22:0] mantissa_C;
     initial //display variables
-    $monitor ("sign=%b, exp_biased=%b, sum=%b",
-    sign_C, exp_C, mantissa_C);
+    $monitor ("sign=%b, exp_biased=%b, sum=%b",sign_C, exp_C, mantissa_C);
     
     initial //apply input vectors
     begin

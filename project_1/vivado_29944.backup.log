@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Apr 21 16:32:36 2020
+# Process ID: 30908
+# Log file: E:/trashCan/Projects/Verilog-CNN/project_1/vivado.log
+# Journal file: E:/trashCan/Projects/Verilog-CNN/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/trashCan/Projects/Verilog-CNN/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/DELL/Desktop/Logic-2/Assign/New folder/Verilog-CNN/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 752.023 ; gain = 153.172
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 21 18:04:27 2020...

@@ -3,8 +3,8 @@ module FC_Layer_ANN(
 input_fc,weightCaches_fc, clk,start_FC,output_fc,test_multi
 );
 
-parameter DATA_WIDTH = 32 ; //float
-parameter parallel_fc_PE= 32; //number of cols
+parameter DATA_WIDTH = 32 ; //ieee float = 32
+parameter parallel_fc_PE= 32; //number of outputs (cols)
 parameter DATA_WIDTH_OUT = 32 ; //float
 input [DATA_WIDTH-1:0] input_fc;
 input start_FC, clk;
@@ -13,7 +13,7 @@ output [(parallel_fc_PE*DATA_WIDTH_OUT )-1:0]output_fc;
 output [(parallel_fc_PE*DATA_WIDTH_OUT )-1:0]test_multi;
 
 genvar i;
-generate 
+generate  //generate the parallel processing elements
 	for (i=0; i < parallel_fc_PE; i=i+1) 
 	begin :PE 
 	PE_FC_ANN PEs (

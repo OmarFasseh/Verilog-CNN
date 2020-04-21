@@ -1,6 +1,4 @@
-module PE_FC_ANN 
-( input_fc,iweight_FC,clk,start_FC,output_fc,test_multi
- );
+module PE_FC_ANN ( input_fc,iweight_FC,clk,start_FC,output_fc,test_multi);
 parameter DATA_WIDTH = 32;
 input [DATA_WIDTH-1:0]       input_fc ;
 input [DATA_WIDTH-1:0]      iweight_FC; 

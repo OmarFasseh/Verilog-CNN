@@ -8,22 +8,16 @@ wire [(parallel_fc_PE*DATA_WIDTH)-1 : 0] output_fc;
 
 
 initial
-begin
+    begin
+        flag =0;
+        #0 input_fc= 64'b0100001000010000000000000000000011000010110001100000000000000000;
+            flag = 1 ;
 
-flag =0;
-#0 input_fc= 64'b0100001000010000000000000000000011000010110001100000000000000000;
-flag = 1 ;
+        #20 flag = 0;
 
-#20 flag = 0;
-
-#20 input_fc =64'b0100001000010000000000000000111111000010110001100100000000000111; 
-flag = 1;
-
-#20 $stop;
-
-
-
-end
-
-ReLU test (.input_fc(input_fc) ,.output_fc(output_fc),.f_flag(flag));
+        #20 input_fc =64'b0100001000010000000000000000111111000010110001100100000000000111; 
+            flag = 1;
+        #20 $stop;
+    end
+    ReLU test (.input_fc(input_fc) ,.output_fc(output_fc),.f_flag(flag));
 endmodule

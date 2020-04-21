@@ -12,23 +12,24 @@ wire [DATA_WIDTH*OUTPUT_SIZE-1:0] output_fc_final;
 wire [(DATA_WIDTH*OUTPUT_SIZE)-1:0] test_multi;
 wire [(DATA_WIDTH*OUTPUT_SIZE)-1:0] test_weights;
 wire [(DATA_WIDTH*OUTPUT_SIZE)-1:0] test_output;
+reg [DATA_WIDTH-1:0] inputs_mem [0:INPUT_SIZE-1]; 
 
-reg [DATA_WIDTH-1:0] inputs_mem [0:INPUT_SIZE-1] ; // inputs_mem[0] --> 32bit
     integer i;
-    initial //apply input vectors
+    initial 
     begin
-    $readmemh(inputs_file_0, inputs_mem); // memory_list is memory file
+    $readmemh(inputs_file_0, inputs_mem); 
     for( i = 0;i <INPUT_SIZE;i=i+1)
         input_fc[i*DATA_WIDTH+:DATA_WIDTH] = inputs_mem[i];
     reset=0; 
-    #1 reset = 1;
-    start_fc=1;
-    clk = 0;
-    done =0; 
-    #20; //16 works 15 doesn't
-    reset =0;
-    start_fc=0;
+    #1  reset = 1;
+        start_fc=1;
+        clk = 0;
+        done =0; 
+    
+    #20 reset =0;
+        start_fc=0;
     #1000 done = 1;
+    
     #10 $stop;
     end
     always begin

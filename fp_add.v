@@ -1,3 +1,4 @@
+//ieee adder module
 module fp_add (
 input [31:0] A_FP, 
 input [31:0] B_FP,
@@ -39,23 +40,23 @@ begin
 	   e_B  = e_B + shift_cnt;
    end 
 	//add fractions
-	if(sign_a==sign_b) begin
-           sign  = sign_a;
+	if(sign_a==sign_b) begin    //if both numbers have the same sign add them
+           sign  = sign_a;      //sign = any sign doesn't matter
 	       {cout, fract_c}  = fract_a + fract_b;
-	       if (cout)
+	       if (cout)            //if there is carry shift and increment the exp
                begin
                    {cout, fract_c}  = {cout, fract_c} >> 1;
                    e_B  = e_B + 1;
                end
          mantissa  = fract_c[22:0];
-	 end else if(sign_a) begin
+	 end else if(sign_a) begin  //if a is negative 
            {cout, fract_c}  =fract_b - fract_a;
            if(fract_a > fract_b) begin
                 sign = 1'b1;
                 fract_c = -fract_c;
            end else 
                 sign =1'b0;
-	 end else begin
+	 end else begin             //if b is negative
 	         {cout, fract_c}  =fract_a - fract_b;
              if(fract_b > fract_a) begin
                      sign = 1'b1;
@@ -64,14 +65,14 @@ begin
                      sign =1'b0;
                  
 	 end
-	//normalize result
-    if(fract_a == fract_b && sign_a != sign_b) begin
+	
+    if(fract_a == fract_b && sign_a != sign_b) begin // handel the case of zero 
         sign= 1'b0;
         e_B = 0;
-        fract_c[23] = 1;
+        fract_c[23] = 1; //the one will be removed
         fract_c[22:0] = 22'b0;
     end
-    
+    //normalize result
     for(i = 0; i < 23 && fract_c[23]==0; i=i+1) begin
         fract_c = fract_c << 1;
         e_B = e_B-1'b1; 
@@ -82,6 +83,6 @@ begin
 end
 
 always@(posedge clk)
-    done = 0;
+    done = 0; 
 
 endmodule

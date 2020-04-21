@@ -25,39 +25,31 @@ wire reset;
 
 integer i;
 
-always @ (posedge reset) begin
+always @ (posedge reset) begin //initial values
     i = 0;
     address_fc = 0;
     relu_flag = 0;
-    //$stop;
 end
-always @(posedge done) begin
+always @(posedge done) begin //start the relu
     relu_flag = 1;
 end
-always @ (negedge clk) begin
+always @ (negedge clk) begin  
     read_en_MM = 1;
     enable_MM_out = 1;
     test_weights = weights;
     test_output = output_fc;
-    //$stop;
 end
 
-always @ (posedge clk) begin
-    if(~reset && ~done)
+always @ (posedge clk) begin 
+    if(~reset && ~done) //increment the  memory address if running
         address_fc = address_fc +1;
-   //  if(done&&INPUT_SIZE==32)
-    //    $stop;
         
-    if(i < INPUT_SIZE) begin
+    if(i < INPUT_SIZE) begin //looping input fc
         FC_LAYER_INPUT = input_fc[(i*DATA_WIDTH)+:DATA_WIDTH-1];
         i = i+1;
         relu_flag=0;
     end 
-    //if(done) begin
-      //  relu_flag = 1;
-        //$stop;
            
-    //end
 end
 
 //Weights module to read the weights from the memory

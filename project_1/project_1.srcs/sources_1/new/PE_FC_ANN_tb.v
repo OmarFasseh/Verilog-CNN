@@ -25,9 +25,9 @@ parameter DATA_WIDTH = 32;
         #2 $stop;
     end
 always begin
-        // Toggle clock every 5 ticks :(
-     #0.5  clock = ~clock;
-     #0.5  clock = ~clock; 
+    // Toggle clock every 5 ticks 
+    #0.5  clock = ~clock;
+    #0.5  clock = ~clock; 
     end
     PE_FC_ANN PE_FC_ANN1 ( //instantiate the module
     .input_fc(input_fc),
