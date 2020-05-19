@@ -38,7 +38,7 @@ module add_flp3_tb;
          #1  clock = ~clock; 
         end
     
-    fp_add fp_add1 ( //instantiate the module
+    fp_add_2 fp_add1 ( //instantiate the module
     .A_FP(A),
     .B_FP(B),
     .sign(sign_C),
