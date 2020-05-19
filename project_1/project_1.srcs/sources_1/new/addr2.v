@@ -1,32 +1,35 @@
 module fp_add_2 (
-input [31:0] A_FP, 
-input [31:0] B_FP,
+input [EXPONENT_WIDTH+MANISSA_WIDTH:0] A_FP, 
+input [EXPONENT_WIDTH+MANISSA_WIDTH:0] B_FP,
 input clk, 
 output reg       sign, 
 output reg	done,
-output reg [7:0] exponent, 
-output reg [22:0] mantissa);
+output reg [EXPONENT_WIDTH-1:0] exponent, 
+output reg [MANISSA_WIDTH-1:0] mantissa);
+
+parameter EXPONENT_WIDTH = 8;
+parameter MANISSA_WIDTH = 23;
 
 //variables used in an always block
 //are declared as registers
 reg sign_a, sign_b,sign_c;
-reg [7:0] e_A, e_B;
-reg [23:0] fract_a, fract_b,fract_c;//frac = 1 . mantissa 
-reg [7:0] shift_cnt;
+reg [EXPONENT_WIDTH-1:0] e_A, e_B;
+reg [MANISSA_WIDTH:0] fract_a, fract_b,fract_c;//frac = 1 . mantissa 
+reg [EXPONENT_WIDTH-1:0] shift_cnt;
 reg cout;
-reg [7:0] tmp_e;
-reg [23:0] tmp_fract;
+reg [EXPONENT_WIDTH-1:0] tmp_e;
+reg [MANISSA_WIDTH:0] tmp_fract;
 reg tmp_sign;
 reg [5:0] i;
 
 always @ (negedge clk)
 begin
-	sign_a  = A_FP [31];
-	sign_b  = B_FP [31];
-	e_A      = A_FP [30:23];
-	e_B      = B_FP [30:23];
-	fract_a  = {1'b1,A_FP [22:0]};
-	fract_b  = {1'b1,B_FP [22:0]};
+	sign_a  = A_FP [EXPONENT_WIDTH+MANISSA_WIDTH];
+	sign_b  = B_FP [EXPONENT_WIDTH+MANISSA_WIDTH];
+	e_A      = A_FP [EXPONENT_WIDTH+MANISSA_WIDTH-1:MANISSA_WIDTH];
+	e_B      = B_FP [EXPONENT_WIDTH+MANISSA_WIDTH-1:MANISSA_WIDTH];
+	fract_a  = {1'b1,A_FP [MANISSA_WIDTH-1:0]};
+	fract_b  = {1'b1,B_FP [MANISSA_WIDTH-1:0]};
 	//if e_A is smaller, swap the two numbers
 	if(e_A < e_B)
 	begin
@@ -80,18 +83,18 @@ begin
 	if(fract_a == fract_b && sign_a != sign_b) begin // handel the case of zero 
         sign= 1'b0;
         e_B = 0;
-        fract_c[23] = 1; //the one will be removed
-        fract_c[22:0] = 22'b0;
+        fract_c[MANISSA_WIDTH] = 1; //the one will be removed
+        fract_c[MANISSA_WIDTH-1:0] = MANISSA_WIDTH-1'b0;
     end
     //normalize result
     //get index of first 1
-	for(i = 0; i < 23 && fract_c[23-i]==0; i=i+1) begin
+	for(i = 0; i < MANISSA_WIDTH && fract_c[MANISSA_WIDTH-i]==0; i=i+1) begin
     end
 	fract_c = fract_c << i;
     e_B = e_B-i;
 
 
-    mantissa = fract_c[22:0];
+    mantissa = fract_c[MANISSA_WIDTH-1:0];
     exponent = e_B; 
 	done = 1;
 end

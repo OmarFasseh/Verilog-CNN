@@ -2,8 +2,8 @@
 # Webtalk v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Tue May 19 17:58:25 2020
-# Process ID: 13208
+# Start of session at: Tue May 19 18:29:19 2020
+# Process ID: 4824
 # Log file: K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.sim/sim_1/behav/webtalk.log
 # Journal file: K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
@@ -12,6 +12,6 @@ invalid command name "Common"
     while executing
 "Common 17-165"
     invoked from within
-"ERROR: [Common 17-165] Too many positional options when parsing '2/ANN_Assignment_2/Verilog-CNN-master/project_1/project_1.hw/webtalk/labtool_webtalk...."
+"ERROR: [Common 17-165] Too many positional options when parsing '2/Final/Verilog-CNN/project_1/project_1.hw/webtalk/labtool_webtalk.log', please type ..."
     (file "K:/Year" line 1)
-INFO: [Common 17-206] Exiting Webtalk at Tue May 19 17:58:25 2020...
+INFO: [Common 17-206] Exiting Webtalk at Tue May 19 18:29:20 2020...

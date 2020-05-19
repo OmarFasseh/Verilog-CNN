@@ -383,3 +383,18 @@ wait_on_run synth_1
 reset_run synth_1
 launch_runs synth_1
 wait_on_run synth_1
+close_project
+open_project {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.xpr}
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1 -noclean_dir 
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
