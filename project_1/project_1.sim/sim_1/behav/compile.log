@@ -31,7 +31,7 @@ INFO: [VRFC 10-311] analyzing module fp_add_2
 WARNING: [VRFC 10-756] identifier EXPONENT_WIDTH is used before its declaration [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v:2]
 WARNING: [VRFC 10-756] identifier EXPONENT_WIDTH is used before its declaration [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v:3]
 WARNING: [VRFC 10-756] identifier EXPONENT_WIDTH is used before its declaration [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v:7]
-WARNING: [VRFC 10-756] identifier MANISSA_WIDTH is used before its declaration [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v:8]
+WARNING: [VRFC 10-756] identifier MANTISSA_WIDTH is used before its declaration [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v:8]
 INFO: [VRFC 10-2263] Analyzing Verilog file "K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
 WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.sim/sim_1/behav/glbl.v:6]

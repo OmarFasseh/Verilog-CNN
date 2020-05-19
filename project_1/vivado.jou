@@ -612,3 +612,16 @@ step
 step
 close_sim
 launch_simulation
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+close_project
+open_project {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.xpr}

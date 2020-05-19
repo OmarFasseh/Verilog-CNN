@@ -1,5 +1,9 @@
 //test bench for floating-point multiplication
 module mul_flp_tb;
+
+parameter EXPONENT_WIDTH = 8;
+parameter MANTISSA_WIDTH = 23;
+
 reg [31:0] flp_a, flp_b;
 reg clock;
 wire sign;
@@ -57,7 +61,7 @@ always begin
     end
         
 //instantiate the module into the test bench
-fpMul inst1 (
+fpMul #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH)) inst1 (
 .flp_a(flp_a),
 .flp_b(flp_b),
 .sign(sign),

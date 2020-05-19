@@ -1,5 +1,10 @@
 //test bench for floating-point addition
+`timescale 1ns / 1ps
+
 module add_flp3_tb;
+
+parameter EXPONENT_WIDTH = 8;
+parameter MANTISSA_WIDTH = 23;
     reg [31:0] A, B;
     reg clock;
     wire sign_C;
@@ -41,7 +46,8 @@ module add_flp3_tb;
          #1  clock = ~clock; 
         end
     
-    fp_add_2 fp_add1 ( //instantiate the module
+    fp_add_2 #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH))
+    fp_add1 ( //instantiate the module
     .A_FP(A),
     .B_FP(B),
     .sign(sign_C),
