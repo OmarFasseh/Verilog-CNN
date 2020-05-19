@@ -75,16 +75,16 @@ begin
 			sign = sign_b;
 		end
 	end else if(cout) begin
-		fract_c = fract_c >> 1; //If there's carry, then shift
+		{cout, fract_c}  = {cout, fract_c} >> 1; //If there's carry, then shift
 		e_B = e_B + 1; //Increment exponent as we shifted
 	end
 		
 
-	if(fract_a == fract_b && sign_a != sign_b) begin // handel the case of zero 
+	if(A_FP[MANISSA_WIDTH-1:0] == B_FP[MANISSA_WIDTH-1:0] && sign_a != sign_b) begin // handel the case of zero 
         sign= 1'b0;
         e_B = 0;
         fract_c[MANISSA_WIDTH] = 1; //the one will be removed
-        fract_c[MANISSA_WIDTH-1:0] = MANISSA_WIDTH-1'b0;
+        fract_c[MANISSA_WIDTH-1:0] = 0;
     end
     //normalize result
     //get index of first 1

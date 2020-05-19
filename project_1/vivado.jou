@@ -398,3 +398,217 @@ reset_run synth_1 -noclean_dir
 launch_simulation
 source add_flp3_tb.tcl
 close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 21
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} -line 27
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 32
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_runs impl_1
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_simulation
+source add_flp3_tb.tcl
+run 10 ns
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 32
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 33
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} -line 32
+run all
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 33
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 36
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 36
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 83
+run all
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
