@@ -4,7 +4,7 @@ parameter DATA_WIDTH = 32 ;
 parameter INPUT_SIZE= 100; //Number of inputs
 parameter OUTPUT_SIZE = 32 ; //Number of outputs
 parameter ADDR_WIDTH = 9 ; 
-parameter file = "C:/Users/giga/Documents/Weights_FC_0_ones.txt";
+parameter file = "C:/Users/giga/Documents/weights1_modified.txt";
 parameter inputs_file_0 = "C:/Users/giga/Documents/Inputs_FC_0.txt";
 reg  [DATA_WIDTH*INPUT_SIZE-1:0] input_fc;
 reg clk, start_fc, reset,done;

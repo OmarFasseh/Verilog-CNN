@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 module SingleLayer(input_fc, clk, start_fc, reset,output_fc_final,test_multi,test_weights,test_output,done);
 parameter DATA_WIDTH = 32 ; 
-parameter INPUT_SIZE= 10; //Number of inputs
-parameter OUTPUT_SIZE = 4 ; //Number of outputs
+parameter INPUT_SIZE= 1000; //Number of inputs
+parameter OUTPUT_SIZE = 32 ; //Number of outputs
 parameter ADDR_WIDTH = 9 ; 
 parameter file = "E:/trashCan/a.txt";
 input  [(DATA_WIDTH*(INPUT_SIZE))-1:0] input_fc;

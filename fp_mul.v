@@ -36,6 +36,12 @@ begin
         prod = product[2*MANTISSA_WIDTH:MANTISSA_WIDTH+1];
     end else begin
         prod = product[2*MANTISSA_WIDTH-1:MANTISSA_WIDTH];
+    end
+    //handle case of multiplying by zero
+    if(flp_a[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0]==0 || flp_b[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0]==0) begin
+        exponent = 0;
+        prod = 0;
+        sign = 0;
     end        
 end
 endmodule

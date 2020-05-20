@@ -96,10 +96,13 @@ begin
     e_B = e_B-i;
 
 	//If one of the inputs is zero or negative zero
-	if(A_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0] == 0 || B_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1]==0) begin
-		fract_c[MANTISSA_WIDTH-1:0] = fract_a[MANTISSA_WIDTH-1:0] + fract_b[MANTISSA_WIDTH-1:0];
-		e_B = 0;
-		sign = 0; 
+	if(A_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0] == 0) begin
+		fract_c[MANTISSA_WIDTH-1:0] = B_FP[MANTISSA_WIDTH-1:0];
+		sign = sign_b; 
+	end else if(B_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0] == 0) begin
+		fract_c[MANTISSA_WIDTH-1:0] = A_FP[MANTISSA_WIDTH-1:0];
+		e_B = e_A;
+		sign = sign_a;
 	end
 
     mantissa = fract_c[MANTISSA_WIDTH-1:0];
