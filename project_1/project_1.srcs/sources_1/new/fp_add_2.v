@@ -30,6 +30,7 @@ begin
 	e_B      = B_FP [EXPONENT_WIDTH+MANTISSA_WIDTH-1:MANTISSA_WIDTH];
 	fract_a  = {1'b1,A_FP [MANTISSA_WIDTH-1:0]};
 	fract_b  = {1'b1,B_FP [MANTISSA_WIDTH-1:0]};
+	
 	//if e_A is smaller, swap the two numbers
 	if(e_A < e_B)
 	begin
@@ -68,11 +69,11 @@ begin
 	{cout, fract_c}  = fract_a + fract_b;
 
 	//Start determining sign
-	sign = sign_a;
+	sign = A_FP[MANTISSA_WIDTH+EXPONENT_WIDTH]; //Use input not fract nor sign as we might have swapped them
 	if(sign_a != sign_b)
 	begin
-		if(fract_b > fract_a) begin
-			sign = sign_b;
+		if(B_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0] > A_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0]) begin
+			sign = B_FP[MANTISSA_WIDTH+EXPONENT_WIDTH];
 		end
 	end else if(cout) begin
 		{cout, fract_c}  = {cout, fract_c} >> 1; //If there's carry, then shift
@@ -80,12 +81,13 @@ begin
 	end
 		
 
-	if(A_FP[MANTISSA_WIDTH-1:0] == B_FP[MANTISSA_WIDTH-1:0] && sign_a != sign_b) begin // handel the case of zero 
+	if(A_FP[MANTISSA_WIDTH-1:0] == B_FP[MANTISSA_WIDTH-1:0] && sign_a != sign_b) begin //If A = -B, answer is zero
         sign= 1'b0;
         e_B = 0;
         fract_c[MANTISSA_WIDTH] = 1; //the one will be removed
         fract_c[MANTISSA_WIDTH-1:0] = 0;
     end
+
     //normalize result
     //get index of first 1
 	for(i = 0; i < MANTISSA_WIDTH && fract_c[MANTISSA_WIDTH-i]==0; i=i+1) begin
@@ -93,6 +95,12 @@ begin
 	fract_c = fract_c << i;
     e_B = e_B-i;
 
+	//If one of the inputs is zero or negative zero
+	if(A_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0] == 0 || B_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1]==0) begin
+		fract_c[MANTISSA_WIDTH-1:0] = fract_a[MANTISSA_WIDTH-1:0] + fract_b[MANTISSA_WIDTH-1:0];
+		e_B = 0;
+		sign = 0; 
+	end
 
     mantissa = fract_c[MANTISSA_WIDTH-1:0];
     exponent = e_B; 
