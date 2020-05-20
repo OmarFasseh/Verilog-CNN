@@ -4,7 +4,7 @@ parameter DATA_WIDTH = 32 ;
 parameter INPUT_SIZE= 1000; //Number of inputs
 parameter OUTPUT_SIZE = 32 ; //Number of outputs
 parameter ADDR_WIDTH = 9 ; 
-parameter file = "E:/trashCan/a.txt";
+parameter file = "C:/Users/giga/Documents/weights1_modified.txt";
 input  [(DATA_WIDTH*(INPUT_SIZE))-1:0] input_fc;
 input clk, start_fc, reset , done;
 output [(DATA_WIDTH*OUTPUT_SIZE)-1:0] output_fc_final;

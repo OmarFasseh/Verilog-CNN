@@ -95,18 +95,19 @@ begin
 	fract_c = fract_c << i;
     e_B = e_B-i;
 
-	//If one of the inputs is zero or negative zero
-	if(A_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0] == 0) begin
-		fract_c[MANTISSA_WIDTH-1:0] = B_FP[MANTISSA_WIDTH-1:0];
-		sign = sign_b; 
-	end else if(B_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0] == 0) begin
-		fract_c[MANTISSA_WIDTH-1:0] = A_FP[MANTISSA_WIDTH-1:0];
-		e_B = e_A;
-		sign = sign_a;
-	end
 
     mantissa = fract_c[MANTISSA_WIDTH-1:0];
     exponent = e_B; 
+	//If one of the inputs is zero or negative zero
+	if(A_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0] == 0) begin
+		mantissa = B_FP[MANTISSA_WIDTH-1:0];
+		sign = B_FP[EXPONENT_WIDTH+MANTISSA_WIDTH];
+		exponent = B_FP [EXPONENT_WIDTH+MANTISSA_WIDTH-1:MANTISSA_WIDTH];
+	end else if(B_FP[MANTISSA_WIDTH+EXPONENT_WIDTH-1:0] == 0) begin
+		mantissa = A_FP[MANTISSA_WIDTH-1:0];
+		sign = A_FP[EXPONENT_WIDTH+MANTISSA_WIDTH];
+		exponent = A_FP [EXPONENT_WIDTH+MANTISSA_WIDTH-1:MANTISSA_WIDTH];
+	end
 	done = 1;
 end
 
