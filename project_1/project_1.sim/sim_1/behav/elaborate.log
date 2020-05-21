@@ -1,20 +1,22 @@
 Vivado Simulator 2015.2
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: D:/vivado/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot exponential_tb_behav xil_defaultlib.exponential_tb xil_defaultlib.glbl -log elaborate.log 
+Running: D:/vivado/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 0bd8e4f971914d9c91763b877ea9f543 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tanh_tb_behav xil_defaultlib.tanh_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/project_1/project_1.srcs/sources_1/new/tanh.v" Line 3. Module tanh(EXPONENT_WIDTH=8,MANTISSA_WIDTH=23) has a timescale but at least one module in design doesn't have timescale.
 WARNING: [XSIM 43-4100] "C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/fp_mul.v" Line 3. Module fpMul(EXPONENT_WIDTH=8,MANTISSA_WIDTH=23) has a timescale but at least one module in design doesn't have timescale.
 WARNING: [XSIM 43-4100] "C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/project_1/project_1.srcs/sources_1/new/tanh.v" Line 3. Module tanh(EXPONENT_WIDTH=8,MANTISSA_WIDTH=23) has a timescale but at least one module in design doesn't have timescale.
 WARNING: [XSIM 43-4100] "C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/fp_mul.v" Line 3. Module fpMul(EXPONENT_WIDTH=8,MANTISSA_WIDTH=23) has a timescale but at least one module in design doesn't have timescale.
 WARNING: [XSIM 43-4100] "C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.fpMul(EXPONENT_WIDTH=8,MANTISSA_...
 Compiling module xil_defaultlib.fp_add_2(EXPONENT_WIDTH=8,MANTIS...
-Compiling module xil_defaultlib.exponential(EXPONENT_WIDTH=8,MAN...
-Compiling module xil_defaultlib.exponential_tb
+Compiling module xil_defaultlib.tanh(EXPONENT_WIDTH=8,MANTISSA_W...
+Compiling module xil_defaultlib.tanh_tb
 Compiling module xil_defaultlib.glbl
 Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot exponential_tb_behav
+Built simulation snapshot tanh_tb_behav
