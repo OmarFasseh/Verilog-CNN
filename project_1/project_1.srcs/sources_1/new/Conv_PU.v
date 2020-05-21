@@ -39,6 +39,7 @@ always @(reset) begin
         state = 0;
         mult_inp[13*DATA_WIDTH-1:0] = img_part[13*DATA_WIDTH-1:0];
         filter_inp[13*DATA_WIDTH-1:0] = filter[13*DATA_WIDTH-1:0];
+        done = 0;
     end 
 end
 

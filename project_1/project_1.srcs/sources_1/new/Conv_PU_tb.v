@@ -4,7 +4,7 @@ module Conv_PU_tb;
 parameter EXPONENT_WIDTH = 8;
 parameter MANTISSA_WIDTH = 23;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
-parameter NUM_TEST_CASES = 1;
+parameter NUM_TEST_CASES = 8;
 parameter image_file = "C:/Users/giga/Documents/imgs.txt";
 parameter filter_file = "C:/Users/giga/Documents/filters.txt";
 //Inputs and output registers and wires
@@ -28,16 +28,16 @@ initial begin
     $readmemh(image_file, images);
     //Iterate over the test by the number of test cases
     for(i = 0; i < NUM_TEST_CASES; i = i + 1) begin
-        //Load the first test
-        //image[25*(i*DATA_WIDTH+DATA_WIDTH)-1-:25*DATA_WIDTH-1] = images[i];
-        //filter[25*(i*DATA_WIDTH+DATA_WIDTH)-1-:25*DATA_WIDTH-1] = filters[i];
-        image[799:0] = images[i];
-        filter[799:0] = filters[i];
+        //Load the test part of image and filter
+        image[25*(DATA_WIDTH)-1-:25*DATA_WIDTH] = images[i];
+        filter[25*(DATA_WIDTH)-1-:25*DATA_WIDTH] = filters[i];
         //Reset the conv unit
         reset = 1;
         #0.2 //Wait for conv unit to feel the reset
-        $stop;
+        reset = 0;
+        #7; //clocks to work
     end
+    $stop;
 end
 //Toggle the clock every 1 second
 always begin 
