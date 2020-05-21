@@ -1,0 +1,718 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue May 19 14:29:31 2020
+# Process ID: 12644
+# Log file: K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/vivado.log
+# Journal file: K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.xpr}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top add_flp3_tb [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top add_flp3_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+close [ open {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} w ]
+add_files {{K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v}}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top fp_add [current_fileset]
+set_property top_lib xil_defaultlib [current_fileset]
+set_property top_file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top fp_add_2 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 24
+restart
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 17
+run all
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source add_flp3_tb.tcl
+run 10 ns
+run 10 ns
+run 10 ns
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 33
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 32
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} -line 32
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 24
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 61
+run all
+step
+step
+step
+step
+step
+step
+step
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 76
+run all
+step
+restart
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} -line 33
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 30
+run all
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} -line 24
+run all
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} -line 61
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} -line 76
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 24
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 61
+run all
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} -line 61
+step
+step
+restart
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} -line 24
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 24
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 61
+run all
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 30
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 71
+run all
+run all
+restart
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} -line 71
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 24
+run all
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 27
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 24
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 61
+run all
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 27
+run all
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 24
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 61
+run all
+step
+step
+run all
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} -line 24
+run all
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} -line 61
+run all
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} -line 27
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 30
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 24
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 61
+run all
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} -line 61
+step
+step
+step
+step
+step
+close_sim
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close_project
+open_project {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.xpr}
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1 -noclean_dir 
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 21
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} -line 27
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 32
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_runs impl_1
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_simulation
+source add_flp3_tb.tcl
+run 10 ns
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 32
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 33
+remove_bps -file {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} -line 32
+run all
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 33
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 36
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 27
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_add_tb.v} 36
+restart
+run all
+add_bp {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v} 83
+run all
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+close_project
+open_project {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.xpr}
+add_files -norecurse {{K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v} {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_mul.v} {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_mul_tb.v}}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top PE_FC_ANN [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+remove_files {{K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/tb.v} {K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/tuturu.v}}
+remove_files {{K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/addr2.v}}
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top PE_FC_ANN_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source PE_FC_ANN_tb.tcl
+close_sim
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source PE_FC_ANN_tb.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top FC_Layer_ANN [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source PE_FC_ANN_tb.tcl
+close_sim
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top SingleLayer_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source SingleLayer_tb.tcl
+close_sim
+launch_simulation
+source SingleLayer_tb.tcl
+close_sim
+launch_simulation
+source SingleLayer_tb.tcl
+close_sim

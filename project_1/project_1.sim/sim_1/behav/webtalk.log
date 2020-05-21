@@ -2,16 +2,11 @@
 # Webtalk v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Wed May 20 21:32:06 2020
-# Process ID: 2392
-# Log file: K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.sim/sim_1/behav/webtalk.log
-# Journal file: K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.sim/sim_1/behav\webtalk.jou
+# Start of session at: Thu May 21 06:47:30 2020
+# Process ID: 33488
+# Log file: C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/project_1/project_1.sim/sim_1/behav/webtalk.log
+# Journal file: C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/project_1/project_1.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source K:/Year -notrace
-invalid command name "Common"
-    while executing
-"Common 17-165"
-    invoked from within
-"ERROR: [Common 17-165] Too many positional options when parsing '2/Final/Verilog-CNN/project_1/project_1.hw/webtalk/labtool_webtalk.log', please type ..."
-    (file "K:/Year" line 1)
-INFO: [Common 17-206] Exiting Webtalk at Wed May 20 21:32:06 2020...
+source C:/Users/DELL/Desktop/Logic-2/Final/New -notrace
+couldn't read file "C:/Users/DELL/Desktop/Logic-2/Final/New": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Thu May 21 06:47:30 2020...
