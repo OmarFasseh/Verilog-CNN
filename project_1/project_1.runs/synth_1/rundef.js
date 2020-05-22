@@ -8,9 +8,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "D:/vivado/Vivado/2015.2/ids_lite/ISE/bin/nt64;D:/vivado/Vivado/2015.2/ids_lite/ISE/lib/nt64;D:/vivado/Vivado/2015.2/bin;";
+  PathVal = "J:/Vivado/2015.2/ids_lite/ISE/bin/nt64;J:/Vivado/2015.2/ids_lite/ISE/lib/nt64;J:/Vivado/2015.2/bin;";
 } else {
-  PathVal = "D:/vivado/Vivado/2015.2/ids_lite/ISE/bin/nt64;D:/vivado/Vivado/2015.2/ids_lite/ISE/lib/nt64;D:/vivado/Vivado/2015.2/bin;" + PathVal;
+  PathVal = "J:/Vivado/2015.2/ids_lite/ISE/bin/nt64;J:/Vivado/2015.2/ids_lite/ISE/lib/nt64;J:/Vivado/2015.2/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log tanh.vds -m64 -mode batch -messageDb vivado.pb -notrace -source tanh.tcl" );
+         "-log PC_SF.vds -m64 -mode batch -messageDb vivado.pb -notrace -source PC_SF.tcl" );
 
 
 

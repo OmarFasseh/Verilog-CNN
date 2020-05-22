@@ -2,9 +2,9 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Thu May 21 09:34:52 2020
-# Process ID: 7376
-# Log file: C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/project_1/project_1.runs/synth_1/tanh.vds
-# Journal file: C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/project_1/project_1.runs/synth_1\vivado.jou
+# Start of session at: Fri May 22 04:41:03 2020
+# Process ID: 18452
+# Log file: K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.runs/synth_1/PC_SF.vds
+# Journal file: K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source tanh.tcl -notrace
+source PC_SF.tcl -notrace

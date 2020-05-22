@@ -100,7 +100,7 @@ genvar i;
 generate  //generate the parallel multipliers
 	for (i=0; i < 13; i=i+1) 
 	begin :mult 
-	fpMul #(.DATA_WIDTH(DATA_WIDTH), .EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH)) 
+	fpMul #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH)) 
 	MULs (
 	.flp_a(mult_inp[i*DATA_WIDTH+DATA_WIDTH-1:i*DATA_WIDTH]),
 	.flp_b(filter_inp[i*DATA_WIDTH+DATA_WIDTH-1:i*DATA_WIDTH]),
