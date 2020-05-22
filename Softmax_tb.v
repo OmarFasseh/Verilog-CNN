@@ -1,50 +1,51 @@
 //test bench for exp
-module exponential_tb;
+module Softmax_tb;
 
 parameter EXPONENT_WIDTH = 8;
 parameter MANTISSA_WIDTH = 23;
+parameter numberOfExps=10;
+parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
 
-reg [31:0] input_value;
+reg [(DATA_WIDTH*numberOfExps)-1:0] input_value;
 reg clock;
-wire [31:0] output_value;
-wire done_exp;
+wire [(DATA_WIDTH*5)-1:0] output_value;
+wire done;
 initial
 begin
 clock =1;
 
 //  e^2
 // s ----e---- --------------f-------------
- input_value = 32'b01000000000000000000000000000000;
+ input_value[31:0] = 32'b01000000000000000000000000000000;
  //  e^3
  // s ----e---- --------------f-------------
-#20 input_value = 32'b01000000010000000000000000000000;
+ input_value[63:32] = 32'b01000000010000000000000000000000;
 //  e^3.4
 // s ----e---- --------------f-------------
-#20 input_value = 32'b01000000010110011001100110011010;
+ input_value[95:64] = 32'b01000000010110011001100110011010;
 //  e^-2
 // s ----e---- --------------f-------------
-#20 input_value = 32'b11000000000000000000000000000000;
+ input_value[127:96] = 32'b11000000000000000000000000000000;
 //  e^-1.2
 // s ----e---- --------------f-------------
-#20 input_value = 32'b10111111100110011001100110011010;
+ input_value[159:128] = 32'b10111111100110011001100110011010;
 //  e^5
 // s ----e---- --------------f-------------
-#20 input_value = 32'b01000000101000000000000000000000;
+ input_value[191:160] = 32'b01000000101000000000000000000000;
 //  e^0.01
 // s ----e---- --------------f-------------
-#20 input_value = 32'b00111100001000111101011100001010;
+ input_value[223:192] = 32'b00111100001000111101011100001010;
 //  e^0.001
 // s ----e---- --------------f-------------
-#20 input_value = 32'b00111010100000110001001001101111;
+ input_value[255:224] = 32'b00111010100000110001001001101111;
 //  e^-0.01
 // s ----e---- --------------f-------------
-#20 input_value = 32'b10111100001000111101011100001010;
+ input_value[287:256] = 32'b10111100001000111101011100001010;
 //  e^-0.001
 // s ----e---- --------------f-------------
-#20 input_value = 32'b10111010100000110001001001101111;
-#25 $stop;
+ input_value[319:288] = 32'b10111010100000110001001001101111;
+#100 $stop;
 end
-
 // e^-0.001        |    e^-0.01    |    e^0.001      |  e^0.01        |     e^5        |  e^-1.2         |   e^-2          | e^3.4         |  e^3           |      e^2        |
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // 0.999000549316  | 0.99004983902 |  1.00100040436  |  1.01005005836 | 113.118034363  | 0.301811099052  |  0.155555725098 | 28.2305774689 |  19.4124965668 | 7.35555553436   |
@@ -52,15 +53,29 @@ end
 //   3f7fbe80      |   3f7d73e8    |   3f8020c8      |  3f814952      | 42e23c6f       |  3e9a86fc       | 3e1f4a00        | 41e1d839      |   419b4ccb     | 40eb60b6        |
 
 
+//First level of addition
+// 1.98905038834 | 2.01105046272 | 113.419837952 |  28.386133194 | 26.7680511475
+//   3ffe9934    |   4000b50d    |   42e2d6f5    |    41e316cd   |  41d624f8
+
+//Second level of addition
+// 1.98905038834 | 115.430885315 | 55.1541824341
+//   3ffe9934    |  42e6dc9d     |   425c9de2
+
+//Third level of addition
+// 1.98905038834 | 170.585067749
+//   3ffe9934    |  432a95c7   
+//Final sum
+// 172.574111938
+//   432c92f9  
 always begin
      #1  clock = ~clock; 
     end
         
 //instantiate the module into the test bench
-exponential #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH)) inst1 (
-.input_exp(input_value),
+Softmax #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH)) Softmax1 (
+.input_exps(input_value),
 .clk(clock),
-.output_exp(output_value),
-.done_exp(done_exp)
+.output_softmax(output_value),
+.done_softmax(done)
 );
 endmodule

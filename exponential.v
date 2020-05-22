@@ -1,16 +1,17 @@
-module exponential ( input_exp,clk,output_exp);
+module exponential ( input_exp,clk,output_exp,done_exp);
 parameter EXPONENT_WIDTH = 8;
 parameter MANTISSA_WIDTH = 23;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
 input [DATA_WIDTH-1:0]       input_exp ;
 input clk ;
 output reg[DATA_WIDTH-1:0] output_exp ;
+output reg done_exp ;
+
 wire [DATA_WIDTH-1:0] output_tmp_mul;
 wire [DATA_WIDTH-1:0] output_tmp_add;
 
-reg [4:0] x;
+reg [4:0] x=1;
 reg [4:0] i;
-wire done;
 reg [(DATA_WIDTH-1):0] const_OneSix=32'b00111110001010101010101010101011;
 reg [(DATA_WIDTH-1):0] const_OneFifths=32'b00111110010011001100110011001101;
 reg [(DATA_WIDTH-1):0] const_OneQuarter=32'b00111110100000000000000000000000;
@@ -26,6 +27,7 @@ reg [DATA_WIDTH-1:0] input_adder;
 initial
 begin
     i=0;
+    done_exp=0;
    // $stop;
 end
 always@ (posedge clk)
@@ -94,6 +96,7 @@ always@ (posedge done && i==10)
 begin
         output_exp=output_tmp_add;
         i=0;
+        done_exp=1;
 end
 
 

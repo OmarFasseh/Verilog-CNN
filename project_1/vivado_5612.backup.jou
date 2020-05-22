@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri May 22 05:16:32 2020
+# Process ID: 19856
+# Log file: C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/vivado.log
+# Journal file: C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.xpr
+remove_files C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential_tb.v
+remove_files C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v
+add_files -norecurse {C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/Softmax.v C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/Softmax_tb.v C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential_tb.v}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top exponential_tb [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top exponential_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source exponential_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Softmax [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Softmax_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close_sim

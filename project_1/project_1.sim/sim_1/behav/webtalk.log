@@ -2,16 +2,14 @@
 # Webtalk v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Thu May 21 23:35:55 2020
-# Process ID: 10012
-# Log file: K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.sim/sim_1/behav/webtalk.log
-# Journal file: K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.sim/sim_1/behav\webtalk.jou
+# Start of session at: Fri May 22 05:28:57 2020
+# Process ID: 15188
+# Log file: C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.sim/sim_1/behav/webtalk.log
+# Journal file: C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source K:/Year -notrace
-invalid command name "Common"
+source C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/Softmax_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+
     while executing
-"Common 17-165"
-    invoked from within
-"ERROR: [Common 17-165] Too many positional options when parsing '2/Final/Verilog-CNN/project_1/project_1.hw/webtalk/labtool_webtalk.log', please type ..."
-    (file "K:/Year" line 1)
-INFO: [Common 17-206] Exiting Webtalk at Thu May 21 23:35:55 2020...
+"webtalk_transmit -clientid 812480806 -regid "" -xml C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.di..."
+    (file "C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/Softmax_tb_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Fri May 22 05:28:58 2020...

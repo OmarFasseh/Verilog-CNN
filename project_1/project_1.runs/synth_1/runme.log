@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log PC_SF.vds -m64 -mode batch -messageDb vivado.pb -notrace -source PC_SF.tcl
+    with args -log Softmax.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Softmax.tcl
 
 
 ****** Vivado v2015.2 (64-bit)
@@ -8,42 +8,588 @@
   **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
-source PC_SF.tcl -notrace
-Command: synth_design -top PC_SF -part xc7z020clg400-1
+source Softmax.tcl -notrace
+Command: synth_design -top Softmax -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 266.430 ; gain = 52.523
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 280.660 ; gain = 27.352
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'PC_SF' [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_SF.v:2]
+INFO: [Synth 8-638] synthesizing module 'Softmax' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/Softmax.v:2]
 	Parameter EXPONENT_WIDTH bound to: 8 - type: integer 
 	Parameter MANTISSA_WIDTH bound to: 23 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
-	Parameter N bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'Conv_PU' [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:2]
+	Parameter parallel_exps bound to: 32 - type: integer 
+	Parameter DATA_WIDTH_OUT bound to: 32 - type: integer 
+	Parameter numberOfExps bound to: 10 - type: integer 
+	Parameter numberOfAdditions bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'exponential' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:1]
 	Parameter EXPONENT_WIDTH bound to: 8 - type: integer 
 	Parameter MANTISSA_WIDTH bound to: 23 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'fpMul' [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_mul.v:3]
+INFO: [Synth 8-638] synthesizing module 'fpMul' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/fp_mul.v:3]
 	Parameter EXPONENT_WIDTH bound to: 8 - type: integer 
 	Parameter MANTISSA_WIDTH bound to: 23 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fpMul' (1#1) [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/fp_mul.v:3]
-INFO: [Synth 8-638] synthesizing module 'fp_add_2' [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:1]
+INFO: [Synth 8-256] done synthesizing module 'fpMul' (1#1) [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/fp_mul.v:3]
+INFO: [Synth 8-638] synthesizing module 'fp_add_2' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:1]
 	Parameter EXPONENT_WIDTH bound to: 8 - type: integer 
 	Parameter MANTISSA_WIDTH bound to: 23 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fp_add_2' (2#1) [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:1]
-WARNING: [Synth 8-350] instance 'ADDRs' of module 'fp_add_2' requires 7 connections, but only 6 given [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:118]
-WARNING: [Synth 8-350] instance 'ADDRs' of module 'fp_add_2' requires 7 connections, but only 6 given [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:118]
-WARNING: [Synth 8-350] instance 'ADDRs' of module 'fp_add_2' requires 7 connections, but only 6 given [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:118]
-WARNING: [Synth 8-350] instance 'ADDRs' of module 'fp_add_2' requires 7 connections, but only 6 given [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:118]
-WARNING: [Synth 8-350] instance 'ADDRs' of module 'fp_add_2' requires 7 connections, but only 6 given [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:118]
-WARNING: [Synth 8-350] instance 'ADDRs' of module 'fp_add_2' requires 7 connections, but only 6 given [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:118]
-WARNING: [Synth 8-350] instance 'ADDRs' of module 'fp_add_2' requires 7 connections, but only 6 given [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:118]
-WARNING: [Synth 8-567] referenced signal 'img_part' should be on the sensitivity list [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:37]
-WARNING: [Synth 8-567] referenced signal 'filter' should be on the sensitivity list [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:37]
-WARNING: [Synth 8-567] referenced signal 'img_part' should be on the sensitivity list [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:77]
-WARNING: [Synth 8-567] referenced signal 'filter' should be on the sensitivity list [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:77]
-WARNING: [Synth 8-567] referenced signal 'add_out_tmp' should be on the sensitivity list [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:77]
-INFO: [Synth 8-256] done synthesizing module 'Conv_PU' (3#1) [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v:2]
-WARNING: [Synth 8-567] referenced signal 'image' should be on the sensitivity list [K:/Year 2 CCE-C/Term 2/Logic 2/Final/Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_SF.v:32]
+INFO: [Synth 8-256] done synthesizing module 'fp_add_2' (2#1) [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:1]
+INFO: [Synth 8-256] done synthesizing module 'exponential' (3#1) [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:1]
+WARNING: [Synth 8-350] instance 'fadd' of module 'fp_add_2' requires 7 connections, but only 6 given [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/Softmax.v:47]
+WARNING: [Synth 8-350] instance 'fadd' of module 'fp_add_2' requires 7 connections, but only 6 given [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/Softmax.v:47]
+WARNING: [Synth 8-350] instance 'fadd' of module 'fp_add_2' requires 7 connections, but only 6 given [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/Softmax.v:47]
+WARNING: [Synth 8-350] instance 'fadd' of module 'fp_add_2' requires 7 connections, but only 6 given [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/Softmax.v:47]
+WARNING: [Synth 8-350] instance 'fadd' of module 'fp_add_2' requires 7 connections, but only 6 given [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/Softmax.v:47]
+INFO: [Synth 8-256] done synthesizing module 'Softmax' (4#1) [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/Softmax.v:2]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 311.875 ; gain = 58.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 311.875 ; gain = 58.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 311.875 ; gain = 58.566
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-5546] ROM "input_one" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "input_two" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "input_adder" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "output_softmax" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 373.512 ; gain = 120.203
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |exponential   |          10|      5515|
+|2     |Softmax__GC0  |           1|     20943|
++------+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 15    
+	   4 Input      8 Bit       Adders := 10    
+	   3 Input      8 Bit       Adders := 30    
+	   2 Input      8 Bit       Adders := 15    
+	   2 Input      5 Bit       Adders := 11    
++---XORs : 
+	   2 Input      1 Bit         XORs := 10    
++---Registers : 
+	              160 Bit    Registers := 3     
+	               32 Bit    Registers := 30    
+	               23 Bit    Registers := 10    
+	                8 Bit    Registers := 10    
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 21    
++---Muxes : 
+	   2 Input    160 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     30 Bit        Muxes := 10    
+	   2 Input     30 Bit        Muxes := 10    
+	   4 Input     30 Bit        Muxes := 10    
+	   2 Input     24 Bit        Muxes := 150   
+	   2 Input     23 Bit        Muxes := 10    
+	   2 Input      8 Bit        Muxes := 90    
+	   2 Input      5 Bit        Muxes := 270   
+	   5 Input      5 Bit        Muxes := 15    
+	   2 Input      1 Bit        Muxes := 91    
+	   5 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Softmax 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	              160 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    160 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module fpMul 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               23 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+Module fp_add_2__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 10    
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 18    
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module exponential 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     30 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   4 Input     30 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 1     
+Module fp_add_2__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 10    
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 18    
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module fp_add_2__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 10    
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 18    
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module fp_add_2__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 10    
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 18    
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module fp_add_2__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 10    
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 18    
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module fp_add_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 10    
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 18    
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 474.703 ; gain = 221.395
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "input_two" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+DSP Report: Generating DSP fmul/prod1, operation Mode is: A*B.
+DSP Report: operator fmul/prod1 is absorbed into DSP fmul/prod1.
+DSP Report: operator fmul/prod1 is absorbed into DSP fmul/prod1.
+DSP Report: Generating DSP fmul/prod1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator fmul/prod1 is absorbed into DSP fmul/prod1.
+DSP Report: operator fmul/prod1 is absorbed into DSP fmul/prod1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 478.977 ; gain = 225.668
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 478.977 ; gain = 225.668
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |exponential   |          10|      5900|
+|2     |Softmax__GC0  |           1|     22933|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP:
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fpMul       | A*B            | No           | 25     | 18     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|fpMul       | (PCIN>>17)+A*B | No           | 25     | 8      | 31     | 25     | 31     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
++------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (done_reg) is unused and will be removed from module fp_add_2__2.
+WARNING: [Synth 8-3332] Sequential element (done_reg__0) is unused and will be removed from module fp_add_2__2.
+WARNING: [Synth 8-3332] Sequential element (done_reg) is unused and will be removed from module fp_add_2__3.
+WARNING: [Synth 8-3332] Sequential element (done_reg__0) is unused and will be removed from module fp_add_2__3.
+WARNING: [Synth 8-3332] Sequential element (done_reg) is unused and will be removed from module fp_add_2__4.
+WARNING: [Synth 8-3332] Sequential element (done_reg__0) is unused and will be removed from module fp_add_2__4.
+WARNING: [Synth 8-3332] Sequential element (done_reg) is unused and will be removed from module fp_add_2__5.
+WARNING: [Synth 8-3332] Sequential element (done_reg__0) is unused and will be removed from module fp_add_2__5.
+WARNING: [Synth 8-3332] Sequential element (done_reg) is unused and will be removed from module fp_add_2.
+WARNING: [Synth 8-3332] Sequential element (done_reg__0) is unused and will be removed from module fp_add_2.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (done_softmax_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (exponential:/\input_adder_reg[30] )
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[31] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[30] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[28] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[27] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[26] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[25] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[24] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[23] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[22] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[21] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[20] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[19] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[18] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[17] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[16] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[15] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[14] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[13] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[12] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[11] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[10] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[9] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[8] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[7] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[6] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[5] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[4] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[3] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[2] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[1] ) is unused and will be removed from module exponential.
+WARNING: [Synth 8-3332] Sequential element (\input_adder_reg[0] ) is unused and will be removed from module exponential.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 635.227 ; gain = 381.918
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 635.227 ; gain = 381.918
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |exponential   |          10|      1755|
+|2     |Softmax__GC0  |           1|      8120|
++------+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 635.227 ; gain = 381.918
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 635.227 ; gain = 381.918
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |exponential   |          10|      1755|
+|2     |Softmax__GC0  |           1|      8120|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 718.707 ; gain = 465.398
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 723.336 ; gain = 470.027
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/done with 1st driver pin 'exp[0].exps/fadd/done_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:115]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/done with 2nd driver pin 'exp[0].exps/fadd/done_reg__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:111]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/i[4] with 1st driver pin 'exp[0].exps/i_reg[4]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/i[4] with 2nd driver pin 'exp[0].exps/i_reg[4]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/i[3] with 1st driver pin 'exp[0].exps/i_reg[3]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/i[3] with 2nd driver pin 'exp[0].exps/i_reg[3]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/i[2] with 1st driver pin 'exp[0].exps/i_reg[2]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/i[2] with 2nd driver pin 'exp[0].exps/i_reg[2]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/i[1] with 1st driver pin 'exp[0].exps/i_reg[1]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/i[1] with 2nd driver pin 'exp[0].exps/i_reg[1]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/i[0] with 1st driver pin 'exp[0].exps/i_reg[0]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[0].exps/i[0] with 2nd driver pin 'exp[0].exps/i_reg[0]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net done_exp with 1st driver pin 'exp[9].exps/done_exp_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:99]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net done_exp with 2nd driver pin 'exp[8].exps/done_exp_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:99]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net done_exp with 3rd driver pin 'exp[7].exps/done_exp_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:99]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net done_exp with 4th driver pin 'exp[6].exps/done_exp_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:99]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net done_exp with 5th driver pin 'exp[5].exps/done_exp_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:99]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net done_exp with 6th driver pin 'exp[4].exps/done_exp_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:99]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net done_exp with 7th driver pin 'exp[3].exps/done_exp_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:99]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net done_exp with 8th driver pin 'exp[2].exps/done_exp_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:99]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net done_exp with 9th driver pin 'exp[1].exps/done_exp_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:99]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net done_exp with 10th driver pin 'exp[0].exps/done_exp_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:99]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/done with 1st driver pin 'exp[1].exps/fadd/done_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:115]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/done with 2nd driver pin 'exp[1].exps/fadd/done_reg__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:111]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/i[4] with 1st driver pin 'exp[1].exps/i_reg[4]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/i[4] with 2nd driver pin 'exp[1].exps/i_reg[4]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/i[3] with 1st driver pin 'exp[1].exps/i_reg[3]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/i[3] with 2nd driver pin 'exp[1].exps/i_reg[3]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/i[2] with 1st driver pin 'exp[1].exps/i_reg[2]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/i[2] with 2nd driver pin 'exp[1].exps/i_reg[2]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/i[1] with 1st driver pin 'exp[1].exps/i_reg[1]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/i[1] with 2nd driver pin 'exp[1].exps/i_reg[1]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/i[0] with 1st driver pin 'exp[1].exps/i_reg[0]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[1].exps/i[0] with 2nd driver pin 'exp[1].exps/i_reg[0]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/done with 1st driver pin 'exp[2].exps/fadd/done_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:115]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/done with 2nd driver pin 'exp[2].exps/fadd/done_reg__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:111]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/i[4] with 1st driver pin 'exp[2].exps/i_reg[4]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/i[4] with 2nd driver pin 'exp[2].exps/i_reg[4]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/i[3] with 1st driver pin 'exp[2].exps/i_reg[3]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/i[3] with 2nd driver pin 'exp[2].exps/i_reg[3]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/i[2] with 1st driver pin 'exp[2].exps/i_reg[2]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/i[2] with 2nd driver pin 'exp[2].exps/i_reg[2]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/i[1] with 1st driver pin 'exp[2].exps/i_reg[1]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/i[1] with 2nd driver pin 'exp[2].exps/i_reg[1]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/i[0] with 1st driver pin 'exp[2].exps/i_reg[0]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[2].exps/i[0] with 2nd driver pin 'exp[2].exps/i_reg[0]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/done with 1st driver pin 'exp[3].exps/fadd/done_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:115]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/done with 2nd driver pin 'exp[3].exps/fadd/done_reg__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:111]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/i[4] with 1st driver pin 'exp[3].exps/i_reg[4]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/i[4] with 2nd driver pin 'exp[3].exps/i_reg[4]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/i[3] with 1st driver pin 'exp[3].exps/i_reg[3]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/i[3] with 2nd driver pin 'exp[3].exps/i_reg[3]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/i[2] with 1st driver pin 'exp[3].exps/i_reg[2]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/i[2] with 2nd driver pin 'exp[3].exps/i_reg[2]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/i[1] with 1st driver pin 'exp[3].exps/i_reg[1]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/i[1] with 2nd driver pin 'exp[3].exps/i_reg[1]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/i[0] with 1st driver pin 'exp[3].exps/i_reg[0]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[3].exps/i[0] with 2nd driver pin 'exp[3].exps/i_reg[0]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/done with 1st driver pin 'exp[4].exps/fadd/done_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:115]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/done with 2nd driver pin 'exp[4].exps/fadd/done_reg__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:111]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/i[4] with 1st driver pin 'exp[4].exps/i_reg[4]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/i[4] with 2nd driver pin 'exp[4].exps/i_reg[4]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/i[3] with 1st driver pin 'exp[4].exps/i_reg[3]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/i[3] with 2nd driver pin 'exp[4].exps/i_reg[3]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/i[2] with 1st driver pin 'exp[4].exps/i_reg[2]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/i[2] with 2nd driver pin 'exp[4].exps/i_reg[2]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/i[1] with 1st driver pin 'exp[4].exps/i_reg[1]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/i[1] with 2nd driver pin 'exp[4].exps/i_reg[1]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/i[0] with 1st driver pin 'exp[4].exps/i_reg[0]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[4].exps/i[0] with 2nd driver pin 'exp[4].exps/i_reg[0]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/done with 1st driver pin 'exp[5].exps/fadd/done_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:115]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/done with 2nd driver pin 'exp[5].exps/fadd/done_reg__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:111]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/i[4] with 1st driver pin 'exp[5].exps/i_reg[4]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/i[4] with 2nd driver pin 'exp[5].exps/i_reg[4]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/i[3] with 1st driver pin 'exp[5].exps/i_reg[3]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/i[3] with 2nd driver pin 'exp[5].exps/i_reg[3]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/i[2] with 1st driver pin 'exp[5].exps/i_reg[2]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/i[2] with 2nd driver pin 'exp[5].exps/i_reg[2]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/i[1] with 1st driver pin 'exp[5].exps/i_reg[1]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/i[1] with 2nd driver pin 'exp[5].exps/i_reg[1]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/i[0] with 1st driver pin 'exp[5].exps/i_reg[0]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[5].exps/i[0] with 2nd driver pin 'exp[5].exps/i_reg[0]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/done with 1st driver pin 'exp[6].exps/fadd/done_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:115]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/done with 2nd driver pin 'exp[6].exps/fadd/done_reg__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:111]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/i[4] with 1st driver pin 'exp[6].exps/i_reg[4]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/i[4] with 2nd driver pin 'exp[6].exps/i_reg[4]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/i[3] with 1st driver pin 'exp[6].exps/i_reg[3]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/i[3] with 2nd driver pin 'exp[6].exps/i_reg[3]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/i[2] with 1st driver pin 'exp[6].exps/i_reg[2]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/i[2] with 2nd driver pin 'exp[6].exps/i_reg[2]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/i[1] with 1st driver pin 'exp[6].exps/i_reg[1]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/i[1] with 2nd driver pin 'exp[6].exps/i_reg[1]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/i[0] with 1st driver pin 'exp[6].exps/i_reg[0]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[6].exps/i[0] with 2nd driver pin 'exp[6].exps/i_reg[0]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[7].exps/done with 1st driver pin 'exp[7].exps/fadd/done_reg/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:115]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[7].exps/done with 2nd driver pin 'exp[7].exps/fadd/done_reg__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_add_2.v:111]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[7].exps/i[4] with 1st driver pin 'exp[7].exps/i_reg[4]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[7].exps/i[4] with 2nd driver pin 'exp[7].exps/i_reg[4]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[7].exps/i[3] with 1st driver pin 'exp[7].exps/i_reg[3]/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net exp[7].exps/i[3] with 2nd driver pin 'exp[7].exps/i_reg[3]__0/Q' [C:/Users/DELL/Desktop/Logic-2/Final/clone2/Verilog-CNN/exponential.v:72]
+INFO: [Common 17-14] Message 'Synth 8-3352' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       61|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 723.336 ; gain = 470.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 723.336 ; gain = 470.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 723.336 ; gain = 470.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 723.336 ; gain = 470.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |    12|
+|2     |CARRY4  |   515|
+|3     |DSP48E1 |    20|
+|4     |LUT1    |    81|
+|5     |LUT2    |  1162|
+|6     |LUT3    |  1453|
+|7     |LUT4    |  1353|
+|8     |LUT5    |  1614|
+|9     |LUT6    |  3347|
+|10    |FDRE    |  2215|
+|11    |FDSE    |   170|
+|12    |IBUF    |   321|
+|13    |OBUF    |   161|
++------+--------+------+
+
+Report Instance Areas: 
++------+----------------+---------------+------+
+|      |Instance        |Module         |Cells |
++------+----------------+---------------+------+
+|1     |top             |               | 12424|
+|2     |  \add[0].fadd  |fp_add_2       |   587|
+|3     |  \add[1].fadd  |fp_add_2_0     |   587|
+|4     |  \add[2].fadd  |fp_add_2_1     |   619|
+|5     |  \add[3].fadd  |fp_add_2_2     |   619|
+|6     |  \add[4].fadd  |fp_add_2_3     |   619|
+|7     |  \exp[0].exps  |exponential    |   840|
+|8     |    fadd        |fp_add_2_30    |    77|
+|9     |    fmul        |fpMul_31       |   581|
+|10    |  \exp[1].exps  |exponential_4  |   808|
+|11    |    fadd        |fp_add_2_28    |    77|
+|12    |    fmul        |fpMul_29       |   581|
+|13    |  \exp[2].exps  |exponential_5  |   808|
+|14    |    fadd        |fp_add_2_26    |    77|
+|15    |    fmul        |fpMul_27       |   581|
+|16    |  \exp[3].exps  |exponential_6  |   808|
+|17    |    fadd        |fp_add_2_24    |    77|
+|18    |    fmul        |fpMul_25       |   581|
+|19    |  \exp[4].exps  |exponential_7  |   808|
+|20    |    fadd        |fp_add_2_22    |    77|
+|21    |    fmul        |fpMul_23       |   581|
+|22    |  \exp[5].exps  |exponential_8  |   808|
+|23    |    fadd        |fp_add_2_20    |    77|
+|24    |    fmul        |fpMul_21       |   581|
+|25    |  \exp[6].exps  |exponential_9  |   808|
+|26    |    fadd        |fp_add_2_18    |    77|
+|27    |    fmul        |fpMul_19       |   581|
+|28    |  \exp[7].exps  |exponential_10 |   808|
+|29    |    fadd        |fp_add_2_16    |    77|
+|30    |    fmul        |fpMul_17       |   581|
+|31    |  \exp[8].exps  |exponential_11 |   808|
+|32    |    fadd        |fp_add_2_14    |    77|
+|33    |    fmul        |fpMul_15       |   581|
+|34    |  \exp[9].exps  |exponential_12 |   808|
+|35    |    fadd        |fp_add_2_13    |    77|
+|36    |    fmul        |fpMul          |   581|
++------+----------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 723.336 ; gain = 470.027
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 130 critical warnings and 46 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 723.336 ; gain = 443.285
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 723.336 ; gain = 470.027
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 856 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 25 inverter(s) to 550 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 46 Warnings, 100 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 728.645 ; gain = 465.977
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.181 . Memory (MB): peak = 728.645 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May 22 05:28:45 2020...

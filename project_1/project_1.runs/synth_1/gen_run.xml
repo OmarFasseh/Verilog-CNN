@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1590115261">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1590118079">
+  <File Type="RDS-DCP" Name="Softmax.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RDS-DCP" Name="PC_SF.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Softmax_utilization_synth.pb"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RDS-UTIL-PB" Name="PC_SF_utilization_synth.pb"/>
+  <File Type="RDS-PROPCONSTRS" Name="Softmax_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="Softmax.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="PA-TCL" Name="PC_SF.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="PC_SF_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="PC_SF.vds"/>
-  <File Type="RDS-UTIL" Name="PC_SF_utilization_synth.rpt"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="PC_SF_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="PC_SF_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="Softmax.vds"/>
+  <File Type="RDS-UTIL" Name="Softmax_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Softmax_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Softmax_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ReLU.v">
@@ -118,20 +118,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../exponential_tb.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../exponential.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/tanh.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -167,9 +153,37 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../Softmax.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../exponential.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Softmax_tb.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../exponential_tb.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="PC_SF"/>
+      <Option Name="TopModule" Val="Softmax"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
