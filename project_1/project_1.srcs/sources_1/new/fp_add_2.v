@@ -81,7 +81,7 @@ begin
 	end
 		
 
-	if(A_FP[MANTISSA_WIDTH-1:0] == B_FP[MANTISSA_WIDTH-1:0] && A_FP[EXPONENT_WIDTH+MANTISSA_WIDTH-1:MANTISSA_WIDTH] == B_FP[EXPONENT_WIDTH+MANTISSA_WIDTH-1:MANTISSA_WIDTH] && sign_a != sign_b) begin //If A = -B, answer is zero
+	if(A_FP[MANTISSA_WIDTH-1:0] == B_FP[MANTISSA_WIDTH-1:0] && sign_a != sign_b) begin //If A = -B, answer is zero
         sign= 1'b0;
         e_B = 0;
         fract_c[MANTISSA_WIDTH] = 1; //the one will be removed

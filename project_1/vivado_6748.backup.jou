@@ -1,0 +1,1067 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue May 26 21:09:42 2020
+# Process ID: 16008
+# Log file: C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/project_1/vivado.log
+# Journal file: C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/DELL/Desktop/Logic-2/Final/New folder/Verilog-CNN/project_1/project_1.xpr}
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run 10 ns
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+restart
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+launch_simulation
+source div_flp_tb.tcl
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source div_flp_tb.tcl
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+source div_flp_tb.tcl
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Softmax [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Softmax_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source Softmax_tb.tcl
+launch_simulation
+launch_simulation
+source Softmax_tb.tcl
+launch_simulation
+source Softmax_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source Softmax_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+launch_simulation
+source Softmax_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source Softmax_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source Softmax_tb.tcl
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source Softmax_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+launch_simulation
+source Softmax_tb.tcl
+run all
+run all
+run all
+run all
+launch_simulation
+source Softmax_tb.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+close_sim
+close_sim
