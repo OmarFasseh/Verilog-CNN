@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module tanh( input_x,clk,output_tanh);
+module tanh( input_x, clk, output_tanh);
 parameter EXPONENT_WIDTH = 8;
 parameter MANTISSA_WIDTH = 23;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
@@ -68,6 +68,20 @@ begin
     end 
 end
 
+/*always@(negedge clk && startTANH)
+begin
+    $stop;
+    i=0;
+    x_power_two=32'h00000000000000000000000000000000;
+    x_power_three=32'h00000000000000000000000000000000;
+    x_power_five=32'h00000000000000000000000000000000;
+    x_power_seven=32'h00000000000000000000000000000000;
+    temp_mul_a=32'h00000000000000000000000000000000;
+    temp_mul_b=32'h00000000000000000000000000000000;
+    temp_add_a=32'h00000000000000000000000000000000;
+    temp_add_b=32'h00000000000000000000000000000000;
+end*/
+
 always@(negedge clk)
 begin
     if(i==0)
@@ -101,15 +115,28 @@ begin
         temp_add_a=output_tmp_add;
         temp_add_b=output_tmp_mul;
     end
-    if(i!=7)
+    else if(i==7)
+    begin
+        output_tanh=output_tmp_add;
+    end
+    if(i!=8)
     begin
         i=i+1;
     end
+    if(i > 7)
+    begin
+        i=0;
+        x_power_two=32'h00000000000000000000000000000000;
+        x_power_three=32'h00000000000000000000000000000000;
+        x_power_five=32'h00000000000000000000000000000000;
+        x_power_seven=32'h00000000000000000000000000000000;
+        temp_mul_a=32'h00000000000000000000000000000000;
+        temp_mul_b=32'h00000000000000000000000000000000;
+        temp_add_a=32'h00000000000000000000000000000000;
+        temp_add_b=32'h00000000000000000000000000000000;
+    end
 end
-always@(posedge done && i==7)
-begin
-        output_tanh=output_tmp_add;
-end
+
 fpMul #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH)) fmul(
 .flp_a(temp_mul_a),
 .flp_b(temp_mul_b),
