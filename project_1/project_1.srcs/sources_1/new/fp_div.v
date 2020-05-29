@@ -19,7 +19,7 @@ clk
     reg [EXPONENT_WIDTH:0] exp_sum;
     reg [MANTISSA_WIDTH-1:0] prod;
     reg [2*(MANTISSA_WIDTH+1):0] product;
-    reg [EXPONENT_WIDTH+MANTISSA_WIDTH:0] flp_b = 32'b00111110100000000000000000000000;
+    reg [EXPONENT_WIDTH+MANTISSA_WIDTH:0] flp_b = 32'b00111110100000000000000000000000; //0.25
     //inputs and outputs
     input flp_a,clk;
     output prod, exponent, sign ;

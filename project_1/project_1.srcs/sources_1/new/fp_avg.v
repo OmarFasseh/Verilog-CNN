@@ -19,46 +19,46 @@ reg [DATA_WIDTH-1:0] avg ;
 
 initial 
 begin
-    i=1;
-   finish = 0;
+    i=1;//set the order of operations
+   finish = 0; 
 end
 
 always@(negedge clk)
 begin
-if(reset ==1 )
+if(reset ==1 ) //check on reset of to put reset finish   
 begin
 finish =0 ;
 i=1 ;
 end
-else if(finish ==0)
+else if(finish ==0) //if check of not finished
 begin
 if(i==1)
-begin
+begin       //Pass first two element to adder to add them 
  add_1 = fp_input[1*(DATA_WIDTH-1):0] ;
  add_2 = fp_input[((2*DATA_WIDTH)-1):DATA_WIDTH] ;
 i=i+1 ;
 end
 
 
-else if(i==2)
+else if(i==2) //Add the result of first two number with the third one
 begin
-  add_1 = sum ;
+  add_1 = sum ; 
   add_2 = fp_input[((3*DATA_WIDTH)-1):(2*DATA_WIDTH)] ;
   i=i+1 ;
 end
 
-else if(i==3)
+else if(i==3) //Add the result of first three number with the fourth one
 begin
   add_1 = sum ;
   add_2 = fp_input[((4*DATA_WIDTH)-1):(3*DATA_WIDTH)] ;
   i=i+1 ;
 end
-else if(i==4)
+else if(i==4) // Pass the summation of the four number to divide on 4 
 begin
  avg = sum ;
 i=i+1;
 end
-else if(i==5)
+else if(i==5) //reset the parameters and make set finish
 begin
  add_1 = 0;
 add_2 = 0 ;

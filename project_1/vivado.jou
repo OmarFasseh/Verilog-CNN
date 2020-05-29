@@ -2,25 +2,10 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Thu May 28 18:20:10 2020
-# Process ID: 4576
-# Log file: C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/vivado.log
-# Journal file: C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1\vivado.jou
+# Start of session at: Fri May 29 04:58:51 2020
+# Process ID: 84984
+# Log file: C:/Users/Mohamed Gaber/Desktop/Logic_c2/Verilog-CNN/project_1/vivado.log
+# Journal file: C:/Users/Mohamed Gaber/Desktop/Logic_c2/Verilog-CNN/project_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.xpr}
-add_files -norecurse {{C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_layer.v} {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_div.v} {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_avg.v} {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_avg_tb.v} {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_layer_tb.v} {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_div_tb.v}}
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top avg_layer_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode DisplayOnly [current_project]
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top avg_layer [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode DisplayOnly [current_project]
-launch_simulation
-source avg_layer_tb.tcl
-close_sim
+open_project {C:/Users/Mohamed Gaber/Desktop/Logic_c2/Verilog-CNN/project_1/project_1.xpr}
