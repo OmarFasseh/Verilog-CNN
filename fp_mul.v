@@ -8,8 +8,8 @@ prod,
 clk
 );
 
-parameter EXPONENT_WIDTH = 8;
-parameter MANTISSA_WIDTH = 23;
+parameter EXPONENT_WIDTH = 5;
+parameter MANTISSA_WIDTH = 10;
 
 //regs and wires
 wire [EXPONENT_WIDTH+MANTISSA_WIDTH:0] flp_a, flp_b;

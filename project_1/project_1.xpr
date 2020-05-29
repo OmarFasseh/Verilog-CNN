@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="C:/Users/Mohamed Gaber/Desktop/Logic_c2/Verilog-CNN/project_1/project_1.xpr">
+<Project Version="7" Minor="5" Path="E:/trashCan/Projects/Final/project_1/project_1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="0bd8e4f971914d9c91763b877ea9f543"/>
@@ -231,6 +231,48 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/tanh_activation_function.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_SF.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_SF_tb.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU_tb.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/LeNet.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_MF.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
