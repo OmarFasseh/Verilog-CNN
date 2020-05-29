@@ -2,11 +2,12 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Fri May 29 12:22:35 2020
-# Process ID: 1476
+# Start of session at: Fri May 29 14:11:21 2020
+# Process ID: 8692
 # Log file: E:/trashCan/Projects/Final/project_1/vivado.log
 # Journal file: E:/trashCan/Projects/Final/project_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project E:/trashCan/Projects/Final/project_1/project_1.xpr
-add_files -norecurse {E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_SF.v E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_SF_tb.v E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU_tb.v E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/LeNet.v E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_MF.v E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v}
+remove_files {E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_SF.v E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_SF_tb.v E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/LeNet.v E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU_tb.v E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_MF.v E:/trashCan/Projects/Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v}
+add_files -norecurse {E:/trashCan/Projects/Final/project_1/project_1.srcs/sources_1/new/Conv_PU.v E:/trashCan/Projects/Final/project_1/project_1.srcs/sources_1/new/PC_SF_tb.v E:/trashCan/Projects/Final/project_1/project_1.srcs/sources_1/new/Conv_PU_tb.v E:/trashCan/Projects/Final/project_1/project_1.srcs/sources_1/new/PC_SF.v E:/trashCan/Projects/Final/project_1/project_1.srcs/sources_1/new/PC_MF.v E:/trashCan/Projects/Final/project_1/project_1.srcs/sources_1/new/LeNet.v}

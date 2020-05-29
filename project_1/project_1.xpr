@@ -237,42 +237,42 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_SF.v">
+      <File Path="$PSRCDIR/sources_1/new/Conv_PU.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_SF_tb.v">
+      <File Path="$PSRCDIR/sources_1/new/PC_SF_tb.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU_tb.v">
+      <File Path="$PSRCDIR/sources_1/new/Conv_PU_tb.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/LeNet.v">
+      <File Path="$PSRCDIR/sources_1/new/PC_SF.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/PC_MF.v">
+      <File Path="$PSRCDIR/sources_1/new/PC_MF.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Verilog-CNN/project_1/project_1.srcs/sources_1/new/Conv_PU.v">
+      <File Path="$PSRCDIR/sources_1/new/LeNet.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
