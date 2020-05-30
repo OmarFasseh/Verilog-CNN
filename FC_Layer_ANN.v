@@ -9,7 +9,7 @@ parameter MANTISSA_WIDTH = 23;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
 
 parameter parallel_fc_PE= 32; //number of outputs (cols)
-parameter DATA_WIDTH_OUT = 32 ; //float
+parameter DATA_WIDTH_OUT = DATA_WIDTH ; //float
 input [DATA_WIDTH-1:0] input_fc;
 input start_FC, clk;
 input  [(DATA_WIDTH*parallel_fc_PE)-1:0] weightCaches_fc;

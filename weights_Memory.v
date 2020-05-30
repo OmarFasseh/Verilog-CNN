@@ -9,7 +9,7 @@ input [ADDR_WIDTH-1:0]          address_fc;
 input       read_en_MM_fc,enable_MM_out_fc;
 output  reg [(DATA_WIDTH*parallel_fc_PE-1):0]    dataMainMemo_fc;
 
-parameter file = "E:/trashCan/a.txt";
+parameter file = "E:/VivadoFiles/a.txt";
 
 reg signed    [DATA_WIDTH-1:0] mem [0:tot_weight_size-1] ;
 integer k;
