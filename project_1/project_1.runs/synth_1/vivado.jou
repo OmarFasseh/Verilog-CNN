@@ -2,9 +2,9 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sun May 31 09:13:43 2020
-# Process ID: 27780
-# Log file: D:/Users/IbrahimWael/Desktop/clonefaseh/Verilog-CNN/project_1/project_1.runs/synth_1/tanh_activation_function.vds
-# Journal file: D:/Users/IbrahimWael/Desktop/clonefaseh/Verilog-CNN/project_1/project_1.runs/synth_1\vivado.jou
+# Start of session at: Sun May 31 11:00:15 2020
+# Process ID: 16432
+# Log file: C:/Users/DELL/Desktop/Git logic/Verilog-CNN/project_1/project_1.runs/synth_1/Softmax.vds
+# Journal file: C:/Users/DELL/Desktop/Git logic/Verilog-CNN/project_1/project_1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source tanh_activation_function.tcl -notrace
+source Softmax.tcl -notrace
