@@ -20,7 +20,7 @@ clk
     reg [MANTISSA_WIDTH-1:0] prod;
     reg [2*(MANTISSA_WIDTH+1):0] product;
     //reg [EXPONENT_WIDTH+MANTISSA_WIDTH:0] flp_b = 32'b0_01111101_00000000000000000000000; 
-    reg [EXPONENT_WIDTH+MANTISSA_WIDTH:0] flp_b = 16'b0_01101_0000000000;  //half percision
+    reg [EXPONENT_WIDTH+MANTISSA_WIDTH:0] flp_b =16'b0_01101_0000000000;  //half percision
     //inputs and outputs
     input flp_a,clk;
     output prod, exponent, sign ;

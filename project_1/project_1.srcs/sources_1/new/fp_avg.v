@@ -56,6 +56,7 @@ end
 else if(i==4) // Pass the summation of the four number to divide on 4 
 begin
  avg = sum ;
+ //$stop;
 i=i+1;
 end
 else if(i==5) //reset the parameters and make set finish

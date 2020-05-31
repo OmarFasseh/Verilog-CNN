@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun May 31 06:28:05 2020
+# Process ID: 9288
+# Log file: C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/vivado.log
+# Journal file: C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 705.516 ; gain = 140.355
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May 31 06:31:04 2020...
+utput will be captured here: C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May 31 06:31:09 2020...

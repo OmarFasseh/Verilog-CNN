@@ -1,11 +1,12 @@
 `timescale 1ns / 1ps
 
-module tanh( input_x, clk, output_tanh);
+module tanh( input_x, clk, reset, output_tanh);
 parameter EXPONENT_WIDTH = 8;
 parameter MANTISSA_WIDTH = 23;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
 input [DATA_WIDTH-1:0] input_x;
 input clk;
+input reset;
 output reg[DATA_WIDTH-1:0] output_tanh;
 reg [DATA_WIDTH-1:0] x_power_two;
 reg [DATA_WIDTH-1:0] x_power_three;
@@ -31,41 +32,48 @@ begin
 end
 always@(posedge clk)
 begin
-    if(i==0)
+    if(reset==0)
     begin
-        temp_mul_a=input_x;
-        temp_mul_b=input_x;
-    end
-    else if(i==1)
-    begin
-        temp_mul_a=x_power_two;
-        temp_mul_b=input_x;
-    end  
-    else if(i==2)
-    begin
-        temp_mul_a=x_power_two;
-        temp_mul_b=x_power_three;
-    end 
-    else if(i==3)
-    begin
-        temp_mul_a=x_power_two;
-        temp_mul_b=x_power_five;
-    end
-    else if(i==4)
-    begin
-        temp_mul_a=x_power_three;
-        temp_mul_b=first_constant;
-    end  
-    else if(i==5)
-    begin
-        temp_mul_a=x_power_five;
-        temp_mul_b=second_constant;
-    end
-    else if(i==6)
-    begin
-        temp_mul_a=x_power_seven;
-        temp_mul_b=third_constant;
-    end 
+        if(i==0)
+        begin
+            temp_mul_a=input_x;
+            temp_mul_b=input_x;
+        end
+        else if(i==1)
+        begin
+            temp_mul_a=x_power_two;
+            temp_mul_b=input_x;
+        end  
+        else if(i==2)
+        begin
+            temp_mul_a=x_power_two;
+            temp_mul_b=x_power_three;
+        end 
+        else if(i==3)
+        begin
+            temp_mul_a=x_power_two;
+            temp_mul_b=x_power_five;
+        end
+        else if(i==4)
+        begin
+            temp_mul_a=x_power_three;
+            temp_mul_b=first_constant;
+        end  
+        else if(i==5)
+        begin
+            temp_mul_a=x_power_five;
+            temp_mul_b=second_constant;
+        end
+        else if(i==6)
+        begin
+            temp_mul_a=x_power_seven;
+            temp_mul_b=third_constant;
+        end
+     end
+     else
+     begin
+        i=0;
+     end
 end
 
 /*always@(negedge clk && startTANH)
@@ -84,56 +92,63 @@ end*/
 
 always@(negedge clk)
 begin
-    if(i==0)
+    if(reset==0)
     begin
-        x_power_two=output_tmp_mul;
+        if(i==0)
+        begin
+            x_power_two=output_tmp_mul;
+        end
+        else if(i==1)
+        begin
+            x_power_three=output_tmp_mul;
+        end
+        else if(i==2)
+        begin
+            x_power_five=output_tmp_mul;
+        end
+        else if(i==3)
+        begin
+            x_power_seven=output_tmp_mul;
+        end
+        else if(i==4)
+        begin
+            temp_add_a=output_tmp_mul;
+            temp_add_b=input_x;
+        end
+        else if(i==5)
+        begin
+            temp_add_a=output_tmp_add;
+            temp_add_b=output_tmp_mul;
+        end
+        else if(i==6)
+        begin
+            temp_add_a=output_tmp_add;
+            temp_add_b=output_tmp_mul;
+        end
+        else if(i==7)
+        begin
+            output_tanh=output_tmp_add;
+        end
+        if(i!=8)
+        begin
+            i=i+1;
+        end
+        if(i > 7)
+        begin
+            i=0;
+            x_power_two=32'h00000000000000000000000000000000;
+            x_power_three=32'h00000000000000000000000000000000;
+            x_power_five=32'h00000000000000000000000000000000;
+            x_power_seven=32'h00000000000000000000000000000000;
+            temp_mul_a=32'h00000000000000000000000000000000;
+            temp_mul_b=32'h00000000000000000000000000000000;
+            temp_add_a=32'h00000000000000000000000000000000;
+            temp_add_b=32'h00000000000000000000000000000000;
+        end
     end
-    else if(i==1)
-    begin
-        x_power_three=output_tmp_mul;
-    end
-    else if(i==2)
-    begin
-        x_power_five=output_tmp_mul;
-    end
-    else if(i==3)
-    begin
-        x_power_seven=output_tmp_mul;
-    end
-    else if(i==4)
-    begin
-        temp_add_a=output_tmp_mul;
-        temp_add_b=input_x;
-    end
-    else if(i==5)
-    begin
-        temp_add_a=output_tmp_add;
-        temp_add_b=output_tmp_mul;
-    end
-    else if(i==6)
-    begin
-        temp_add_a=output_tmp_add;
-        temp_add_b=output_tmp_mul;
-    end
-    else if(i==7)
-    begin
-        output_tanh=output_tmp_add;
-    end
-    if(i!=8)
-    begin
-        i=i+1;
-    end
-    if(i > 7)
+    else
     begin
         i=0;
-        x_power_two=32'h00000000000000000000000000000000;
-        x_power_three=32'h00000000000000000000000000000000;
-        x_power_five=32'h00000000000000000000000000000000;
-        x_power_seven=32'h00000000000000000000000000000000;
-        temp_mul_a=32'h00000000000000000000000000000000;
-        temp_mul_b=32'h00000000000000000000000000000000;
-        temp_add_a=32'h00000000000000000000000000000000;
-        temp_add_b=32'h00000000000000000000000000000000;
     end
 end
 
