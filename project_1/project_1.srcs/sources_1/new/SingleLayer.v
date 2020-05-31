@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module SingleLayer(input_fc, clk, start_fc, reset,output_fc_final,test_multi,test_weights,test_output,done);
+module SingleLayer(input_fc, clk, start_fc, reset,output_fc_final,test_multi,test_weights,test_output);
 parameter EXPONENT_WIDTH = 8;
 parameter MANTISSA_WIDTH = 23;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
@@ -11,7 +11,7 @@ parameter ADDR_WIDTH = 9 ; //address bus width
 
 parameter file = "C:/Users/giga/Documents/weights1_modified.txt";
 input  [(DATA_WIDTH*(INPUT_SIZE))-1:0] input_fc;
-input clk, start_fc, reset , done;
+input clk, start_fc, reset ;
 output [(DATA_WIDTH*OUTPUT_SIZE)-1:0] output_fc_final;
 output [(DATA_WIDTH*OUTPUT_SIZE)-1:0] test_multi;
 output reg [(DATA_WIDTH*OUTPUT_SIZE)-1:0] test_weights;
@@ -41,7 +41,7 @@ always @ (negedge clk) begin
 end
 
 always @ (posedge clk) begin 
-    if(~reset && ~done) //increment the  memory address if running
+    if(~reset) //increment the  memory address if running
         address_fc = address_fc +1;
         
     if(i < INPUT_SIZE) begin //looping input fc

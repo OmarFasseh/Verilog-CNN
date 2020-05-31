@@ -41,5 +41,5 @@ SL( .input_fc(input_fc),
     .start_fc(start_fc),
     .reset(reset),
     .output_fc_final(output_fc_final),
-    .test_multi(test_multi),.test_weights(test_weights),.test_output(test_output),.done(done));
+    .test_multi(test_multi),.test_weights(test_weights),.test_output(test_output));
 endmodule

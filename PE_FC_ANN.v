@@ -21,7 +21,6 @@ begin
     end else begin 
         output_fc = output_tmp_add;
         test_multi = output_tmp_mul;
-        $stop;
     end
     
 end
