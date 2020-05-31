@@ -1,0 +1,437 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sat May 30 22:40:44 2020
+# Process ID: 21032
+# Log file: C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/vivado.log
+# Journal file: C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.xpr}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top avg_pooling_input_tensor [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top avg_layer_tb [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top avg_layer_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+launch_simulation
+source avg_layer_tb.tcl
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_layer_tb.v} 17
+remove_bps -file {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_layer_tb.v} -line 17
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top avg_layer [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+launch_simulation
+source avg_layer_tb.tcl
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top fp_avg_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source fp_avg_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top avg_layer_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+launch_simulation
+source avg_layer_tb.tcl
+run all
+launch_simulation
+source avg_layer_tb.tcl
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_avg.v} 28
+remove_bps -file {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_avg.v} -line 28
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_avg.v} 33
+remove_bps -file {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_avg.v} -line 33
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_avg.v} 59
+run all
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_avg.v} 63
+run all
+run all
+run all
+run all
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_avg.v} 58
+remove_bps -file {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/fp_avg.v} -line 58
+launch_simulation
+source avg_layer_tb.tcl
+run all
+run all
+step
+step
+step
+launch_simulation
+source avg_layer_tb.tcl
+run all
+step
+step
+step
+step
+step
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+run all
+run all
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+launch_simulation
+source avg_layer_tb.tcl
+launch_simulation
+source avg_layer_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top fp_avg_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+source fp_avg_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top avg_layer_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top avg_pooling_input_tensor [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close [ open {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor_tb.v} w ]
+add_files {{C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor_tb.v}}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top avg_pooling_input_tensor_tb [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+launch_simulation
+source avg_layer_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top avg_pooling_input_tensor_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top avg_pooling_input_tensor [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+run all
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 42
+remove_bps -file {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} -line 42
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 36
+run all
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 25
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 25
+run all
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 25
+run all
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 30
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 28
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 25
+run all
+step
+close_sim
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 28
+run all
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 33
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 34
+remove_bps -file {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} -line 34
+add_bp {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} 34
+remove_bps -file {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.srcs/sources_1/new/avg_pooling_input_tensor.v} -line 33
+run all
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+close_sim
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+run all
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+close_sim
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+close_sim
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+close_sim
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+close_sim
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+close_sim
+launch_simulation
+source avg_pooling_input_tensor_tb.tcl
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+close_sim
+close_sim
+close_sim

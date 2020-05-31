@@ -6,4 +6,4 @@ REM          to be invoked for Vivado to track run status.
 REM Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 REM
 
-vivado -log Softmax.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Softmax.tcl
+vivado -log avg_pooling_input_tensor.vds -m64 -mode batch -messageDb vivado.pb -notrace -source avg_pooling_input_tensor.tcl
