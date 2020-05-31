@@ -7,6 +7,7 @@ parameter numberOfInputs=6;
 
 reg [((EXPONENT_WIDTH+MANTISSA_WIDTH+1)*numberOfInputs)-1:0] input_value;
 reg clock;
+reg reset;
 wire [((EXPONENT_WIDTH+MANTISSA_WIDTH+1)*numberOfInputs)-1:0] output_value;
 
 initial
@@ -29,6 +30,7 @@ always begin
 tanh_activation_function #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH), .numberOfInputs(numberOfInputs)) inst1 (
 .input_tanh_function(input_value),
 .clk(clock),
+.reset(reset),
 .output_tanh_function(output_value)
 );
 endmodule

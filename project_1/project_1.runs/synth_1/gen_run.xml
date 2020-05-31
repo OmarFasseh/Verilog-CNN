@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1590899400">
-  <File Type="RDS-DCP" Name="avg_pooling_input_tensor.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1590909222">
+  <File Type="RDS-DCP" Name="tanh_activation_function.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="avg_pooling_input_tensor_utilization_synth.pb"/>
+  <File Type="RDS-UTIL-PB" Name="tanh_activation_function_utilization_synth.pb"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="avg_pooling_input_tensor_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="avg_pooling_input_tensor.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="tanh_activation_function_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="tanh_activation_function.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="RDS-RDS" Name="avg_pooling_input_tensor.vds"/>
-  <File Type="RDS-UTIL" Name="avg_pooling_input_tensor_utilization_synth.rpt"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="avg_pooling_input_tensor_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="avg_pooling_input_tensor_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="tanh_activation_function.vds"/>
+  <File Type="RDS-UTIL" Name="tanh_activation_function_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="tanh_activation_function_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="tanh_activation_function_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ReLU.v">
@@ -288,7 +288,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="avg_pooling_input_tensor"/>
+      <Option Name="TopModule" Val="tanh_activation_function"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

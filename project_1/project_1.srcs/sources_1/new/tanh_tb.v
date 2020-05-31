@@ -3,7 +3,7 @@ module tanh_tb;
 
 parameter EXPONENT_WIDTH = 8;
 parameter MANTISSA_WIDTH = 23;
-
+reg reset;
 reg [31:0] input_value;
 reg clock;
 wire [31:0] output_value;
@@ -11,12 +11,20 @@ wire [31:0] output_value;
 initial
 begin
 clock =1;
+reset=0;
 //  e^2
 // s ----e---- --------------f-------------
+#200;
 input_value = 32'b01000000000000000000000000000000;
-
+reset=1;
+#2 reset=0;
  // s ----e---- --------------f-------------
+ #24;
+ 
+
 #16 input_value = 32'b01000000010000000000000000000000;
+reset=1;
+#2 reset=0;
 //#0.1 start=0;
 //  e^3.4
 // s ----e---- --------------f-------------
@@ -57,6 +65,7 @@ always begin
 tanh #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH)) inst1 (
 .input_x(input_value),
 .clk(clock),
+.reset(reset),
 .output_tanh(output_value)
 );
 endmodule
