@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1590908033">
-  <File Type="RDS-DCP" Name="tanh.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1591097959">
+  <File Type="RDS-DCP" Name="fpMul.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="tanh_utilization_synth.pb"/>
+  <File Type="RDS-UTIL-PB" Name="fpMul_utilization_synth.pb"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="tanh_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="tanh.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="fpMul_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="fpMul.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="RDS-RDS" Name="tanh.vds"/>
-  <File Type="RDS-UTIL" Name="tanh_utilization_synth.rpt"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="tanh_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="tanh_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="fpMul.vds"/>
+  <File Type="RDS-UTIL" Name="fpMul_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="fpMul_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="fpMul_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ReLU.v">
@@ -272,9 +272,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/avg_pooling_input_tensor.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/avg_pooling_input_tensor_tb.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/LeNet_tb.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="tanh"/>
+      <Option Name="TopModule" Val="fpMul"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

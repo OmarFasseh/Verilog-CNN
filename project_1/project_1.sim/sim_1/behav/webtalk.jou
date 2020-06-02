@@ -2,18 +2,9 @@
 # Webtalk v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-<<<<<<< HEAD
-# Start of session at: Fri May 29 16:57:45 2020
-# Process ID: 16616
+# Start of session at: Tue Jun 02 14:23:00 2020
+# Process ID: 22072
 # Log file: E:/VivadoFiles/Verilog-CNN/project_1/project_1.sim/sim_1/behav/webtalk.log
 # Journal file: E:/VivadoFiles/Verilog-CNN/project_1/project_1.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source E:/VivadoFiles/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/tanh_activation_function_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-=======
-# Start of session at: Sun May 31 11:02:50 2020
-# Process ID: 22000
-# Log file: C:/Users/DELL/Desktop/Git logic/Verilog-CNN/project_1/project_1.sim/sim_1/behav/webtalk.log
-# Journal file: C:/Users/DELL/Desktop/Git logic/Verilog-CNN/project_1/project_1.sim/sim_1/behav\webtalk.jou
-#-----------------------------------------------------------
-source C:/Users/DELL/Desktop/Git -notrace
->>>>>>> d7b5dfc926cbc15d6b6c19f180d20e990c22fc66
+source E:/VivadoFiles/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/LeNet_tb_behav/webtalk/xsim_webtalk.tcl -notrace

@@ -1,13 +1,15 @@
 `timescale 1ns / 1ps
-module LeNet(clk,reset,input_fc1);
-parameter EXPONENT_WIDTH = 8;
-parameter MANTISSA_WIDTH = 23;
+module LeNet(clk,reset,input_fc1,sm_output_value);
+parameter EXPONENT_WIDTH = 5;
+parameter MANTISSA_WIDTH = 10;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
 //fc
 parameter FC_INPUT_SIZE1= 120; //Number of inputs
 parameter FC_OUTPUT_SIZE1 = 84 ; //Number of outputs
 parameter FC_INPUT_SIZE2= 84; //Number of inputs
 parameter FC_OUTPUT_SIZE2 = 10; //Number of outputs
+//parameter file_fc1 = "E:/VivadoFiles/finalT/weight_ones1.txt";//weights 1
+//parameter file_fc2 = "E:/VivadoFiles/finalT/weight_ones2.txt";//weights 2
 parameter file_fc1 = "E:/VivadoFiles/finalT/hex_weightsdense_1.txt";//weights 1
 parameter file_fc2 = "E:/VivadoFiles/finalT/hex_weightsdense_2.txt";//weights 2
 //parameter inputs_file_1 = "E:/VivadoFiles/finalT/Inputs_FC_1.txt";
@@ -22,6 +24,7 @@ parameter numberOfInputs=84;
 //avg layer
 parameter dimension = 4 ;
 parameter dimension2 = (dimension/2)  ;
+parameter filter =3;
 //softMax
 parameter numberOfExps=10;
 
@@ -55,16 +58,19 @@ wire [(N-4)*(N-4)*filters_number*DATA_WIDTH-1:0] PC_output_fmap;
 wire  PC_done;
 
 //tanh
+reg tanh_reset;
 reg [(DATA_WIDTH*numberOfInputs)-1:0] tanh_input_value;
 wire [(DATA_WIDTH*numberOfInputs)-1:0] tanh_output_value;
 
 //avg layer
-reg [(dimension*dimension*DATA_WIDTH)-1:0] avLayer_input_value;
-wire [(dimension2*dimension2*DATA_WIDTH)-1:0] avLayer_output_value;
+reg avLayer_reset;
+reg [(filter*dimension*dimension*DATA_WIDTH)-1:0] avLayer_input_value;
+wire [(filter*dimension2*dimension2*DATA_WIDTH)-1:0] avLayer_output_value;
 
 //softmax
 reg [(DATA_WIDTH*numberOfExps)-1:0] sm_input_value;
-wire [(numberOfExps*DATA_WIDTH)-1:0] sm_output_value;
+reg sm_reset;
+output [(numberOfExps*DATA_WIDTH)-1:0] sm_output_value;
 wire sm_done;
 
 //LeNet
@@ -82,6 +88,7 @@ always@(posedge clk) begin
         //fc
         reset_fc1=1;
         start_fc1=1;   
+        //$stop;
     end else if (i==0)begin
         //initializing conv module
         PC_reset = 0; //close the reset
@@ -100,43 +107,57 @@ always@(posedge clk) begin
     end else if(i==2) begin 
         //delayed for now we start at i =10
     end else if(i==10)begin
+        //prepare fc1
         reset_fc1=1;
         start_fc1=1;  
         i=i+1;
         //input_fc1[DATA_WIDTH*FC_INPUT_SIZE-1:0]=
         clk_fc=0;
     end else if(i==11)begin
-        if (clk_fc >= FC_INPUT_SIZE1)
-            i=i+1;
-        else begin
+        //wait for fc1
+        if (clk_fc >= FC_INPUT_SIZE1) begin
+            i=i+1; //proceed to next module
+            //prepare next module (tanh)
+            tanh_reset = 1;
+            tanh_input_value=output_fc1;
+            j=8;//tanh takes 8 clks to finish
+            //$stop;
+        end else begin
             reset_fc1=0;
             start_fc1=0;
             clk_fc = clk_fc+1;
         end
-    end else if(i==12) begin
-        //reset tanh
-        tanh_input_value=output_fc1;
-        j=7;//8-1
-    end else if(i==13)begin
+    end else if(i==12)begin
         if(j!=0)begin
-            j=j-1;
+            tanh_reset = 0;
+            j=j-1; //wait for tanh
         end else begin
-            i=i+1;
+            i=i+1; //proceed to next module
+            //prepare next module (fc 2)
             clk_fc=0;
+            sm_reset=0;
             reset_fc2=1;
             start_fc2=1;
             input_fc2=tanh_output_value;
+            //$stop;
         end
-    end else if(i==14)begin
-        if (clk_fc >= FC_INPUT_SIZE2)
-            i=i+1;
-        else begin
+    end else if(i==13)begin
+        if (clk_fc >= FC_INPUT_SIZE2)begin
+            i=i+1;//proceed to next module
+            //prepare the next module (softmax)
+            sm_reset=1;
+            sm_input_value=output_fc2;
+            //$stop;
+        end else begin
+            //wait till clk_fc reaches the whole input size
             reset_fc2=0;
             start_fc2=0;
             clk_fc = clk_fc+1;
         end
-    end else if(i==15)begin
-        
+    end else if(i==14)begin
+        sm_reset=0;
+        //$stop;
+        //done (sm_done)?
     end
 end
 
@@ -148,7 +169,7 @@ SL1( .input_fc(input_fc1),
     .clk(clk),
     .start_fc(start_fc1),
     .reset(reset_fc1),
-    .output_fc_final(output_fc1),
+    .output_fc(output_fc1),
     .test_multi(test_multi1),.test_weights(test_weights1),.test_output(test_output1));
     
 SingleLayer #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH),.DATA_WIDTH(DATA_WIDTH),.INPUT_SIZE(FC_INPUT_SIZE2), 
@@ -157,39 +178,39 @@ SingleLayer #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH),.
         .clk(clk),
         .start_fc(start_fc2),
         .reset(reset_fc2),
-        .output_fc_final(output_fc2),
+        .output_fc(output_fc2),
         .test_multi(test_multi2),.test_weights(test_weights2),.test_output(test_output2));
 
-PC_MF #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH),.DATA_WIDTH(DATA_WIDTH),.N(N),.filters_number(filters_number))
+/*PC_MF #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH),.DATA_WIDTH(DATA_WIDTH),.N(N),.filters_number(filters_number))
 PC_MF1(.image(PC_image),
 .filters(PC_filters),
 .reset(PC_reset),
 .clk(clk),
 .output_fmap(PC_output_fmap),
 .done(PC_done)
-);
+);*/
 
 tanh_activation_function #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH), .numberOfInputs(numberOfInputs)) 
 tanh1 (
 .input_tanh_function(tanh_input_value),
 .clk(clk),
+.reset(tanh_reset),
 .output_tanh_function(tanh_output_value)
 );
 
-Softmax #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH)) 
-softmax1 (
+Softmax #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH)) softmax1(
 .input_exps(sm_input_value),
 .clk(clk),
+.reset_softmax(sm_reset),
 .output_softmax(sm_output_value),
 .done_softmax(sm_done)
 );
 
-avg_layer #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH), .dimension(dimension),
- .DATA_WIDTH(DATA_WIDTH)) 
-avg1 (
-.img_in(avLayer_input_value),
+/*avg_pooling_input_tensor #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH), .dimension(dimension),
+.DATA_WIDTH(DATA_WIDTH),.filter(filter)) avg1 (
+.imgs_in(avLayer_input_value),
+.reset_module(avLayer_reset),
 .clk(clk),
-.img_out(avLayer_output_value)
-);
-
+.imgs_out(avLayer_output_value)
+);*/
 endmodule

@@ -22,8 +22,17 @@ reg [MANTISSA_WIDTH:0] tmp_fract;
 reg tmp_sign;
 reg [5:0] i;
 
+//reg cat_a,cat_b;
+
 always @ (negedge clk)
 begin
+    //extra accurate but might cause issues?
+    /*if(A_FP[EXPONENT_WIDTH+MANTISSA_WIDTH-1:MANTISSA_WIDTH]>0) cat_a=1;
+    else cat_a=0;
+    if(A_FP[EXPONENT_WIDTH+MANTISSA_WIDTH-1:MANTISSA_WIDTH]>0) cat_b=1;
+    else cat_b=0;
+	fract_a  = {cat_a,A_FP [MANTISSA_WIDTH-1:0]};
+	fract_b  = {cat_b,B_FP [MANTISSA_WIDTH-1:0]};*/
 	sign_a  = A_FP [EXPONENT_WIDTH+MANTISSA_WIDTH];
 	sign_b  = B_FP [EXPONENT_WIDTH+MANTISSA_WIDTH];
 	e_A      = A_FP [EXPONENT_WIDTH+MANTISSA_WIDTH-1:MANTISSA_WIDTH];

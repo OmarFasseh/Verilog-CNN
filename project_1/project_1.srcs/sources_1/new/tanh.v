@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
 module tanh( input_x, clk, reset, output_tanh);
-parameter EXPONENT_WIDTH = 8;
-parameter MANTISSA_WIDTH = 23;
+parameter EXPONENT_WIDTH = 5;
+parameter MANTISSA_WIDTH = 10;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
 input [DATA_WIDTH-1:0] input_x;
 input clk;
@@ -12,9 +12,9 @@ reg [DATA_WIDTH-1:0] x_power_two;
 reg [DATA_WIDTH-1:0] x_power_three;
 reg [DATA_WIDTH-1:0] x_power_five;
 reg [DATA_WIDTH-1:0] x_power_seven;
-reg [DATA_WIDTH-1:0] first_constant=32'b10111110101010101010101010101011;
-reg [DATA_WIDTH-1:0] second_constant=32'b00111110000010001000100010001001;
-reg [DATA_WIDTH-1:0] third_constant=32'b10111101010111010000110111010001;
+reg [DATA_WIDTH-1:0] first_constant=16'b1011010101010101;
+reg [DATA_WIDTH-1:0] second_constant=16'b0011000001000100;
+reg [DATA_WIDTH-1:0] third_constant=16'b1010101011101000;
 reg [DATA_WIDTH-1:0] temp_mul_a;
 reg [DATA_WIDTH-1:0] temp_mul_b;
 wire [DATA_WIDTH-1:0] output_tmp_mul;
@@ -128,6 +128,16 @@ begin
         else if(i==7)
         begin
             output_tanh=output_tmp_add;
+            if(input_x[DATA_WIDTH-2:DATA_WIDTH-EXPONENT_WIDTH-1] >= 5'b01111 && input_x[DATA_WIDTH-2:DATA_WIDTH-EXPONENT_WIDTH-1] < 5'b10000)
+            begin
+                output_tanh[DATA_WIDTH-1]=input_x[DATA_WIDTH-1];
+                output_tanh[DATA_WIDTH-2:0]=15'b011101100110011;
+            end
+            else if(input_x [DATA_WIDTH-2:DATA_WIDTH-EXPONENT_WIDTH-1] >= 5'b10000)
+            begin
+                output_tanh[DATA_WIDTH-1]=input_x[DATA_WIDTH-1];
+                output_tanh[DATA_WIDTH-2:0]=15'b011110000000000;
+            end
         end
         if(i!=8)
         begin
