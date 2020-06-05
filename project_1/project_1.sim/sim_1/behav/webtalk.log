@@ -2,14 +2,11 @@
 # Webtalk v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Tue Jun 02 14:23:00 2020
-# Process ID: 22072
-# Log file: E:/VivadoFiles/Verilog-CNN/project_1/project_1.sim/sim_1/behav/webtalk.log
-# Journal file: E:/VivadoFiles/Verilog-CNN/project_1/project_1.sim/sim_1/behav\webtalk.jou
+# Start of session at: Fri Jun 05 21:39:54 2020
+# Process ID: 18008
+# Log file: C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.sim/sim_1/behav/webtalk.log
+# Journal file: C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source E:/VivadoFiles/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/LeNet_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-
-    while executing
-"webtalk_transmit -clientid 2784064318 -regid "" -xml E:/VivadoFiles/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/LeNet_tb_behav/webtalk/us..."
-    (file "E:/VivadoFiles/Verilog-CNN/project_1/project_1.sim/sim_1/behav/xsim.dir/LeNet_tb_behav/webtalk/xsim_webtalk.tcl" line 32)
-INFO: [Common 17-206] Exiting Webtalk at Tue Jun 02 14:23:02 2020...
+source C:/Users/Mohamed -notrace
+couldn't read file "C:/Users/Mohamed": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Fri Jun 05 21:39:54 2020...

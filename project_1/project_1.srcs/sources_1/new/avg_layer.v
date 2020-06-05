@@ -5,10 +5,10 @@ clk,
 img_out,
 reset
 );
-parameter EXPONENT_WIDTH = 8;
-parameter MANTISSA_WIDTH = 23;
+parameter EXPONENT_WIDTH = 5;
+parameter MANTISSA_WIDTH = 10;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
-parameter dimension = 4 ; //dimension of input matrix
+parameter dimension = 10 ; //dimension of input matrix
 parameter dimension2 = (dimension/2); //dimension of output matrix
 input [(dimension*dimension*DATA_WIDTH)-1:0] img_in;
 input clk ;

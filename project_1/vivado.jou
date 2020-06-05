@@ -2,13 +2,36 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sun May 31 11:17:21 2020
-# Process ID: 12720
-# Log file: E:/VivadoFiles/Verilog-CNN/project_1/vivado.log
-# Journal file: E:/VivadoFiles/Verilog-CNN/project_1\vivado.jou
+# Start of session at: Fri Jun 05 01:52:06 2020
+# Process ID: 30612
+# Log file: C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/vivado.log
+# Journal file: C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project E:/VivadoFiles/Verilog-CNN/project_1/project_1.xpr
-set_property is_enabled true [get_files  E:/VivadoFiles/Verilog-CNN/project_1/project_1.srcs/sources_1/new/LeNet.v]
+open_project {C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1/project_1.xpr}
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top avg_layer_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
 launch_simulation
-source Softmax_tb.tcl
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source avg_layer_tb.tcl
+close_sim
+launch_simulation
+source avg_layer_tb.tcl
+close_sim

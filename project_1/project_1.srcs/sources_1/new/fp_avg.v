@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 module fp_avg(fp_input ,clk, fp_output,reset);
-parameter EXPONENT_WIDTH = 8;
-parameter MANTISSA_WIDTH = 23;
+parameter EXPONENT_WIDTH = 5;
+parameter MANTISSA_WIDTH = 10;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1 ;
 
 input [((4*DATA_WIDTH)-1):0] fp_input;

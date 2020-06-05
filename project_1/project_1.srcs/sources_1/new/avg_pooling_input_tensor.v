@@ -9,7 +9,7 @@ parameter EXPONENT_WIDTH = 5;
 parameter MANTISSA_WIDTH = 10;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
 parameter filter =6; //24 clk
-parameter dimension = 2 ; //dimension of input matrix
+parameter dimension = 28 ; //dimension of input matrix
 parameter dimension2 = (dimension/2); //dimension of output matrix
 input [(filter*dimension*dimension*DATA_WIDTH)-1:0] imgs_in;
 input clk ;
