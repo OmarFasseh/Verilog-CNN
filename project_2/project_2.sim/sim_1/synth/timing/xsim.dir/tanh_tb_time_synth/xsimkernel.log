@@ -1,0 +1,4 @@
+Running: xsim.dir/tanh_tb_time_synth/xsimk.exe -simmode gui -wdb tanh_tb_time_synth.wdb -simrunnum 0 -socket 57374
+Design successfully loaded
+Design Loading Memory Usage: 32292 KB (Peak: 32292 KB)
+Design Loading CPU Usage: 343 ms

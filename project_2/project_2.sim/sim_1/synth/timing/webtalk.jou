@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun Jun 07 01:08:46 2020
+# Process ID: 31728
+# Log file: D:/Users/IbrahimWael/Desktop/project_2/project_2.sim/sim_1/synth/timing/webtalk.log
+# Journal file: D:/Users/IbrahimWael/Desktop/project_2/project_2.sim/sim_1/synth/timing\webtalk.jou
+#-----------------------------------------------------------
+source D:/Users/IbrahimWael/Desktop/project_2/project_2.sim/sim_1/synth/timing/xsim.dir/tanh_tb_time_synth/webtalk/xsim_webtalk.tcl -notrace

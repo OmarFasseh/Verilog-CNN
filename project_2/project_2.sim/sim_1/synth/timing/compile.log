@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/IbrahimWael/Desktop/project_2/project_2.sim/sim_1/synth/timing/tanh_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_add_2
+INFO: [VRFC 10-311] analyzing module tanh
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/IbrahimWael/Desktop/project_2/project_2.srcs/sources_1/new/tanh_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tanh_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/IbrahimWael/Desktop/project_2/project_2.sim/sim_1/synth/timing/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [D:/Users/IbrahimWael/Desktop/project_2/project_2.sim/sim_1/synth/timing/glbl.v:6]

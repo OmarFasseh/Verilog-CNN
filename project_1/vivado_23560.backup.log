@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun Jun 07 00:51:47 2020
+# Process ID: 5172
+# Log file: D:/Users/IbrahimWael/Desktop/clonefaseeeeeeeeeeh/Verilog-CNN/project_1/vivado.log
+# Journal file: D:/Users/IbrahimWael/Desktop/clonefaseeeeeeeeeeh/Verilog-CNN/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Users/IbrahimWael/Desktop/clonefaseeeeeeeeeeh/Verilog-CNN/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Mohamed Gaber/Desktop/logic/Verilog-CNN/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2015.2/data/ip'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 07 00:56:10 2020...
