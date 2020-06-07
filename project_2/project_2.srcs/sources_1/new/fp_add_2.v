@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module fp_add_2 (
 input [EXPONENT_WIDTH+MANTISSA_WIDTH:0] A_FP, 
 input [EXPONENT_WIDTH+MANTISSA_WIDTH:0] B_FP,

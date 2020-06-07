@@ -13,6 +13,9 @@ reg reset;
 
 wire [(numberOfExps*DATA_WIDTH)-1:0] output_value;
 wire done;
+initial //display variables
+$monitor ("input=%h, Output=%h",
+   input_value, output_value);
 initial
 begin
 clock =1;
@@ -23,46 +26,65 @@ clock =1;
 //  e^2
 // s ----e---- --------------f-------------
  //input_value[DATA_WIDTH-1:0] = 32'b01000000000000000000000000000000;
- input_value[DATA_WIDTH-1:0] = 16'h5540;//16'b0100000000000000;
+  input_value[DATA_WIDTH-1:0] = 16'b0100000000000000;
+ //input_value[DATA_WIDTH-1:0] = 16'h5540;//16'b0100000000000000;
+ 
  //  e^3
  // s ----e---- --------------f-------------
  //input_value[(DATA_WIDTH*2)-1:DATA_WIDTH] = 32'b01000000010000000000000000000000;
- input_value[(DATA_WIDTH*2)-1:DATA_WIDTH] = 16'h5540;//16'b0100001000000000;
+  input_value[(DATA_WIDTH*2)-1:DATA_WIDTH] = 16'b0100001000000000;
+ //input_value[(DATA_WIDTH*2)-1:DATA_WIDTH] = 16'h5540;//16'b0100001000000000;
 
 //  e^3.4
 // s ----e---- --------------f-------------
  //input_value[DATA_WIDTH*3-1:DATA_WIDTH*2] = 32'b01000000010110011001100110011010;
- input_value[DATA_WIDTH*3-1:DATA_WIDTH*2] = 16'h5540;//16'b0100001011001101;
+  input_value[DATA_WIDTH*3-1:DATA_WIDTH*2] = 16'b0100001011001101;
+
+ //input_value[DATA_WIDTH*3-1:DATA_WIDTH*2] = 16'h5540;//16'b0100001011001101;
 
 //  e^-2
 // s ----e---- --------------f-------------
  //input_value[DATA_WIDTH*4-1:DATA_WIDTH*3] = 32'b11000000000000000000000000000000;
- input_value[DATA_WIDTH*4-1:DATA_WIDTH*3] = 16'h5540;//16'b1100000000000000;
+  input_value[DATA_WIDTH*4-1:DATA_WIDTH*3] = 16'b1100000000000000;
+  
+ //input_value[DATA_WIDTH*4-1:DATA_WIDTH*3] = 16'h5540;//16'b1100000000000000;
 
 //  e^-1.2
 // s ----e---- --------------f-------------
  //input_value[DATA_WIDTH*5-1:DATA_WIDTH*4] = 32'b10111111100110011001100110011010;
- input_value[DATA_WIDTH*5-1:DATA_WIDTH*4] = 16'h5540;//16'b1011110011001101;
+  input_value[DATA_WIDTH*5-1:DATA_WIDTH*4] = 16'b1011110011001101;
+
+ //input_value[DATA_WIDTH*5-1:DATA_WIDTH*4] = 16'h5540;//16'b1011110011001101;
+
 //  e^5
 // s ----e---- --------------f-------------
  //input_value[DATA_WIDTH*6-1:DATA_WIDTH*5] = 32'b01000000101000000000000000000000;
- input_value[DATA_WIDTH*6-1:DATA_WIDTH*5] = 16'h5540;//16'b0100010100000000;
+  input_value[DATA_WIDTH*6-1:DATA_WIDTH*5] = 16'b0100010100000000;
+
+ //input_value[DATA_WIDTH*6-1:DATA_WIDTH*5] = 16'h5540;//16'b0100010100000000;
 //  e^0.01
 // s ----e---- --------------f-------------
  //input_value[DATA_WIDTH*7-1:DATA_WIDTH*6] = 32'b00111100001000111101011100001010;
- input_value[DATA_WIDTH*7-1:DATA_WIDTH*6] = 16'h5540;//16'b0010000100011111;
+  input_value[DATA_WIDTH*7-1:DATA_WIDTH*6] = 16'b0010000100011111;
+ //input_value[DATA_WIDTH*7-1:DATA_WIDTH*6] = 16'h5540;//16'b0010000100011111;
 //  e^0.001
 // s ----e---- --------------f-------------
  //input_value[DATA_WIDTH*8-1:DATA_WIDTH*7] = 32'b00111010100000110001001001101111;
- input_value[DATA_WIDTH*8-1:DATA_WIDTH*7] = 16'h5540;//16'b0001010000011001;
+  input_value[DATA_WIDTH*8-1:DATA_WIDTH*7] = 16'b0001010000011001;
+
+ //input_value[DATA_WIDTH*8-1:DATA_WIDTH*7] = 16'h5540;//16'b0001010000011001;
 //  e^-0.01
 // s ----e---- --------------f-------------
 // input_value[DATA_WIDTH*9-1:DATA_WIDTH*8] = 32'b10111100001000111101011100001010;
- input_value[DATA_WIDTH*9-1:DATA_WIDTH*8] = 16'h5540;//16'b1010000100011111;
+ input_value[DATA_WIDTH*9-1:DATA_WIDTH*8] = 16'b1010000100011111;
+
+ //input_value[DATA_WIDTH*9-1:DATA_WIDTH*8] = 16'h5540;//16'b1010000100011111;
 //  e^-0.001
 // s ----e---- --------------f-------------
  //input_value[DATA_WIDTH*10-1:DATA_WIDTH*9] = 32'b10111010100000110001001001101111;
- input_value[DATA_WIDTH*10-1:DATA_WIDTH*9] = 16'h5540;//16'b1001010000011001;
+  input_value[DATA_WIDTH*10-1:DATA_WIDTH*9] = 16'b1001010000011001;
+
+// input_value[DATA_WIDTH*10-1:DATA_WIDTH*9] = 16'h5540;//16'b1001010000011001;
 #2 reset=0;
 #50;
    reset=0;

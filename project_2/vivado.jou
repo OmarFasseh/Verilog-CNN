@@ -193,3 +193,98 @@ launch_simulation
 source LeNet_tb.tcl
 close_sim
 launch_simulation
+add_files -norecurse E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/PC_MF_tb.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top LeNet [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source LeNet_tb.tcl
+restart
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 147
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 152
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 172
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 174
+run all
+run all
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 156
+restart
+run all
+restart
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 165
+remove_bps -file {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} -line 156
+run all
+restart
+run all
+run all
+run all
+run all
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 150
+remove_bps -file {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} -line 165
+restart
+run all
+remove_bps -file {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} -line 150
+remove_bps -file {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} -line 152
+run all
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 150
+run all
+launch_simulation
+launch_simulation
+source LeNet_tb.tcl
+restart
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 147
+run all
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 152
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 165
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run all
+run all
+run all
+run all
+run all
+remove_bps -file {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} -line 165
+add_bp {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} 165
+remove_bps -file {E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v} -line 165
+run all
+close_sim

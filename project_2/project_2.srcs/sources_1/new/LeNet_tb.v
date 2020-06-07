@@ -11,6 +11,7 @@ parameter FC_OUTPUT_SIZE2 = 10; //Number of outputs
 parameter inputs_file_0 = "E:/VivadoFiles/finalT/edited_ones.txt";
 //parameter file_fc1 = "E:/VivadoFiles/finalT/hex_weightsdense_1.txt";//weights 1
 //parameter file_fc2 = "E:/VivadoFiles/finalT/hex_weightsdense_2.txt";//weights 2
+//remeber to pass parameters
 parameter file_fc1 = "E:/VivadoFiles/finalT/weight_ones1.txt";//weights 1
 parameter file_fc2 = "E:/VivadoFiles/finalT/weight_ones1.txt";//weights 2
 //parameter inputs_file_1 = "E:/VivadoFiles/finalT/Inputs_FC_1.txt";
@@ -19,7 +20,16 @@ parameter file_fc2 = "E:/VivadoFiles/finalT/weight_ones1.txt";//weights 2
 
 //PC_MF 
 parameter N = 32; //The size of the image NxN
-parameter filters_number = 2; //Number of filters
+parameter filters_number = 6; //Number of filters
+
+parameter number_of_filters3 = 120; //Number of filters 3rd conv
+//remember to change file
+parameter filter_file = "E:/VivadoFiles/finalT/filters2.txt";
+reg [number_of_filters3*25*DATA_WIDTH-1:0] PC3_filters;
+//work in progress
+//reg [N*N*DATA_WIDTH-1:0] images [0:NUM_TEST_CASES-1]; //A collection of images for different test cases
+//reg [25*DATA_WIDTH-1:0] filters [0:NUM_TEST_CASES-1]; //For different test cases
+
 //tanh
 parameter numberOfInputs=84; 
 //avg layer
@@ -41,6 +51,7 @@ initial begin
     $readmemh(inputs_file_0, inputs_mem);
     for( i = 0;i <FC_INPUT_SIZE1;i=i+1)
         input_fc1[i*DATA_WIDTH+:DATA_WIDTH] = inputs_mem[i];
+    PC3_filters=0;//remember to mem read    
     reset=0;
     clk=0;
     #2 reset =1;
@@ -52,5 +63,5 @@ end
 always begin
     #1 clk = ~clk; // Toggle clock every 5 ticks 
 end
-LeNet lN(.clk(clk),.reset(reset),.input_leNet(input_fc1),.sm_output_value(sm_output_value),.sm_done(sm_done),.tanh6_output_value(tanh6_output_value));
+LeNet lN(.clk(clk),.reset(reset),.input_leNet(input_fc1),.PC3_filters(PC3_filters),.sm_output_value(sm_output_value),.sm_done(sm_done),.tanh6_output_value(tanh6_output_value));
 endmodule

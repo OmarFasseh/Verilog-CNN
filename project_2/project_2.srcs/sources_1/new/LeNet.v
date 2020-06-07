@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module LeNet(clk,reset,input_leNet,sm_output_value,sm_done,tanh6_output_value);
+module LeNet(clk,reset,input_leNet,PC3_filters,sm_output_value,sm_done,tanh6_output_value);
 parameter EXPONENT_WIDTH = 5;
 parameter MANTISSA_WIDTH = 10;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
@@ -20,8 +20,9 @@ parameter file_fc2 = "E:/VivadoFiles/finalT/hex_weightsdense_2.txt";//weights 2
 parameter N = 32; //The size of the image NxN
 parameter filters_number = 2; //Number of filters
 
-parameter N3 = 5; //The size of the image NxN
-parameter number_of_filters3 = 120; //Number of filters 
+parameter N3 = 5; //The size of the image NxN of 3rd conv
+parameter number_of_filters3 = 120; //Number of filters of 3rd conv
+parameter number_of_series3 =1;//120/number_of_filters3 =>how many series operation needed  
 //avg layer
 parameter dimension = 4 ;
 parameter dimension2 = (dimension/2)  ;
@@ -29,10 +30,11 @@ parameter filter =3;
 //softMax
 parameter numberOfExps=10;
 
-//LeNet
+//LeNet i/o
 input clk;
 input reset;
 input [(DATA_WIDTH*FC_INPUT_SIZE1)-1:0] input_leNet;
+
 reg [6*25*DATA_WIDTH-1:0]filters1; //input
 //input filters2;
 //input filters3;
@@ -57,8 +59,8 @@ wire [(DATA_WIDTH*FC_OUTPUT_SIZE2)-1:0] test_output2;
 // wire [(N-4)*(N-4)*filters_number*DATA_WIDTH-1:0] PC_output_fmap;
 // wire  PC_done;
 
-reg [N*N*DATA_WIDTH-1:0] PC3_image; //The part of the image used in conv unit
-reg [number_of_filters3*25*DATA_WIDTH-1:0] PC3_filters; //The filters used in conv unit
+reg [N3*N3*DATA_WIDTH-1:0] PC3_image; //The part of the image used in conv unit
+input [number_of_filters3*25*DATA_WIDTH-1:0] PC3_filters; //The filters used in conv unit
 reg PC3_reset;
 wire [(N3-4)*(N3-4)*number_of_filters3*DATA_WIDTH-1:0] PC3_output_fmap;
 wire  PC3_done;
@@ -95,6 +97,7 @@ output sm_done;
 
 //LeNet
 reg [(N-4)*(N-4)*6*DATA_WIDTH-1:0] output_conv1;
+reg [(N3-4)*(N3-4)*number_of_filters3*number_of_series3*DATA_WIDTH-1:0]   PC3_whole_output;
 
 reg [12:0] conv3_idx; //needs to reach (25 clks if parallel or 3K if series) to fisnish
 
@@ -116,7 +119,6 @@ always@(posedge clk) begin
     if(reset==1) begin //resetting/initializing
         i = 10; //should be i=0 but for now we will start with the fc layer
         //j = 6; //max number of filters
-        PC3_filters = 0;
         PC3_reset = 1;
         output_conv1 = 0;
         
@@ -128,7 +130,7 @@ always@(posedge clk) begin
         reset_fc1=1;
         start_fc1=1;
         //temp
-        tanh5_input_value=input_leNet;
+        PC3_image=input_leNet[N3*N3*DATA_WIDTH-1:0];
         //pipeline
         conv3_idx=0;
 
@@ -143,14 +145,23 @@ always@(posedge clk) begin
         //Conv Layer 3 
         if(conv3_idx==0)begin
             PC3_reset=1;
+            j=0;
             conv3_idx=conv3_idx+1;
-        end else if (conv3_idx==FC_INPUT_SIZE1+1 && tanh6_idx > 8) begin //Input_SIZE clks passed && next module is ready-> init the next module 
+        end else if (PC3_done&&conv3_idx>=25*(N3-4)*(N3-4) && tanh5_idx > 8) begin //Input_SIZE clks passed && next module is ready-> init the next module 
             conv3_idx=conv3_idx+1;
-
+            j=j+1;
+            if(j==number_of_series3)begin
             //prepare next module (tanh)
-            tanh6_input_value=output_fc1;
-            tanh6_idx=0;
-        end else if(conv3_idx<=(N3-4)*(N3-4)*filters_number)begin
+                PC3_whole_output[j*(N3-4)*(N3-4)*number_of_filters3*DATA_WIDTH-1-:(N3-4)*(N3-4)*number_of_filters3*DATA_WIDTH]=PC3_output_fmap;
+                tanh5_input_value=PC3_whole_output;
+                tanh5_idx=0;
+
+                conv3_idx=0; //reset myself since I am the first
+                i=i+1; //take another input since I am the first
+            end else begin
+                PC3_whole_output[j*(N3-4)*(N3-4)*number_of_filters3*DATA_WIDTH-1-:(N3-4)*(N3-4)*number_of_filters3*DATA_WIDTH]=PC3_output_fmap;
+            end
+        end else if(conv3_idx<=25*(N3-4)*(N3-4) || !PC3_done)begin
             PC3_reset=0;
             conv3_idx=conv3_idx+1;
         end
@@ -165,8 +176,6 @@ always@(posedge clk) begin
             input_fc1=tanh5_output_value;
             fc1_idx=0; //start fc1
 
-            tanh5_idx=0; //reset myself since I am the first
-            i=i+1; //take another input since I am the first
         end else if (tanh5_idx<9) begin
             tanh5_reset = 0;
             tanh5_idx=tanh5_idx+1; //wait for tanh
@@ -282,7 +291,7 @@ SL2( .input_fc(input_fc2),
 
 
 PC_MF #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH),.N(N3),.filters_number(number_of_filters3))
-PC_MF3(.image(PC_image),
+PC_MF3(.image(PC3_image),
 .filters(PC3_filters),
 .reset(PC3_reset),
 .clk(clk),
