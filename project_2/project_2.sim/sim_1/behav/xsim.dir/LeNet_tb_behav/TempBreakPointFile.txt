@@ -1,2 +1,0 @@
-Breakpoint File Version 1.0147 true E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v
-152 true E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/LeNet.v
