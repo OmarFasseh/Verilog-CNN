@@ -1,4 +1,5 @@
 //test bench for floating-point multiplication
+`timescale 1ns / 1ps
 module div_flp_tb;
 
 parameter EXPONENT_WIDTH = 5;

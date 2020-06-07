@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/fp_add_2.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/fp_mul.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/PE_FC_ANN.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/Conv_PU.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/PC_SF.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/weights_Memory.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/FC_Layer_ANN.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/exponential.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/Div_flp.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/tanh.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/PC_MF.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/SingleLayer.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/tanh_activation_function.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/Softmax.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/LeNet.v"
+verilog xil_defaultlib  "../../../project_2.srcs/sources_1/new/LeNet_tb.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -155,5 +155,6 @@ begin
     div_reset=0;
     div_start=0;
     done_adders=0;
+    done_softmax=0;
 end 
 endmodule

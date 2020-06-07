@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module PE_FC_ANN ( input_fc,iweight_FC,clk,start_FC,output_fc,test_multi);
 parameter EXPONENT_WIDTH = 8;
 parameter MANTISSA_WIDTH = 23;

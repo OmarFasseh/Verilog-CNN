@@ -21,12 +21,10 @@ reg [EXPONENT_WIDTH-1:0] tmp_e;
 reg [MANTISSA_WIDTH:0] tmp_fract;
 reg tmp_sign;
 reg [5:0] i;
-
 //reg cat_a,cat_b;
-
 always @ (negedge clk)
 begin
-    //extra accurate but might cause issues?
+//extra accurate but might cause issues?
     /*if(A_FP[EXPONENT_WIDTH+MANTISSA_WIDTH-1:MANTISSA_WIDTH]>0) cat_a=1;
     else cat_a=0;
     if(A_FP[EXPONENT_WIDTH+MANTISSA_WIDTH-1:MANTISSA_WIDTH]>0) cat_b=1;
@@ -123,5 +121,3 @@ end
 always @(posedge clk)
 	done = 0;
 endmodule
-
-

@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module exponential ( input_exp,clk,output_exp,done_exp, reset_exp);
 parameter EXPONENT_WIDTH = 5;
 parameter MANTISSA_WIDTH = 10;

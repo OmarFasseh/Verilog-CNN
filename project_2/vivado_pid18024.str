@@ -1,0 +1,822 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 18024
+
+Current time: 	6/7/20 3:22:50 PM EEST
+Time zone: 	Eastern European Time (Africa/Cairo)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	E:/Xilinx/Vivado/2015.2/tps/win64/jre
+
+User name: 	Omar
+User directory: E:/VivadoFiles/Verilog-CNN/project_2
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: C:/Users/DELL/AppData/Roaming/Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: C:/Users/DELL/AppData/Roaming/Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	148 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 395 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// cp:P (cl:JFrame):  Open Project : addNotify
+// Opening Vivado Project: E:\VivadoFiles\Verilog-CNN\project_2\project_2.xpr. Version: Vivado v2015.2 
+// [GUI Memory]: 65 MB (+65787kb) [00:00:08]
+// [Engine Memory]: 382 MB (+249571kb) [00:00:08]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project E:/VivadoFiles/Verilog-CNN/project_2/project_2.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 407 MB. GUI used memory: 28 MB. Current time: 6/7/20 3:22:51 PM EEST
+// Tcl Message: open_project E:/VivadoFiles/Verilog-CNN/project_2/project_2.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/Users/IbrahimWael/Desktop/project_2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// [Engine Memory]: 407 MB (+5812kb) [00:00:13]
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 450 MB (+23572kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 478 MB (+6169kb) [00:00:23]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: project_2; location: E:/VivadoFiles/Verilog-CNN/project_2; part: xc7z020clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 772.371 ; gain = 171.918 
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 487 MB. GUI used memory: 37 MB. Current time: 6/7/20 3:23:07 PM EEST
+// Elapsed time: 166 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LeNet_tb (LeNet_tb.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LeNet_tb (LeNet_tb.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LeNet_tb (LeNet_tb.v)]", 4, true, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LeNet_tb (LeNet_tb.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LeNet_tb (LeNet_tb.v), lN - LeNet (LeNet.v)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LeNet_tb (LeNet_tb.v), lN - LeNet (LeNet.v)]", 5, true, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// cp:P (cl:JFrame):  Set as Top : addNotify
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top LeNet [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+dismissDialog("Set as Top"); // cp:P (cl:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceCommand.PACommandNames_PROJECT_SETTINGS, "project_settings"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROJECT_SETTINGS
+// Project Settings: addNotify
+selectButton(PAResourceOtoP.ProjectSettingsGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // r:a (a:ai, k:br)
+// c:c (k:br): Select Device: addNotify
+// [GUI Memory]: 70 MB (+1851kb) [00:03:31]
+// Elapsed time: 12 seconds
+selectTableHeader(PAResourceOtoP.PartChooser_BOARDS, "LUT
+Elements", 7); // N:v (JViewport:JComponent, c:c)
+selectTableHeader(PAResourceOtoP.PartChooser_BOARDS, "LUT
+Elements", 7); // N:v (JViewport:JComponent, c:c)
+// Elapsed time: 15 seconds
+selectTable(PAResourceOtoP.PartChooser_BOARDS, "ZYNQ-7 ZC706 Evaluation Board ; xilinx.com ; 1.1 ; xc7z045ffg900-2 ; 900 ; 1.2 ; 362 ; 218600 ; 437200 ; 545 ; 900 ; 16 ; 16 ; 0 ; 0 ; 1 ; 8 ; 0 ; 85 ; 85 ; 0.97 ; 0.97 ; 1.03 ; C ; 0", 5, "ZYNQ-7 ZC706 Evaluation Board", 0); // N:v (JViewport:JComponent, c:c)
+// Elapsed time: 27 seconds
+selectComboBox(PAResourceOtoP.PartChooser_BOARD_REV_CHOOSER, "All", 1); // C:M (JPanel:JComponent, c:c)
+// [GUI Memory]: 74 MB (+321kb) [00:04:21]
+selectTable(PAResourceOtoP.PartChooser_BOARDS, "ZedBoard Zynq Evaluation and Development Kit ; em.avnet.com ; c ; xc7z020clg484-1 ; 484 ; 0.9 ; 200 ; 53200 ; 106400 ; 140 ; 220 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 85 ; 85 ; 0.95 ; 0.95 ; 1.05 ; C ; 0", 0, "53200", 7); // N:v (JViewport:JComponent, c:c)
+selectTableHeader(PAResourceOtoP.PartChooser_BOARDS, "LUT
+Elements", 7); // N:v (JViewport:JComponent, c:c)
+selectTableHeader(PAResourceOtoP.PartChooser_BOARDS, "LUT
+Elements", 7); // N:v (JViewport:JComponent, c:c)
+// [GUI Memory]: 79 MB (+1222kb) [00:04:26]
+selectTable(PAResourceOtoP.PartChooser_BOARDS, "ZYNQ-7 ZC706 Evaluation Board ; xilinx.com ; b ; xc7z045ffg900-2 ; 900 ; 0.9 ; 362 ; 218600 ; 437200 ; 545 ; 900 ; 16 ; 16 ; 0 ; 0 ; 1 ; 8 ; 0 ; 85 ; 85 ; 0.97 ; 0.97 ; 1.03 ; C ; 0", 11, "218600", 7); // N:v (JViewport:JComponent, c:c)
+// [GUI Memory]: 85 MB (+2261kb) [00:06:34]
+// Elapsed time: 127 seconds
+selectTable(PAResourceOtoP.PartChooser_BOARDS, "Kintex-7 KC705 Evaluation Platform ; xilinx.com ; 1.0 ; xc7k325tffg900-2 ; 900 ; 0.9 ; 500 ; 203800 ; 407600 ; 445 ; 840 ; 16 ; 16 ; 0 ; 0 ; 1 ; 10 ; 0 ; 85 ; 85 ; 0.97 ; 0.97 ; 1.03 ; C ; 0", 15, "203800", 7); // N:v (JViewport:JComponent, c:c)
+selectComboBox(PAResourceOtoP.PartChooser_BOARD_REV_CHOOSER, "Latest", 0); // C:M (JPanel:JComponent, c:c)
+selectTable(PAResourceOtoP.PartChooser_BOARDS, "Kintex-7 KC705 Evaluation Platform ; xilinx.com ; 1.1 ; xc7k325tffg900-2 ; 900 ; 1.2 ; 500 ; 203800 ; 407600 ; 445 ; 840 ; 16 ; 16 ; 0 ; 0 ; 1 ; 10 ; 0 ; 85 ; 85 ; 0.97 ; 0.97 ; 1.03 ; C ; 0", 3, "Kintex-7 KC705 Evaluation Platform", 0); // N:v (JViewport:JComponent, c:c)
+// Elapsed time: 13 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, c:c)
+dismissDialog("Select Device"); // c:c (k:br)
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:br)
+// ap:bI (cl:JFrame): Create New Run: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// b:ag (cl:JFrame): Create Run: addNotify
+dismissDialog("Create New Run"); // ap:bI (cl:JFrame)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, b:ag)
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: RUN_MODIFY
+// TclEventType: PART_MODIFIED
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: create_run impl_2 -parent_run synth_1 -flow {Vivado Implementation 2015} -strategy {Vivado Implementation Defaults} 
+// Tcl Message: Run is defaulting to parent run srcset: sources_1 Run is defaulting to parent run constrset: constrs_1 Run is defaulting to parent run part: xc7z020clg400-1 
+// Tcl Message: current_run [get_runs impl_2] 
+// Tcl Message: set_property board_part xilinx.com:kc705:part0:1.2 [current_project] 
+// Tcl Message: INFO: [Project 1-152] Project part set to kintex7 (xc7k325tffg900-2) 
+dismissDialog("Create Run"); // b:ag (cl:JFrame)
+dismissDialog("Project Settings"); // k:br (cl:JFrame)
+// [Engine Memory]: 504 MB (+1489kb) [00:07:14]
+// [GUI Memory]: 90 MB (+447kb) [00:07:16]
+// [GUI Memory]: 94 MB (+121kb) [00:07:18]
+// PAPropertyPanels.initPanels (impl_2) elapsed time: 0.9s
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_2 ; constrs_1 ; Not started ; 0 ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2015) ; xc7k325tffg900-2 ; Vivado Implementation Defaults", 2, "impl_2", 0, false); // W:av (JViewport:JComponent, cl:JFrame)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_1 ; constrs_1 ; Not started ; 0 ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2015) ; xc7z020clg400-1 ; Vivado Implementation Defaults", 1, "constrs_1", 1, false); // W:av (JViewport:JComponent, cl:JFrame)
+// [GUI Memory]: 101 MB (+1906kb) [00:07:22]
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_2 ; constrs_1 ; Not started ; 0 ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2015) ; xc7k325tffg900-2 ; Vivado Implementation Defaults", 2, "constrs_1", 1, false); // W:av (JViewport:JComponent, cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 511 MB. GUI used memory: 49 MB. Current time: 6/7/20 3:30:02 PM EEST
+// [Engine Memory]: 531 MB (+1560kb) [00:07:24]
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LeNet_tb (LeNet_tb.v), lN - LeNet (LeNet.v)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LeNet_tb (LeNet_tb.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LeNet_tb (LeNet_tb.v), lN - LeNet (LeNet.v)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LeNet_tb (LeNet_tb.v), lN - LeNet (LeNet.v)]", 5, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'tanh_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav' 
+// Tcl Message: Built simulation snapshot tanh_tb_behav  ****** Webtalk v2015.2 (64-bit)   **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015   **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.  source E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav/xsim.dir/tanh_tb_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message:      while executing "webtalk_transmit -clientid 2475332759 -regid "" -xml E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav/xsim.dir/tanh_tb_behav/webtalk/usa..."     (file "E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav/xsim.dir/tanh_tb_behav/webtalk/xsim_webtalk.tcl" line 41) INFO: [Common 17-206] Exiting Webtalk at Sun Jun 07 14:30:49 2020... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 815.270 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tanh_tb_behav -key {Behavioral:sim_1:Functional:tanh_tb} -tclbatch {tanh_tb.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source tanh_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tanh_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 815.270 ; gain = 0.000 
+// 'c' command handler elapsed time: 15 seconds
+// Elapsed time: 15 seconds
+dismissDialog("Run Simulation"); // d:cp (cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LeNet.v", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("LeNet.v", 245, 373); // bj:J (JPanel:JComponent, cl:JFrame)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // l:JideButton (JPanel:JComponent, cl:JFrame)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - tanh_tb", "DesignTask.SIMULATION");
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Elapsed time: 1192 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tanh_tb.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LeNet.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 24); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 25); // A:k (H:JPanel, cl:JFrame)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, LeNet_tb (LeNet_tb.v)]", 30, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, LeNet_tb (LeNet_tb.v)]", 30, true, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 87 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'tanh_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav' 
+// Tcl Message: Built simulation snapshot tanh_tb_behav  ****** Webtalk v2015.2 (64-bit)   **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015   **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.  source E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav/xsim.dir/tanh_tb_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// Tcl Message:      while executing "webtalk_transmit -clientid 2962965218 -regid "" -xml E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav/xsim.dir/tanh_tb_behav/webtalk/usa..."     (file "E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav/xsim.dir/tanh_tb_behav/webtalk/xsim_webtalk.tcl" line 41) INFO: [Common 17-206] Exiting Webtalk at Sun Jun 07 14:52:56 2020... 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tanh_tb_behav -key {Behavioral:sim_1:Functional:tanh_tb} -tclbatch {tanh_tb.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: source tanh_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tanh_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 821.094 ; gain = 0.000 
+// 'c' command handler elapsed time: 8 seconds
+dismissDialog("Run Simulation"); // d:cp (cl:JFrame)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // l:JideButton (JPanel:JComponent, cl:JFrame)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - tanh_tb", "DesignTask.SIMULATION");
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, ReLU_tb (ReLU_tb.v)]", 34, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, LeNet_tb (LeNet_tb.v)]", 30, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, LeNet_tb (LeNet_tb.v)]", 30, true, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top LeNet_tb [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'LeNet_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav' 
+// Tcl Message: Built simulation snapshot LeNet_tb_behav  ****** Webtalk v2015.2 (64-bit)   **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015   **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.  source E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav/xsim.dir/LeNet_tb_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// Tcl Message:      while executing "webtalk_transmit -clientid 3738120663 -regid "" -xml E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav/xsim.dir/LeNet_tb_behav/webtalk/us..."     (file "E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav/xsim.dir/LeNet_tb_behav/webtalk/xsim_webtalk.tcl" line 41) INFO: [Common 17-206] Exiting Webtalk at Sun Jun 07 14:54:36 2020... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:01:11 . Memory (MB): peak = 821.094 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "LeNet_tb_behav -key {Behavioral:sim_1:Functional:LeNet_tb} -tclbatch {LeNet_tb.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: source LeNet_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'LeNet_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:01:15 . Memory (MB): peak = 821.094 ; gain = 0.000 
+// 'c' command handler elapsed time: 75 seconds
+// Elapsed time: 75 seconds
+dismissDialog("Run Simulation"); // d:cp (cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 546 MB. GUI used memory: 96 MB. Current time: 6/7/20 3:54:46 PM EEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 13 seconds
+selectMenu((HResource) null, "Waveform Style"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenu((HResource) null, "Radix"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenuItem((HResource) null, "Hexadecimal"); // N:JCheckBoxMenuItem (JPopupMenu:JComponent, cl:JFrame)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// HMemoryUtils.trashcanNow. Engine heap size: 554 MB. GUI used memory: 91 MB. Current time: 6/7/20 3:54:55 PM EEST
+// Elapsed time: 41 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LeNet.v", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("LeNet.v", 26, 300); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 18 seconds
+selectCodeEditor("LeNet.v", 22, 157); // bj:J (JPanel:JComponent, cl:JFrame)
+// [Engine Memory]: 561 MB (+3953kb) [00:33:36]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 39 seconds
+selectCodeEditor("LeNet.v", 290, 71); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 622 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 3*", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // l:JideButton (JPanel:JComponent, cl:JFrame)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - LeNet_tb", "DesignTask.SIMULATION");
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+selectButton("RDIResource.WaveformUtils_WAVEFORM_CONFIGURATION_HAS_BEEN_MODIFIED_Discard", "Discard"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// Tcl Message: close_sim 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tanh_tb.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 221, 43); // H:bj (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LeNet.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("LeNet.v", 205, 187); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("LeNet.v", 191, 365); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 19 seconds
+selectCodeEditor("LeNet.v", 196, 177); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 173, 109); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor("LeNet.v", 206, 108); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 115, 127); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 130, 132); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 146, 139); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 109, 288); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 115, 303); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 120, 304); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 131, 311); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 62, 368); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 121, 272); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 60, 281); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 54, 280); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 116, 283); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 197, 270); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 107 MB (+1047kb) [00:47:43]
+// Elapsed time: 167 seconds
+selectCodeEditor("LeNet.v", 996, 196); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 90, 359); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 32, 471); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 3, 334); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 27, 465); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "LeNet.v", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 22, 347); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+typeControlKey((HResource) null, "LeNet.v", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 32, 388); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 10 seconds
+selectCodeEditor("LeNet.v", 451, 445, false, false, false, true, false); // bj:J (JPanel:JComponent, cl:JFrame) - Popup Trigger
+selectCodeEditor("LeNet.v", 68, 479); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 402, 555); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "LeNet.v", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 450, 569); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 33 seconds
+typeControlKey((HResource) null, "LeNet.v", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 413, 514); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("LeNet.v", 95, 477); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 13 seconds
+selectCodeEditor("LeNet.v", 94, 499); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 374, 527); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 373, 514); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 376, 513, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("LeNet.v", 378, 515); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 10 seconds
+selectCodeEditor("LeNet.v", 393, 466); // bj:J (JPanel:JComponent, cl:JFrame)
+// [GUI Memory]: 113 MB (+1139kb) [00:50:29]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("LeNet.v", 95, 434); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 129, 478); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 1, 440); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "LeNet.v", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 139, 437); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 124, 425); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 112, 417); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "LeNet.v", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 107, 414); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "LeNet.v", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 100, 438); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 385, 449); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 103, 489); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 216, 449); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 220, 473); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 214, 503); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 225, 526); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 391, 499); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 408, 518); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 15 seconds
+selectCodeEditor("LeNet.v", 381, 556); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 395, 567); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 217, 556); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 222, 566); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 103, 539); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 216, 345); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 105, 334); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 392, 352); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 397, 364); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 214, 407); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 220, 420); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 119 MB (+13kb) [00:52:06]
+// Elapsed time: 17 seconds
+selectCodeEditor("LeNet.v", 33, 176); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 256, 200); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 272, 244); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 859, 159); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 168 seconds
+selectButton(PAResourceCommand.PACommandNames_PROJECT_SETTINGS, "project_settings"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROJECT_SETTINGS
+// Project Settings: addNotify
+selectButton(PAResourceOtoP.ProjectSettingsGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // r:a (a:ai, k:br)
+// c:c (k:br): Select Device: addNotify
+selectComboBox(PAResourceOtoP.PartChooser_BOARD_REV_CHOOSER, "All", 1); // C:M (JPanel:JComponent, c:c)
+selectTableHeader(PAResourceOtoP.PartChooser_BOARDS, "LUT
+Elements", 7); // N:v (JViewport:JComponent, c:c)
+// Elapsed time: 31 seconds
+setText("PAResourceOtoP.PartChooser_BOARDS_SEARCH_FIELD", (String) null); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, c:c)
+selectComboBox(PAResourceOtoP.PartChooser_BOARD_REV_CHOOSER, "Latest", 0); // C:M (JPanel:JComponent, c:c)
+// Elapsed time: 107 seconds
+selectTable(PAResourceOtoP.PartChooser_BOARDS, "Virtex-7 VC707 Evaluation Platform ; xilinx.com ; 1.1 ; xc7vx485tffg1761-2 ; 1761 ; 1.2 ; 700 ; 303600 ; 607200 ; 1030 ; 2800 ; 28 ; 28 ; 0 ; 0 ; 4 ; 14 ; 0 ; 85 ; 85 ; 0.97 ; 0.97 ; 1.03 ; C ; 0", 6, "303600", 7); // N:v (JViewport:JComponent, c:c)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, c:c)
+dismissDialog("Select Device"); // c:c (k:br)
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:br)
+// ap:bI (cl:JFrame): Create New Run: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// b:ag (cl:JFrame): Create Run: addNotify
+dismissDialog("Create New Run"); // ap:bI (cl:JFrame)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, b:ag)
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: RUN_MODIFY
+// TclEventType: PART_MODIFIED
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: create_run impl_3 -parent_run synth_1 -flow {Vivado Implementation 2015} -strategy {Vivado Implementation Defaults} 
+// Tcl Message: Run is defaulting to parent run srcset: sources_1 Run is defaulting to parent run constrset: constrs_1 Run is defaulting to parent run part: xc7k325tffg900-2 
+// Tcl Message: current_run [get_runs impl_3] 
+// Tcl Message: set_property board_part xilinx.com:vc707:part0:1.2 [current_project] 
+// Tcl Message: INFO: [Project 1-152] Project part set to virtex7 (xc7vx485tffg1761-2) 
+dismissDialog("Create Run"); // b:ag (cl:JFrame)
+// [GUI Memory]: 125 MB (+169kb) [00:58:43]
+// HMemoryUtils.trashcanNow. Engine heap size: 561 MB. GUI used memory: 65 MB. Current time: 6/7/20 4:24:57 PM EEST
+// Elapsed time: 1261 seconds
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:br)
+dismissDialog("Project Settings"); // k:br (cl:JFrame)
+selectCodeEditor("LeNet.v", 201, 199); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 201, 199, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("LeNet.v", 824, 158); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 824, 158, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("LeNet.v", 824, 158, false, false, false, true, false); // bj:J (JPanel:JComponent, cl:JFrame) - Popup Trigger
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // R:JideMenu (ai:JPopupMenu, cl:JFrame)
+selectMenu(RDIResource.HCodeEditor_DIFF_WITH, "Diff with"); // R:JideMenu (ai:JPopupMenu, cl:JFrame)
+selectMenu(RDIResource.HCodeEditor_DIFF_WITH, "Diff with"); // R:JideMenu (ai:JPopupMenu, cl:JFrame)
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // R:JideMenu (ai:JPopupMenu, cl:JFrame)
+selectCodeEditor("LeNet.v", 34, 91); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 10 seconds
+selectCodeEditor("LeNet.v", 862, 79); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 13 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "numberO", true); // o:ao (f:JComboBox, cl:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "numberO"); // o:ao (f:JComboBox, cl:JFrame)
+selectCodeEditor("LeNet.v", 195, 330); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 133, 141); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 133, 141, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+typeControlKey((HResource) null, "LeNet.v", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 162, 345); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 162, 345, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+typeControlKey((HResource) null, "LeNet.v", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 185, 367); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 185, 367, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+typeControlKey((HResource) null, "LeNet.v", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 363, 344); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 363, 344, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 14 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "numberOfI"); // o:ao (f:JComboBox, cl:JFrame)
+selectCodeEditor("LeNet.v", 826, 436); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 826, 436, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+typeControlKey((HResource) null, "LeNet.v", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 162, 345); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 162, 345, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+typeControlKey((HResource) null, "LeNet.v", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 132, 105); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 132, 104, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+typeControlKey((HResource) null, "LeNet.v", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 168, 455); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 168, 455, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+typeControlKey((HResource) null, "LeNet.v", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 189, 466); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 189, 466, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+typeControlKey((HResource) null, "LeNet.v", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 14 seconds
+selectCodeEditor("LeNet.v", 831, 109); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 831, 109, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+typeControlKey((HResource) null, "LeNet.v", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 35 seconds
+selectCodeEditor("LeNet.v", 116, 346); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 116, 346, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("LeNet.v", 105, 458); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 105, 458, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("LeNet.v", 990, 215); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 66 seconds
+selectCodeEditor("LeNet.v", 44, 292); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "LeNet.v", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 169, 310); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 227, 352); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 227, 352, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("LeNet.v", 348, 352); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 348, 352, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("LeNet.v", 804, 352); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 804, 352, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("LeNet.v", 275, 439); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 263, 379); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 261, 379); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("LeNet.v", 116, 417); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("LeNet.v", 116, 548); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH

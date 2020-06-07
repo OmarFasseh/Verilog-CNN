@@ -46,7 +46,8 @@ always begin
     #0.5 clk = ~clk;
 end
 
-Conv_PU #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH), .N(5))//instantiate the module                                                     
+//instantiate the module
+Conv_PU #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH))                                                      
 CPU(
     .image(image),
     .filter(filter),

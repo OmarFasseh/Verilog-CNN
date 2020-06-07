@@ -1,4 +1,5 @@
 //ieee adder module
+`timescale 1ns / 1ps
 module fp_add (
 input [31:0] A_FP, 
 input [31:0] B_FP,

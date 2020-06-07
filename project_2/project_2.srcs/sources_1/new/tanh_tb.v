@@ -1,4 +1,5 @@
 //test bench for tanh
+`timescale 1ns / 1ps
 module tanh_tb;
 
 parameter EXPONENT_WIDTH = 5;

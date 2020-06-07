@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module weights_Memory (clk,address_fc,read_en_MM_fc ,dataMainMemo_fc,enable_MM_out_fc) ;
 parameter DATA_WIDTH = 32;
 parameter ADDR_WIDTH = 9 ;

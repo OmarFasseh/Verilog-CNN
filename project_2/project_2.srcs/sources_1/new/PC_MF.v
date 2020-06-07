@@ -13,8 +13,8 @@ parameter MANTISSA_WIDTH = 10;
 parameter DATA_WIDTH = EXPONENT_WIDTH+MANTISSA_WIDTH+1;
 //The size of the image NxN
 parameter N = 32;
-//Number of filters
-parameter filters_number = 2;
+//Number of filters to be multiplied in parallel
+parameter filters_number = 6;
 
 //Inputs and outputs
 input [N*N*DATA_WIDTH-1:0] image;
@@ -25,7 +25,6 @@ output [(N-4)*(N-4)*filters_number*DATA_WIDTH-1:0] output_fmap;
 output reg  done;
 
 //Registers and wires
-reg [25*DATA_WIDTH-1:0] image_ordered; //The input image ordered for the convolution layer
 reg filter_reset; //The register to reset the image convolution units
 wire filter_done; //Done signal from the image convolution unit
 integer finished_filters; //The number of finished filters of output.
@@ -47,7 +46,7 @@ always @(negedge clk) begin
         if(finished_filters == filters_number) begin //If we calculated all output feature maps
             done = 1;
         end else begin
-            filter_reset = 1; //If not done yet, reset the convolution units to start calculating next set of outputs.
+            finished_filters = finished_filters;
         end
     end
 end
@@ -56,10 +55,10 @@ end
 genvar i;
 generate
     for(i = 1; i <= filters_number; i = i + 1) begin
-        PC_SF #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH), .N(N))
+        PC_SF #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH), .N(N), .filter_number(i))
         PCs(
         .image(image),
-        .filter(filters[25*i*DATA_WIDTH-1-:25*DATA_WIDTH]),
+        .filter(filters[25*(i)*DATA_WIDTH-1-:25*DATA_WIDTH]),
         .reset(filter_reset),
         .clk(clk),
         .output_fmap(output_fmap[i*(N-4)*(N-4)*DATA_WIDTH-1-:(N-4)*(N-4)*DATA_WIDTH]),
