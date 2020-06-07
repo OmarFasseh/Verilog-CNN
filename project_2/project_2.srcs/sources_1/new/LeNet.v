@@ -20,8 +20,8 @@ parameter file_fc2 = "E:/VivadoFiles/finalT/hex_weightsdense_2.txt";//weights 2
 parameter N = 32; //The size of the image NxN
 parameter filters_number = 2; //Number of filters
 
-parameter N3 = 32; //The size of the image NxN
-parameter filters_number3 = 2; //Number of filters 
+parameter N3 = 5; //The size of the image NxN
+parameter number_of_filters3 = 120; //Number of filters 
 //avg layer
 parameter dimension = 4 ;
 parameter dimension2 = (dimension/2)  ;
@@ -37,7 +37,6 @@ reg [6*25*DATA_WIDTH-1:0]filters1; //input
 //input filters2;
 //input filters3;
 
-//input [N*N*DATA_WIDTH-1:0] PC_image;
 //fc
 reg  [DATA_WIDTH*FC_INPUT_SIZE1-1:0] input_fc1;
 reg  start_fc1,reset_fc1;
@@ -53,14 +52,15 @@ wire [(DATA_WIDTH*FC_OUTPUT_SIZE2)-1:0] test_multi2;
 wire [(DATA_WIDTH*FC_OUTPUT_SIZE2)-1:0] test_weights2;
 wire [(DATA_WIDTH*FC_OUTPUT_SIZE2)-1:0] test_output2;
 //PC_MF 
-reg [25*filters_number*DATA_WIDTH-1:0] PC_filters;
-reg PC_reset;
-wire [(N-4)*(N-4)*filters_number*DATA_WIDTH-1:0] PC_output_fmap;
-wire  PC_done;
+// reg [25*filters_number*DATA_WIDTH-1:0] PC_filters;
+// reg PC_reset;
+// wire [(N-4)*(N-4)*filters_number*DATA_WIDTH-1:0] PC_output_fmap;
+// wire  PC_done;
 
-reg [25*filters_number3*DATA_WIDTH-1:0] PC3_filters;
+reg [N*N*DATA_WIDTH-1:0] PC3_image; //The part of the image used in conv unit
+reg [number_of_filters3*25*DATA_WIDTH-1:0] PC3_filters; //The filters used in conv unit
 reg PC3_reset;
-wire [(N3-4)*(N3-4)*filters_number3*DATA_WIDTH-1:0] PC3_output_fmap;
+wire [(N3-4)*(N3-4)*number_of_filters3*DATA_WIDTH-1:0] PC3_output_fmap;
 wire  PC3_done;
 
 //tanh
@@ -96,8 +96,9 @@ output sm_done;
 //LeNet
 reg [(N-4)*(N-4)*6*DATA_WIDTH-1:0] output_conv1;
 
+reg [12:0] conv3_idx; //needs to reach (25 clks if parallel or 3K if series) to fisnish
 
-reg [7:0] fc1_idx; //needs to reach input size (120) to finish
+reg [7:0] fc1_idx; //needs to reach input size = (120) to finish
 reg [7:0] fc2_idx;
 
 reg [5:0] tanh1_idx; //needs 8 clks to finish
@@ -129,8 +130,8 @@ always@(posedge clk) begin
         //temp
         tanh5_input_value=input_leNet;
         //pipeline
-        
-        
+        conv3_idx=0;
+
         tanh5_idx=6'b111111; //prevent them form starting at reset
         fc1_idx=8'b1111_1111;       
         fc2_idx=8'b1111_1111;       
@@ -139,21 +140,19 @@ always@(posedge clk) begin
         //$stop;
     end else begin
         
-        //Fc Layer 1 
-        if(fc1_idx==0)begin
-            reset_fc1=1;
-            start_fc1=1;  
-            fc1_idx=fc1_idx+1;
-        end else if (fc1_idx==FC_INPUT_SIZE1+1 && tanh6_idx > 8) begin //Input_SIZE clks passed && next module is ready-> init the next module 
-            fc1_idx=fc1_idx+1;
+        //Conv Layer 3 
+        if(conv3_idx==0)begin
+            PC3_reset=1;
+            conv3_idx=conv3_idx+1;
+        end else if (conv3_idx==FC_INPUT_SIZE1+1 && tanh6_idx > 8) begin //Input_SIZE clks passed && next module is ready-> init the next module 
+            conv3_idx=conv3_idx+1;
 
             //prepare next module (tanh)
             tanh6_input_value=output_fc1;
             tanh6_idx=0;
-        end else if(fc1_idx<=FC_INPUT_SIZE1)begin
-            reset_fc1=0;
-            start_fc1=0;
-            fc1_idx=fc1_idx+1;
+        end else if(conv3_idx<=(N3-4)*(N3-4)*filters_number)begin
+            PC3_reset=0;
+            conv3_idx=conv3_idx+1;
         end
 
         //Tanh fc 5
@@ -282,7 +281,7 @@ SL2( .input_fc(input_fc2),
     .test_multi(test_multi2),.test_weights(test_weights2),.test_output(test_output2));
 
 
-PC_MF #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH),.DATA_WIDTH(DATA_WIDTH),.N(N3),.filters_number(filters_number3))
+PC_MF #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH),.N(N3),.filters_number(number_of_filters3))
 PC_MF3(.image(PC_image),
 .filters(PC3_filters),
 .reset(PC3_reset),
@@ -290,6 +289,7 @@ PC_MF3(.image(PC_image),
 .output_fmap(PC3_output_fmap),
 .done(PC3_done)
 );
+
 
 tanh_activation_function #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH), .numberOfInputs(FC_INPUT_SIZE1)) 
 tanh5 (
