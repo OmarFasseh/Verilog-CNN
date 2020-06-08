@@ -24,11 +24,10 @@ parameter filters_number = 6; //Number of filters
 
 parameter number_of_filters3 = 120; //Number of filters 3rd conv
 //remember to change file
-parameter filter_file = "E:/VivadoFiles/finalT/filters2.txt";
-reg [number_of_filters3*25*DATA_WIDTH-1:0] PC3_filters;
-//work in progress
-//reg [N*N*DATA_WIDTH-1:0] images [0:NUM_TEST_CASES-1]; //A collection of images for different test cases
-//reg [25*DATA_WIDTH-1:0] filters [0:NUM_TEST_CASES-1]; //For different test cases
+parameter filter3_file_1 = "E:/VivadoFiles/finalT/Conv3_FilterPerRow_ones.txt";
+parameter filter3_file_2 = "E:/VivadoFiles/finalT/Conv3_FilterPerRow_twos.txt";
+reg [2*120*25*DATA_WIDTH-1:0] PC3_filters;
+
 
 //tanh
 parameter numberOfInputs=84; 
@@ -42,6 +41,7 @@ reg  [DATA_WIDTH*FC_INPUT_SIZE1-1:0] input_fc1;
 reg clk;
 reg reset;
 reg [DATA_WIDTH-1:0] inputs_mem [0:FC_INPUT_SIZE1-1] ;
+reg [25*DATA_WIDTH-1:0] filters3[0:number_of_filters3-1];
 wire [(DATA_WIDTH*FC_INPUT_SIZE2)-1:0] tanh6_output_value;
 wire [(numberOfExps*DATA_WIDTH)-1:0] sm_output_value;
 wire sm_done;
@@ -49,15 +49,21 @@ wire sm_done;
 integer i;
 initial begin
     $readmemh(inputs_file_0, inputs_mem);
-    for( i = 0;i <FC_INPUT_SIZE1;i=i+1)
+    $readmemh(filter3_file_1, filters3);
+    for(i=0;i <FC_INPUT_SIZE1;i=i+1)
         input_fc1[i*DATA_WIDTH+:DATA_WIDTH] = inputs_mem[i];
-    PC3_filters=0;//remember to mem read    
+    for(i=0;i <number_of_filters3;i=i+1)
+        PC3_filters[i*25*DATA_WIDTH+:25*DATA_WIDTH]=filters3[i]; //each file has 1 filter / row  
+    $readmemh(filter3_file_2, filters3);
+    for(i=0;i <number_of_filters3;i=i+1)
+        PC3_filters[120*25*DATA_WIDTH+i*25*DATA_WIDTH+:25*DATA_WIDTH]=filters3[i]; //each file has 1 filter / row  
     reset=0;
     clk=0;
+    $stop;
     #2 reset =1;
     #20 reset =0;
     #5000;
-        $stop;
+    $stop;
 
 end
 always begin

@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Tue Jun 09 00:47:08 2020
-# Process ID: 1900
+# Start of session at: Tue Jun 09 00:45:27 2020
+# Process ID: 6432
 # Log file: E:/VivadoFiles/Verilog-CNN/project_2/vivado.log
 # Journal file: E:/VivadoFiles/Verilog-CNN/project_2\vivado.jou
 #-----------------------------------------------------------
@@ -14,6 +14,9 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2015.2/data/ip'.
-open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:10 . Memory (MB): peak = 764.293 ; gain = 182.707
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 793.500 ; gain = 197.555
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Jun 09 00:47:44 2020...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 09 00:46:36 2020...

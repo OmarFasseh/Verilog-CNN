@@ -6,7 +6,9 @@ reg [63:0] input_value;
 reg clk;
 reg reset ;
 wire [15:0] output_value;
-
+initial //display variables
+    $monitor ("input=%h, Output=%h",
+    input_value, output_value);
 initial
 begin
 clk =0;

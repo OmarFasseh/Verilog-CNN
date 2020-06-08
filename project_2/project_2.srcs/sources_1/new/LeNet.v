@@ -21,8 +21,8 @@ parameter N = 32; //The size of the image NxN
 parameter filters_number = 2; //Number of filters
 
 parameter N3 = 5; //The size of the image NxN of 3rd conv
-parameter number_of_filters3 = 120; //Number of filters of 3rd conv
-parameter number_of_series3 =1;//120/number_of_filters3 =>how many series operation needed  
+parameter number_of_filters3 = 60; //Number of filters of 3rd conv
+parameter number_of_series3 =2;//120/number_of_filters3 =>how many series operation needed  
 //avg layer
 parameter dimension = 4 ;
 parameter dimension2 = (dimension/2)  ;
@@ -43,16 +43,11 @@ reg [6*25*DATA_WIDTH-1:0]filters1; //input
 reg  [DATA_WIDTH*FC_INPUT_SIZE1-1:0] input_fc1;
 reg  start_fc1,reset_fc1;
 wire [DATA_WIDTH*FC_OUTPUT_SIZE1-1:0] output_fc1;
-wire [(DATA_WIDTH*FC_OUTPUT_SIZE1)-1:0] test_multi1;
-wire [(DATA_WIDTH*FC_OUTPUT_SIZE1)-1:0] test_weights1;
-wire [(DATA_WIDTH*FC_OUTPUT_SIZE1)-1:0] test_output1;
 
 reg  [DATA_WIDTH*FC_INPUT_SIZE2-1:0] input_fc2;
 reg  start_fc2,reset_fc2;
 wire [DATA_WIDTH*FC_OUTPUT_SIZE2-1:0] output_fc2;
-wire [(DATA_WIDTH*FC_OUTPUT_SIZE2)-1:0] test_multi2;
-wire [(DATA_WIDTH*FC_OUTPUT_SIZE2)-1:0] test_weights2;
-wire [(DATA_WIDTH*FC_OUTPUT_SIZE2)-1:0] test_output2;
+
 //PC_MF 
 // reg [25*filters_number*DATA_WIDTH-1:0] PC_filters;
 // reg PC_reset;
@@ -60,7 +55,9 @@ wire [(DATA_WIDTH*FC_OUTPUT_SIZE2)-1:0] test_output2;
 // wire  PC_done;
 
 reg [N3*N3*DATA_WIDTH-1:0] PC3_image; //The part of the image used in conv unit
-input [number_of_filters3*25*DATA_WIDTH-1:0] PC3_filters; //The filters used in conv unit
+//2 test cases
+input [2*number_of_filters3*number_of_series3*25*DATA_WIDTH-1:0] PC3_filters; //The filters used in conv unit
+reg [number_of_filters3*25*DATA_WIDTH-1:0] PC3_passed_filters;
 reg PC3_reset;
 wire [(N3-4)*(N3-4)*number_of_filters3*DATA_WIDTH-1:0] PC3_output_fmap;
 wire  PC3_done;
@@ -99,6 +96,7 @@ output sm_done;
 reg [(N-4)*(N-4)*6*DATA_WIDTH-1:0] output_conv1;
 reg [(N3-4)*(N3-4)*number_of_filters3*number_of_series3*DATA_WIDTH-1:0]   PC3_whole_output;
 
+reg conv3_ready, fc1_ready, fc2_ready, tanh5_ready, tanh6_ready;
 reg [12:0] conv3_idx; //needs to reach (25 clks if parallel or 3K if series) to fisnish
 
 reg [7:0] fc1_idx; //needs to reach input size = (120) to finish
@@ -111,13 +109,14 @@ reg [5:0] tanh4_idx;
 reg [5:0] tanh5_idx;
 reg [5:0] tanh6_idx;
 
-reg [2:0] sm_idx;
+reg [5:0] sm_idx;
 reg [5:0] i;
 reg [5:0] j;
 reg [8:0] clk_fc;
+
 always@(posedge clk) begin
     if(reset==1) begin //resetting/initializing
-        i = 10; //should be i=0 but for now we will start with the fc layer
+        i = 0; //pipelined inputs index
         //j = 6; //max number of filters
         PC3_reset = 1;
         output_conv1 = 0;
@@ -131,23 +130,33 @@ always@(posedge clk) begin
         start_fc1=1;
         //temp
         PC3_image=input_leNet[N3*N3*DATA_WIDTH-1:0];
-        //pipeline
+        PC3_passed_filters=PC3_filters[i*120*25*DATA_WIDTH+number_of_filters3*25*DATA_WIDTH-1-:number_of_filters3*25*DATA_WIDTH];
+        //~~~~~~~~~~~~~~~~pipeline~~~~~~~~~~~~~~~~//
+
+        //mark all modules as ready to recieve from its previous module (pipeline)
+        conv3_ready=1;
+        tanh5_ready=1;
+        tanh6_ready=1;
+        fc1_ready=1;
+        fc2_ready=1;
+
         conv3_idx=0;
 
         tanh5_idx=6'b111111; //prevent them form starting at reset
         fc1_idx=8'b1111_1111;       
         fc2_idx=8'b1111_1111;       
         tanh6_idx=6'b111111;        
-        sm_idx=3'b111;             
+        sm_idx=6'b111111;            
         //$stop;
     end else begin
         
         //Conv Layer 3 
         if(conv3_idx==0)begin
+            conv3_ready=0;
             PC3_reset=1;
             j=0;
             conv3_idx=conv3_idx+1;
-        end else if (PC3_done&&conv3_idx>=25*(N3-4)*(N3-4) && tanh5_idx > 8) begin //Input_SIZE clks passed && next module is ready-> init the next module 
+        end else if (PC3_done && tanh5_ready) begin //Input_SIZE clks passed && next module is ready-> init the next module 
             conv3_idx=conv3_idx+1;
             j=j+1;
             if(j==number_of_series3)begin
@@ -158,8 +167,11 @@ always@(posedge clk) begin
 
                 conv3_idx=0; //reset myself since I am the first
                 i=i+1; //take another input since I am the first
-            end else begin
-                PC3_whole_output[j*(N3-4)*(N3-4)*number_of_filters3*DATA_WIDTH-1-:(N3-4)*(N3-4)*number_of_filters3*DATA_WIDTH]=PC3_output_fmap;
+                conv3_ready=1;
+            end else begin //part of the filters is done --> reset the module, pass new filters and store the output
+                PC3_passed_filters=PC3_filters[i*120*25*DATA_WIDTH+(j+1)*number_of_filters3*25*DATA_WIDTH-1-:number_of_filters3*25*DATA_WIDTH];
+                PC3_whole_output[j*number_of_filters3*DATA_WIDTH-1-:number_of_filters3*DATA_WIDTH]= PC3_output_fmap;
+                PC3_reset=1;
             end
         end else if(conv3_idx<=25*(N3-4)*(N3-4) || !PC3_done)begin
             PC3_reset=0;
@@ -168,30 +180,33 @@ always@(posedge clk) begin
 
         //Tanh fc 5
         if(tanh5_idx==0)begin
+            tanh5_ready=0;
             tanh5_reset = 1;
             tanh5_idx=tanh5_idx+1; //wait for tanh
-        end else if (tanh5_idx==9 && fc1_idx>FC_INPUT_SIZE1+1)begin //if this module finished and the next one is ready 
+        end else if (tanh5_idx==9 && fc1_ready)begin //if this module finished and the next one is ready 
             tanh5_idx=tanh5_idx+1; //wait for previous module to restart this one (no "if"s will work)
             //prepare next module (fc 21
             input_fc1=tanh5_output_value;
             fc1_idx=0; //start fc1
-
+            tanh5_ready=1;
         end else if (tanh5_idx<9) begin
             tanh5_reset = 0;
             tanh5_idx=tanh5_idx+1; //wait for tanh
         end
 
         //Fc Layer 1 
-        if(fc1_idx==0)begin
+        if(fc1_idx==0) begin
+            fc1_ready=0;
             reset_fc1=1;
             start_fc1=1;  
             fc1_idx=fc1_idx+1;
-        end else if (fc1_idx==FC_INPUT_SIZE1+1 && tanh6_idx > 8) begin //Input_SIZE clks passed && next module is ready-> init the next module 
+        end else if (fc1_idx==FC_INPUT_SIZE1+1 && tanh6_ready ) begin //Input_SIZE clks passed && next module is ready-> init the next module 
             fc1_idx=fc1_idx+1;
 
             //prepare next module (tanh)
             tanh6_input_value=output_fc1;
             tanh6_idx=0;
+            fc1_ready=1;
         end else if(fc1_idx<=FC_INPUT_SIZE1)begin
             reset_fc1=0;
             start_fc1=0;
@@ -200,30 +215,34 @@ always@(posedge clk) begin
 
         //Tanh fc 6
         if(tanh6_idx==0)begin
-            tanh6_reset = 1;
+            tanh6_ready=0;
+            tanh6_reset= 1;
             tanh6_idx=tanh6_idx+1; //wait for tanh
-        end else if (tanh6_idx==9 && fc2_idx>FC_INPUT_SIZE2+1)begin //if this module finished and the next one is ready 
+        end else if (tanh6_idx==9 && fc2_ready)begin //if this module finished and the next one is ready 
             tanh6_idx=tanh6_idx+1; //wait for previous module to restart this one (no "if"s will work)
             //prepare next module (fc 2)
             input_fc2=tanh6_output_value;
             fc2_idx=0; //start fc2
-        end else if (tanh6_idx<9) begin
-            tanh6_reset = 0;
+            tanh6_ready= 1;
+        end else if (tanh6_idx < 9) begin
+            tanh6_reset= 0;
             tanh6_idx=tanh6_idx+1; //wait for tanh
         end
 
         //Fc Layer 2
         if(fc2_idx==0)begin
+            fc2_ready=0; //mark as not ready to recieve from other modules
             reset_fc2=1;
             start_fc2=1;
             fc2_idx=fc2_idx+1;
-        end else if (fc2_idx==FC_INPUT_SIZE2+1 && (sm_done||sm_idx>1)) begin //Input_SIZE clks passed  && next module ready -> init the next module  
+        end else if (fc2_idx==FC_INPUT_SIZE2+1 && (sm_done||sm_idx==50)) begin //Input_SIZE clks passed  && next module ready -> init the next module  
             fc2_idx=fc2_idx+1; //wait for previous module to restart this one (no "if"s will work)
 
             //prepare the next module (softmax)
             sm_idx=0;
             //sm_reset=0;
             sm_input_value=output_fc2;
+            fc2_ready=1; //mark this module as ready to recieve from its previous module (pipeline)
         end else if(fc2_idx<=FC_INPUT_SIZE2)begin
             reset_fc2=0;
             start_fc2=0;
@@ -234,9 +253,12 @@ always@(posedge clk) begin
         if(sm_idx==0)begin
             sm_idx=1;
             sm_reset=1;
-        end else
+        end else if(sm_idx<50) begin //should take 40 only
+            sm_idx=sm_idx+1;
             sm_reset=0;
         //when done "sm_done" will be 1
+        end else
+            sm_reset=0; // make sure it's 0 because this module's reset works on posedge
     end
     /*
     if(reset==1) begin //resetting/initializing
@@ -277,8 +299,7 @@ SL1( .input_fc(input_fc1),
     .clk(clk),
     .start_fc(start_fc1),
     .reset(reset_fc1),
-    .output_fc(output_fc1),
-    .test_multi(test_multi1),.test_weights(test_weights1),.test_output(test_output1));
+    .output_fc(output_fc1));
     
 SingleLayer #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH),.DATA_WIDTH(DATA_WIDTH),.INPUT_SIZE(FC_INPUT_SIZE2), 
 .file(file_fc2), .OUTPUT_SIZE(FC_OUTPUT_SIZE2)) //instantiate the module                                                     
@@ -286,13 +307,12 @@ SL2( .input_fc(input_fc2),
     .clk(clk),
     .start_fc(start_fc2),
     .reset(reset_fc2),
-    .output_fc(output_fc2),
-    .test_multi(test_multi2),.test_weights(test_weights2),.test_output(test_output2));
+    .output_fc(output_fc2));
 
 
 PC_MF #(.EXPONENT_WIDTH(EXPONENT_WIDTH), .MANTISSA_WIDTH(MANTISSA_WIDTH),.N(N3),.filters_number(number_of_filters3))
 PC_MF3(.image(PC3_image),
-.filters(PC3_filters),
+.filters(PC3_passed_filters),
 .reset(PC3_reset),
 .clk(clk),
 .output_fmap(PC3_output_fmap),
