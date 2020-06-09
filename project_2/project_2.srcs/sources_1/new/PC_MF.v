@@ -23,7 +23,6 @@ input reset;
 input clk;
 output [(N-4)*(N-4)*filters_number*DATA_WIDTH-1:0] output_fmap;
 output reg  done;
-
 //Registers and wires
 reg filter_reset; //The register to reset the image convolution units
 wire filter_done; //Done signal from the image convolution unit

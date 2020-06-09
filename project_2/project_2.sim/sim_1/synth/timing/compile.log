@@ -1,9 +1,40 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/IbrahimWael/Desktop/project_2/project_2.sim/sim_1/synth/timing/tanh_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/synth/timing/array_adder_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_adder
 INFO: [VRFC 10-311] analyzing module fp_add_2
-INFO: [VRFC 10-311] analyzing module tanh
+INFO: [VRFC 10-311] analyzing module fp_add_2_0
+INFO: [VRFC 10-311] analyzing module fp_add_2_1
+INFO: [VRFC 10-311] analyzing module fp_add_2_10
+INFO: [VRFC 10-311] analyzing module fp_add_2_11
+INFO: [VRFC 10-311] analyzing module fp_add_2_12
+INFO: [VRFC 10-311] analyzing module fp_add_2_13
+INFO: [VRFC 10-311] analyzing module fp_add_2_14
+INFO: [VRFC 10-311] analyzing module fp_add_2_15
+INFO: [VRFC 10-311] analyzing module fp_add_2_16
+INFO: [VRFC 10-311] analyzing module fp_add_2_17
+INFO: [VRFC 10-311] analyzing module fp_add_2_18
+INFO: [VRFC 10-311] analyzing module fp_add_2_19
+INFO: [VRFC 10-311] analyzing module fp_add_2_2
+INFO: [VRFC 10-311] analyzing module fp_add_2_20
+INFO: [VRFC 10-311] analyzing module fp_add_2_21
+INFO: [VRFC 10-311] analyzing module fp_add_2_22
+INFO: [VRFC 10-311] analyzing module fp_add_2_23
+INFO: [VRFC 10-311] analyzing module fp_add_2_3
+INFO: [VRFC 10-311] analyzing module fp_add_2_4
+INFO: [VRFC 10-311] analyzing module fp_add_2_5
+INFO: [VRFC 10-311] analyzing module fp_add_2_6
+INFO: [VRFC 10-311] analyzing module fp_add_2_7
+INFO: [VRFC 10-311] analyzing module fp_add_2_8
+INFO: [VRFC 10-311] analyzing module fp_add_2_9
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/IbrahimWael/Desktop/project_2/project_2.srcs/sources_1/new/tanh_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tanh_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/IbrahimWael/Desktop/project_2/project_2.sim/sim_1/synth/timing/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/fp_add_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_add_2
+WARNING: [VRFC 10-1195] overwriting previous definition of module fp_add_2 [E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/fp_add_2.v:2]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/array_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_adder
+WARNING: [VRFC 10-611] empty port in module declaration [E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/array_adder.v:2]
+WARNING: [VRFC 10-1195] overwriting previous definition of module array_adder [E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/array_adder.v:2]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VivadoFiles/Verilog-CNN/project_2/project_2.srcs/sources_1/new/array_adder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_adder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/synth/timing/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [D:/Users/IbrahimWael/Desktop/project_2/project_2.sim/sim_1/synth/timing/glbl.v:6]
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/VivadoFiles/Verilog-CNN/project_2/project_2.sim/sim_1/synth/timing/glbl.v:6]

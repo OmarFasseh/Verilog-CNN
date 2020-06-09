@@ -1,6 +1,6 @@
 @echo off
-set xv_path=D:\\Vivado\\Vivado\\2015.2\\bin
-call %xv_path%/xsim tanh_tb_time_synth -key {Post-Synthesis:sim_1:Timing:tanh_tb} -tclbatch tanh_tb.tcl -log simulate.log
+set xv_path=E:\\Xilinx\\Vivado\\2015.2\\bin
+call %xv_path%/xsim array_adder_tb_time_synth -key {Post-Synthesis:sim_1:Timing:array_adder_tb} -tclbatch array_adder_tb.tcl -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END

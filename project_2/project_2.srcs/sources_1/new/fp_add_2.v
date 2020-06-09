@@ -1,16 +1,15 @@
 `timescale 1ns / 1ps
-module fp_add_2 (
-input [EXPONENT_WIDTH+MANTISSA_WIDTH:0] A_FP, 
-input [EXPONENT_WIDTH+MANTISSA_WIDTH:0] B_FP,
-input clk, 
-output reg       sign, 
-output reg	done,
-output reg [EXPONENT_WIDTH-1:0] exponent, 
-output reg [MANTISSA_WIDTH-1:0] mantissa);
+module fp_add_2 (A_FP, B_FP,clk, sign, done,exponent, mantissa);
 
 parameter EXPONENT_WIDTH = 8;
 parameter MANTISSA_WIDTH = 23;
-
+input [EXPONENT_WIDTH+MANTISSA_WIDTH:0] A_FP;
+input [EXPONENT_WIDTH+MANTISSA_WIDTH:0] B_FP;
+input clk;
+output reg sign;
+output reg	done;
+output reg [EXPONENT_WIDTH-1:0] exponent; 
+output reg [MANTISSA_WIDTH-1:0] mantissa;
 //variables used in an always block
 //are declared as registers
 reg sign_a, sign_b,sign_c;
